@@ -1,0 +1,47 @@
+-
+    const defaultBtnProps = {
+        classes: '',
+        name: 'Кнопка',
+        cMode: '',
+        sMode: '',
+        type: 'link',
+        link: 'javascript:void(0);',
+        buttonType: 'button',
+        icon: '',
+        iconLeft: false
+    }
+
+mixin btn(props = defaultBtnProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultBtnProps.classes,
+            name: props.name ? props.name : defaultBtnProps.name,
+            cMode: props.cMode ? props.cMode : defaultBtnProps.cMode,
+            sMode: props.sMode ? props.sMode : defaultBtnProps.sMode,
+            type: props.type ? props.type : defaultBtnProps.type,
+            link: props.link ? props.link : defaultBtnProps.link,
+            buttonType: props.buttonType ? props.buttonType : defaultBtnProps.buttonType,
+            icon: props.icon ? props.icon : defaultBtnProps.icon,
+            iconLeft: props.iconLeft ? props.iconLeft : defaultBtnProps.iconLeft,
+        }
+
+        let colorClass = checkProps.cMode ? ` d-btn--${checkProps.cMode}` : ''
+        let sizeClass = checkProps.sMode ? ` d-btn--${checkProps.sMode}` : ''
+        let iconPosClass = checkProps.iconLeft === true ? ` d-btn--reverse` : ''
+
+    - if(checkProps.type == 'link')
+        a.d-btn(class=checkProps.classes + colorClass + sizeClass + iconPosClass href= checkProps.link)&attributes(attributes)
+            if(checkProps.sMode !== 'icon')
+                span!= checkProps.name
+            if(checkProps.icon.length > 0)
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
+
+    - else if(checkProps.type == 'button')
+        button.d-btn(class=checkProps.classes + colorClass + sizeClass + iconPosClass type= checkProps.buttonType)&attributes(attributes)
+            if(checkProps.sMode !== 'icon')
+                span!= checkProps.name
+            if(checkProps.icon.length > 0)
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
+

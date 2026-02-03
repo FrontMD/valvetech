@@ -1,0 +1,111 @@
+mixin footer
+
+    footer.site-footer.section
+        .section__bg
+            img(src="img/footer_bg.webp" alt="")
+        .vt-container
+            .site-footer__container
+                .site-footer__top
+                    +form({
+                        classes: 'site-footer__form form--light',
+                        btnText: 'Отправить заявку',
+                        title: 'Подобрать оборудование'
+                    })
+                        +field({
+                            placeholder: 'Ваше имя',
+                            inputAttr: {
+                                'required': '',
+                                'data-type': 'letters'
+                            },
+                            hasError: true
+                        })
+                        +field({
+                            placeholder: 'Tелефон',
+                            type: 'tel',
+                            inputAttr: {
+                                'data-type': 'phoneNumber',
+                                'required': '',
+                                'data-v-name': 'phone'
+                            },
+                            hasError: true
+                        })
+                        +field({
+                            placeholder: 'Email',
+                            type: 'email',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': 'email'
+                            },
+                            hasError: true
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'textarea',
+                            type: '',
+                            title: '',
+                            placeholder: 'Комментарий',
+                        })
+
+                .site-footer__bottom
+                    .site-footer__row
+                        .site-footer__left
+                            +title({
+                                text: 'ООО «Вальв Тек Груп»',
+                                size: '30',
+                                cMode: 'light',
+                                upper: true
+                            })
+                            .site-footer__address Пермь, Чернышевского 28 оф.100
+                            .site-footer__contacts
+                                a.site-footer__contact(href="javascript:void(0);") info2@valvetechgroup.com
+                                a.site-footer__contact(href="javascript:void(0);") +7 (342) 248-20-63
+
+                        .site-footer__right
+                            .site-footer__column
+                                .site-footer__title Каталог
+                                ul.site-footer__list
+                                    li
+                                        a.site-footer__link(href="javascript:void(0);") Пластинчатые теплообменники
+                                    li
+                                        a.site-footer__link(href="javascript:void(0);") Паяные теплообменники
+                                    li
+                                        a.site-footer__link(href="javascript:void(0);") Насосные станции
+                                    li
+                                        a.site-footer__link(href="javascript:void(0);") Блочные тепловые пункты
+                                    li
+                                        a.site-footer__link(href="javascript:void(0);") Пластины и прокладки (ЗИП)
+
+                            .site-footer__column
+                                .site-footer__title Услуги
+                                ul.site-footer__list
+                                    li 
+                                        a.site-footer__link(href="javascript:void(0);") Подбор аналогов
+                                    li 
+                                        a.site-footer__link(href="javascript:void(0);") Поставка запчастей
+                                    li 
+                                        a.site-footer__link(href="javascript:void(0);") Инжиниринг и проектирование
+
+                            .site-footer__column
+                                .site-footer__title Клиентам
+                                ul.site-footer__list
+                                    li 
+                                        a.site-footer__link(href="javascript:void(0);") О компании
+                                    li 
+                                        a.site-footer__link(href="javascript:void(0);") Условия оплаты
+                                    li 
+                                        a.site-footer__link(href="javascript:void(0);") Доставка и логистика
+                                    li 
+                                        a.site-footer__link(href="javascript:void(0);") Гарантия и возврат
+                                    li 
+                                        a.site-footer__link(href="javascript:void(0);") Документация
+
+                    .site-footer__row
+                        .site-footer__left
+                            .site-footer__text © 2026 Все права защищены
+                        .site-footer__right
+                            .site-footer__column
+                                a.site-footer__text(href="javascript:void(0);") Пользовательское соглашение
+                            .site-footer__column
+                                .site-footer__text
+                                    | Сделано в 
+                                    a(href="https://itspace.group/" target="_blank") ITS

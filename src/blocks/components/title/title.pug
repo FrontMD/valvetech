@@ -1,0 +1,47 @@
+-
+    const defaultTitleProps = {
+        classes: '',
+        tag: '',
+        size: '80',
+        text: 'Заголовок',
+        cMode: '', //light - на темном фоне
+        upper: false
+    }
+
+mixin title(props = defaultTitleProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTitleProps.classes,
+            tag: props.tag ? props.tag : defaultTitleProps.tag,
+            size: props.size ? props.size : defaultTitleProps.size,
+            text: props.text ? props.text : defaultTitleProps.text,
+            cMode: props.cMode ? props.cMode : defaultTitleProps.cMode,
+            upper: props.upper ? props.upper : defaultTitleProps.upper,
+        }
+
+        let sizeClass = ` title--${checkProps.size}`
+        let colorClass = checkProps.cMode.length > 0 ? ` title--${checkProps.cMode}` : ''
+        let upperClass = checkProps.upper === true ? ' title--upper' : ''
+
+    case checkProps.tag
+        when 'h1'
+            .title(class=checkProps.classes + sizeClass + colorClass + upperClass)&attributes(attributes)
+                h1!= checkProps.text
+        when 'h2'
+            .title(class=checkProps.classes + sizeClass + colorClass + upperClass)&attributes(attributes)
+                h2!= checkProps.text
+        when 'h3'
+            .title(class=checkProps.classes + sizeClass + colorClass + upperClass)&attributes(attributes)
+                h3!= checkProps.text
+        when 'h4'
+            .title(class=checkProps.classes + sizeClass + colorClass + upperClass)&attributes(attributes)
+                h4!= checkProps.text
+        when 'h5'
+            .title(class=checkProps.classes + sizeClass + colorClass + upperClass)&attributes(attributes)
+                h5!= checkProps.text
+        when 'h6'
+            .title(class=checkProps.classes + sizeClass + colorClass + upperClass)&attributes(attributes)
+                h6!= checkProps.text
+        default	
+            .title(class=checkProps.classes + sizeClass + colorClass + upperClass)&attributes(attributes)
+                != checkProps.text

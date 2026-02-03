@@ -1,0 +1,58 @@
+-
+    const defaultFormProps = {
+        classes: '',
+        title: '',
+        text: '',
+        btnText: '',
+        btnCMode: 'accent',
+        innerThanks: true,
+        privacyText: 'Нажимая кнопку “Отправить” вы соглашаетесь с политикой <a href="javascript:void(0);" target="_blank">конфиденциальности</a>',
+        successTitle: 'Ваша заявка отправлена!',
+        successText: 'Менеджер свяжется с вами в ближайшее время',
+    }
+
+mixin form(props = defaultFormProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultFormProps.classes,
+            title: props.title ? props.title : defaultFormProps.title,
+            text: props.text ? props.text : defaultFormProps.text,
+            btnText: props.btnText ? props.btnText : defaultFormProps.btnText,
+            btnCMode: props.btnCMode ? props.btnCMode : defaultFormProps.btnCMode,
+            innerThanks: props.innerThanks ? props.innerThanks : defaultFormProps.innerThanks,
+            privacyText: props.privacyText ? props.privacyText : defaultFormProps.privacyText,
+            successTitle: props.successTitle ? props.successTitle : defaultFormProps.successTitle,
+            successText: props.successText ? props.successText : defaultFormProps.successText,
+        }
+
+        let design2Class = checkProps.design2 === true ? ' form--design2' : '';
+
+    form.form(action="#" class=checkProps.classes + design2Class data-validate novalidate)&attributes(attributes)
+        .form__content(data-js='formContent')
+            - if(checkProps.title.length > 0)
+                .form__title!= checkProps.title
+            - if(checkProps.text.length > 0)
+                .form__text!= checkProps.text
+            .form__fields(data-js="formFields")
+                block
+            .form__privacy.form-privacy(data-js="formField")
+                .form-privacy__flex
+                    label
+                        input(type="checkbox" data-v-name='checkbox' required)
+                        span.form-privacy__fake
+                    span.form-privacy__text!= checkProps.privacyText
+                span.field__error(data-js='fieldError')
+            +btn({
+                classes: 'form__submit',
+                type: 'button',
+                buttonType: 'submit',
+                name: checkProps.btnText,
+                cMode: checkProps.btnCMode,
+            })
+
+        - if(checkProps.innerThanks === true)
+            .form__thanks(data-js='form-thanks')
+                .form__title!= checkProps.successTitle
+                .form__image-success
+                    img(src="img/success.png")
+                .form__text!= checkProps.successText

@@ -1,0 +1,59 @@
+-
+    const defaultMainMenuProps = {
+        classes: ''
+    }
+
+mixin main-menu(props = defaultMainMenuProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultMainMenuProps.classes,
+        }
+
+    .main-menu(class= checkProps.classes)&attributes(attributes)
+        .main-menu__items
+            .main-menu__item(data-js="mainMenuItem")
+                a.main-menu__link(href="javascript:void(0);") Каталог
+                .main-menu__chevron
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+                .submenu.main-menu__submenu
+                    .submenu__item
+                        a.main-menu__link(href="javascript:void(0);") Виды продукции
+                    .submenu__item
+                        a.main-menu__link(href="javascript:void(0);") Декоративные элементы
+                    .submenu__item
+                        a.main-menu__link(href="javascript:void(0);") Фрезеровки
+                    .submenu__item
+                        a.main-menu__link(href="javascript:void(0);") Типы покрытия
+                    .submenu__item
+                        a.main-menu__link(href="javascript:void(0);") Торцы фасадов
+                    .submenu__item
+                        a.main-menu__link(href="javascript:void(0);") Патина
+
+            .main-menu__item(data-js="mainMenuItem")
+                a.main-menu__link(href="javascript:void(0);") Готовые решения
+                .main-menu__chevron
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+                .submenu.main-menu__submenu
+                    .submenu__item
+                        a.main-menu__link(href="javascript:void(0);") Эворон
+                    .submenu__item
+                        a.main-menu__link(href="javascript:void(0);") Гокли
+                    .submenu__item
+                        a.main-menu__link(href="javascript:void(0);") Эльтон
+
+            .main-menu__item(data-js="mainMenuItem")
+                a.main-menu__link(href="javascript:void(0);") Галерея фасадов
+
+            .main-menu__item(data-js="mainMenuItem")
+                a.main-menu__link(href="javascript:void(0);") Акции
+
+            .main-menu__item(data-js="mainMenuItem")
+                a.main-menu__link(href="javascript:void(0);") Новости
+
+            .main-menu__item(data-js="mainMenuItem")
+                a.main-menu__link(href="javascript:void(0);") Партнерам
+
+            .main-menu__item(data-js="mainMenuItem")
+                a.main-menu__link(href="javascript:void(0);") Контакты

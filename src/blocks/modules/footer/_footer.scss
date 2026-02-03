@@ -1,0 +1,125 @@
+.site-footer {
+    position: relative;
+    color: $c-white;
+    background-color: $c-black;
+
+    &__container {
+        padding: 50px 0;
+    }
+
+    &__form {
+        max-width: 700px;
+    }
+
+    &__bottom {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 60px;
+        margin-top: 50px;
+        padding-top: 60px;
+        border-top: 1px solid $c-border;
+
+        @include max(mobile) {}
+
+        @include max(mobile) {}
+    }
+
+    &__row {
+        display: flex;
+        gap: 40px;
+        padding-right: 7%;
+    }
+
+    &__left {
+        flex: 0 1 24%;
+        margin-right: auto;
+    }
+
+    &__address {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 150%;
+        color: $c-border;
+    }
+
+    &__contacts {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    &__contact {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+    }
+
+    a.site-footer__contact,
+    &__contact {
+        transition: all $tr;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__right {
+        flex: 0 0 64.4%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__column {
+        flex: 0 1 auto;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $c-border;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        transition: all $tr;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 150%;
+    }
+
+    a.site-footer__text,
+    &__text a {
+        transition: all $tr;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+}

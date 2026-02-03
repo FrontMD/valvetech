@@ -1,0 +1,65 @@
+.slider-controls {
+    display: none;
+    align-items: center;
+    gap: 10px;
+
+    @include max(xs) {
+        gap: 6px;
+    }
+
+    &.active {
+        display: flex;
+    }
+}
+
+.slider-control {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $c-white;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all $tr;
+
+    &--next {
+        transform: rotate(-180deg);
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0.2;
+        pointer-events: none;
+    }
+
+    svg {
+        width: 56.57px;
+        height: 56.57px;
+
+        @include max(laptop) {
+            width: 32px;
+            height: 32px;
+        }
+
+        @include max(xs) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__arrow,
+    &__rhombus {
+        transition: all $tr;
+    }
+
+    /*&:hover path.slider-control__arrow {
+        d: path("M 40.7834 28.6676 L 16.9014 28.6676");
+    }
+
+    &:hover path.slider-control__rhombus {
+        d: path("M 57.068599 28.7843 L 28.7843 57.0686 L 0.500001 28.7843 L 28.7843 0.500029 L 57.068599 28.7843");
+    }*/
+}

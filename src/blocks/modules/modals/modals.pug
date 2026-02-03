@@ -1,0 +1,86 @@
+noindex
+    div
+        //- код модалок сюда
+
+        //- обратный звонок
+        +modal({modalId:"callbackModal"})(data-js="callbackModal")
+            +form({
+                classes: 'form--modal',
+                title: 'Оставить заявку',
+                text: '',
+                btnText: 'Отправить заявку',
+                btnCMode: 'accent',
+                privacyText: 'Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных',
+                design2: true,
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'Имя',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                        hasError: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: 'Телефон',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                        hasError: true
+                    })
+
+        //- обратный звонок
+        +modal({modalId:"faqModal"})(data-js="faqModal")
+            +form({
+                classes: 'form--modal',
+                title: 'Задать вопрос',
+                text: '',
+                btnText: 'Отправить вопрос',
+                btnCMode: 'accent',
+                privacyText: 'Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных',
+                design2: true,
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'Имя',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                        hasError: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: 'Телефон',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                        hasError: true
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        type: '',
+                        title: '',
+                        placeholder: 'Вопрос',
+                    })
+
+        //- 3D модель 
+        +modal({modalId:"piSliderModel", classes: 'modal--3d'})(data-js="piSliderModel")
+            <div id="d3-model-wrap" class="d3-model-wrap" data-mtl="public/3d-models/model-1/r32.mtl" data-obj="public/3d-models/model-1/r32.obj">
+                <canvas id="model_3d"></canvas>
+            </div>

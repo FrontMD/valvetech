@@ -1,0 +1,24 @@
+-
+    const defaultSliderControlsProps = {
+        classes: ''
+    }
+
+mixin slider-controls(props= defaultSliderControlsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSliderControlsProps.classes
+        }
+
+    .slider-controls(class= checkProps.classes data-js="sliderControls")&attributes(attributes)
+        button.slider-control.slider-control--prev(type="button" data-js='sliderPrev')
+            <svg data-js="sliderControlsSvg" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="slider-control__rhombus" d="M42.9264 42.9264L28.7843 57.0686L0.500001 28.7843L28.7843 0.500029L42.9264 14.6422" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.7326 38.7843L16.6159 28.6676L26.7326 18.551" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="slider-control__arrow" d="M56.7834 28.6676L16.9014 28.6676" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        button.slider-control.slider-control--next(type="button" data-js='sliderNext')
+            <svg data-js="sliderControlsSvg" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="slider-control__rhombus" d="M42.9264 42.9264L28.7843 57.0686L0.500001 28.7843L28.7843 0.500029L42.9264 14.6422" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.7326 38.7843L16.6159 28.6676L26.7326 18.551" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path class="slider-control__arrow" d="M56.7834 28.6676L16.9014 28.6676" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
