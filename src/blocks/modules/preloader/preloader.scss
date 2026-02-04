@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     background-color: $c-black;
+    transition: opacity 1s linear;
 
     &__bg {
         position: absolute;
@@ -18,7 +19,7 @@
         height: 100%;
         overflow: hidden;
         opacity: 0;
-        transition: opacity 1s linear;
+        transition: opacity 1.5s linear;
 
         &.animated {
             opacity: 1;
@@ -45,24 +46,30 @@
         font-weight: 700;
         font-size: 90px;
         line-height: 110%;
-        opacity: 0;
+        opacity: 0.4;
         margin-bottom: 18.52vh;
+        color: $c-text;
+        transition: opacity 1.5s linear;
 
         &.animated {
-            animation: preloaderText 2 linear 0 1 normal forwards;
+            opacity: 1;
+        }
+
+        span {
+            background: linear-gradient(90deg, $c-white 0%, $c-white 50%, $c-text 50%, $c-text 100%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            background-size: 200% 100%;
+            background-position: 100% 0;
+            width: fit-content;
+            transition: background-position 1s linear;
+
+            &.animated {
+                background-position: 0 0;
+            }
         }
     }
 
-}
-
-@keyframes preloaderText {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {}
 }
