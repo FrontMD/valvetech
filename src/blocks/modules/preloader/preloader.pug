@@ -9,38 +9,9 @@ mixin preloader(props = defaultPreloaderProps)
             classes: props.classes ? props.classes : defaultPreloaderProps.classes,
         }
 
-    .preloader(class= checkProps.classes data-js="preloader" style="mask: url(#diamonds);")&attributes(attributes)
-        .preloader__bg.preloader__bg--start(data-js="preloaderBg")
-            img(src="img/preloader/preloader_bg.webp" alt="")
-            .preloader__line.preloader__line--1(data-js="preloaderLine")
-                .preloader__innerline
-            .preloader__line.preloader__line--2(data-js="preloaderLine")
-                .preloader__innerline
-            .preloader__line.preloader__line--3(data-js="preloaderLine")
-                .preloader__innerline
-            .preloader__line.preloader__line--4(data-js="preloaderLine")
-                .preloader__innerline
-            .preloader__line.preloader__line--5(data-js="preloaderLine")
-                .preloader__innerline
-            .preloader__line.preloader__line--6(data-js="preloaderLine")
-                .preloader__innerline
-            .preloader__line.preloader__line--7(data-js="preloaderLine")
-                .preloader__innerline
-            .preloader__line.preloader__line--8(data-js="preloaderLine")
-                .preloader__innerline
-            .preloader__line.preloader__line--9(data-js="preloaderLine")
-                .preloader__innerline
-            .preloader__line.preloader__line--10(data-js="preloaderLine")
-                .preloader__innerline
+    .preloader(class= checkProps.classes data-js="preloader")&attributes(attributes)
+        .preloader__bg(data-js="preloaderBg")
+            img(src="img/preloader_bg.webp" alt="")
         .vt-container.preloader__content
-            .preloader__logo.preloader__logo--start(data-js="preloaderLogo")
-                img(src="img/logo.svg" alt="")
-            .height-anim(data-js="heightAnim")
-                .preloader__logotext(data-js="heightAnimContent")
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#logo_text`)
-            .height-anim(data-js="heightAnim")
-                .preloader__title(data-js="heightAnimContent") Фасады для Вашей мебели
-            .height-anim(data-js="heightAnim")
-                .preloader__tag(data-js="heightAnimContent") Since 2012
+            .preloader__text(data-js="preloaderText") Точность <br>Скорость <br>Гарантии
 

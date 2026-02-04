@@ -8,7 +8,7 @@
     min-height: 60px;
     padding: 15px 20px;
     background-color: $c-accent;
-    border-radius: 5px;
+    border-radius: $br-5;
     font-family: $ff-main;
     color: $c-white;
     cursor: pointer;
@@ -62,6 +62,62 @@
 
     &--full {
         width: 100%;
+    }
+
+    &--ma {
+        min-width: auto;
+
+        @include max(large) {
+            padding: 10px;
+            gap: 10px;
+            min-height: 50px;
+        }
+
+        @include max(laptop) {
+            width: 40px;
+            height: 40px;
+            min-height: auto;
+            border-radius: 100%;
+        }
+
+        @include max(mobile) {
+            width: 32px;
+            height: 32px;
+        }
+
+        svg {
+            width: 18px;
+            height: 18px;
+
+            @include max(large) {
+                width: 14px;
+                height: 14px;
+            }
+
+            @include max(laptop) {
+                width: 24px;
+                height: 24px;
+            }
+
+            @include max(mobile) {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+
+    &--ma &__text {
+        @include max(large) {
+            font-size: 14px;
+        }
+    }
+
+    &--ma &__text,
+    &--ma &__separator {
+
+        @include max(laptop) {
+            display: none;
+        }
     }
 
     /*&--transparent {

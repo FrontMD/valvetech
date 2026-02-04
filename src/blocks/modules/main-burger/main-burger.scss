@@ -24,16 +24,18 @@
     }
 
     &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+        position: relative;
         width: 100%;
-        max-width: 400px;
+        max-width: 320px;
         height: 100%;
-        background-color: $c-black;
+        background-color: $c-white;
         transform: translateX(101%);
         transition: all 0.5s linear;
         margin-left: auto;
+
+        @include max(xs) {
+            max-width: 100%;
+        }
 
     }
 
@@ -41,24 +43,8 @@
         transform: translateX(0);
     }
 
-    &__header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        border-bottom: 1px solid $c-border;
-        flex: 0 0 auto;
-    }
-
-    .site-header__location {
-        @include max(tablet) {
-            display: block;
-        }
-    }
-
-
     &__body {
-        padding: 10px 10px 24px;
+        padding: 30px 10px 24px;
         flex: 1 1 auto;
         overflow-y: auto;
     }
@@ -69,7 +55,6 @@
         &__search {
             display: none;
         }
-
 
     }
 
@@ -84,8 +69,11 @@
     }
 
     &__close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
         cursor: pointer;
-        color: $c-white;
+        color: $c-title;
         transition: all $tr;
         width: fit-content;
 

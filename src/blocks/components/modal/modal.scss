@@ -35,7 +35,7 @@
         min-width: auto;
         cursor: pointer;
         z-index: 20;
-        color: $c-white;
+        color: $c-title;
         transition: color $tr;
 
         @include max(tablet) {
@@ -57,12 +57,13 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        background: $c-cards-bg;
+        background: $c-white;
         width: 100%;
         max-width: 700px;
         z-index: 9999;
         padding: 30px 50px 40px;
         max-height: 95vh;
+        border-radius: $br-5;
 
         @include max(tablet) {
             padding: 20px;

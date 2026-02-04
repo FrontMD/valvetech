@@ -3,33 +3,26 @@ mixin header
         .section
             .vt-container
                 .site-header__container
-                    .site-header__side.site-header__side--center
+                    .site-header__side.site-header__side--bg
                         a.site-header__logo(href="/")
                             img(src="img/logo_full.svg" alt="")
+                        .site-header__separator
                         +main-menu({
                             classes: 'site-header__menu'
                         })
 
                     .site-header__side
                         .site-header__contacts
+                            +copy-text
+                                a.site-header__contact(href="mailto:info2@valvetechgroup.com") info2@valvetechgroup.com
                             a.site-header__contact(href="tel:+78002220026") +7 (800) 222-00-26
-                            +btn({
-                                type: 'button',
-                                name: 'Заказать звонок',
-                                cMode: 'transparent',
-                                icon: 'arrow_top_right'
+                        +btn({
+                            classes: 'vt-btn--ma',
+                            type: 'button',
+                            name: 'Заказать звонок',
+                            icon: 'handset'
 
-                            })(data-modal="#callbackModal")
-                        .site-header__controls
-                            a.site-header__control(href="javascript:void(0);")
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#favorite`)
-                            a.site-header__control(href="javascript:void(0);")
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#basket`)
-                            a.site-header__control(href="javascript:void(0);")
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#lk`)
+                        })(data-modal="#callbackModal")
 
                     .site-header__burger(data-js='mainBurgerOpen')
                         svg 

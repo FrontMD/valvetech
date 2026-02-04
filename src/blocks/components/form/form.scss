@@ -133,10 +133,10 @@
             font-weight: 400;
             font-size: 15px;
             line-height: 150%;
-            color: $c-text-grey;
+            color: $c-text;
 
             a {
-                color: $c-white;
+                color: $c-text;
                 text-decoration: underline;
                 transition: all $tr;
             }
@@ -194,9 +194,13 @@
     &--light &__title,
     &--light &__text,
     &--light .field .field__input,
-    &--light .field .field__textarea {
+    &--light .field .field__textarea,
+    &--light .form-privacy .form-privacy__text,
+    &--light .form-privacy .form-privacy__text a {
         color: $c-white;
     }
+
+
 }
 
 .form {

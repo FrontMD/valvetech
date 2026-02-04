@@ -8,6 +8,10 @@
         align-items: center;
         gap: 30px;
         width: fit-content;
+
+        @include max(large) {
+            gap: 16px;
+        }
     }
 
     &__item {
@@ -20,8 +24,7 @@
         line-height: 100%;
 
         @include max(large) {
-            padding: 10px;
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 
@@ -60,6 +63,7 @@
         opacity: 0;
         transition: all $tr;
         z-index: 10;
+        box-shadow: 0 4px 8px rgba(5, 40, 182, 0.2);
 
     }
 
@@ -122,51 +126,23 @@
         z-index: 1;
         padding: 0px;
         background-color: transparent;
+        box-shadow: none;
+        border-radius: 0;
 
     }
 }
 
 .submenu {
-    min-width: 240px;
+    min-width: 200px;
+    padding: 10px 0;
     background-color: $c-white;
-    padding: 15px 0;
+    border-radius: $br-5;
 
     &__item {
         position: relative;
-        padding: 15px 20px;
+        padding: 8px 12px;
         display: flex;
         align-items: center;
         gap: 10px;
-
-        @include max(laptop) {
-            padding: 8px 10px;
-        }
-    }
-
-    &__subtitle {
-        position: absolute;
-        top: -0.58em;
-        left: 20px;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 190%;
-        letter-spacing: 0;
-        color: $c-text-grey;
-
-        @include max(laptop) {
-            left: 0;
-        }
-    }
-
-    &__sticker {
-        width: fit-content;
-        background-color: $c-accent;
-        padding: 5px 10px;
-        color: $c-white;
-        font-weight: 400;
-        font-size: 11px;
-        line-height: 100%;
-        letter-spacing: 0;
-
     }
 }

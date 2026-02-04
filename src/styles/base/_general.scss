@@ -169,7 +169,7 @@ body.no-scroll {
 	padding-left: 50px;
 	padding-right: 50px;
 
-	/*@include max(large) {
+	@include max(large) {
 		padding-left: 30px;
 		padding-right: 30px;
 	}
@@ -182,7 +182,7 @@ body.no-scroll {
 	@include max(mobile) {
 		padding-left: 10px;
 		padding-right: 10px;
-	}*/
+	}
 
 	&__bg {
 		position: absolute;

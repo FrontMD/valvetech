@@ -1,49 +1,9 @@
 .main-burger(data-js='mainBurger')
     .main-burger__overlay(data-js="mainBurgerClose")
     .main-burger__content
-        .main-burger__header
-            .site-header__location
-                form(action="#").site-header__region
-                    +field({
-                        tag: 'select',
-                        placeholder: 'Выберите город',
-                        selectOptions: [
-                            {
-                                value: 'Воронеж',
-                                isActive: false
-                            },
-                            {
-                                value: 'Краснодар',
-                                isActive: false
-                            },
-                            {
-                                value: 'Пятигорск',
-                                isActive: true
-                            },
-                            {
-                                value: 'Санкт-Петербург',
-                                isActive: false
-                            },
-                            {
-                                value: 'Севастополь',
-                                isActive: false
-                            },
-                            {
-                                value: 'Сочи',
-                                isActive: false
-                            }
-                        ],
-                        selectNoForm: true,
-                    })
-
-                .site-header__address
-                    svg
-                        use(xlink:href=`img/sprites/sprite.svg#location`)
-                    span пос. Иноземцево, ул. Промышленная, д.11
-
-            .main-burger__close(data-js="mainBurgerClose")
-                svg
-                    use(xlink:href=`img/sprites/sprite.svg#close`)
+        .main-burger__close(data-js="mainBurgerClose")
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#close`)
 
         .main-burger__body
             +main-menu({
@@ -51,11 +11,6 @@
             })
 
             .site-header__contacts
+                +copy-text
+                    a.site-header__contact(href="mailto:info2@valvetechgroup.com") info2@valvetechgroup.com
                 a.site-header__contact(href="tel:+78002220026") +7 (800) 222-00-26
-
-                +btn({
-                    type: 'button',
-                    name: 'Заказать звонок',
-                    cMode: 'transparent',
-                    icon: 'arrow_top_right'
-                })(data-modal="#callbackModal")

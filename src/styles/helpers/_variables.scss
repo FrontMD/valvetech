@@ -1,5 +1,6 @@
 // шрифты
 $ff-main: 'Raleway', sans-serif;
+$ff-preloader: 'Raleway', sans-serif;
 
 // media
 $media-list: (
@@ -36,6 +37,9 @@ $c-favorite: #841315;
 $c-bullet-active: #614330;
 $c-cards-bg: #1B1B1B;
 $c-bg-input: transparent;
+
+// скругления
+$br-5: 5px;
 
 // переходы
 $tr: .3s linear;

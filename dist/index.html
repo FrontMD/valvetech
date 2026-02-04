@@ -144,7 +144,8 @@
           <div class="section">
             <div class="vt-container">
               <div class="site-header__container">
-                <div class="site-header__side site-header__side--center"><a class="site-header__logo" href="/"><img src="img/logo_full.svg" alt=""></a>
+                <div class="site-header__side site-header__side--bg"><a class="site-header__logo" href="/"><img src="img/logo_full.svg" alt=""></a>
+                  <div class="site-header__separator"></div>
                       <div class="main-menu site-header__menu">
                         <div class="main-menu__items">
                           <div class="main-menu__item" data-js="mainMenuItem"><a class="main-menu__link" href="javascript:void(0);">Подбор оборудования</a>
@@ -180,23 +181,23 @@
                       </div>
                 </div>
                 <div class="site-header__side">
-                  <div class="site-header__contacts"><a class="site-header__contact" href="tel:+78002220026">+7 (800) 222-00-26</a>
-                        <button class="vt-btn  vt-btn--transparent" type="button" data-modal="#callbackModal"><span class="vt-btn__text">Заказать звонок</span><span class="vt-btn__separator"></span>
-                          <svg> 
-                            <use xlink:href="img/sprites/sprite.svg#arrow_top_right"></use>
-                          </svg>
-                        </button>
+                  <div class="site-header__contacts">
+                        <div class="copy-text" data-js="copyText">
+                          <div class="copy-text__content" data-js="copyTextContent"><a class="site-header__contact" href="mailto:info2@valvetechgroup.com">info2@valvetechgroup.com</a>
+                          </div>
+                          <div class="copy-text__notice" data-js="copyTextNotice">Скопировано</div>
+                          <div class="copy-text__btn" data-js="copyTextBtn">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#copy"></use>
+                            </svg>
+                          </div>
+                        </div><a class="site-header__contact" href="tel:+78002220026">+7 (800) 222-00-26</a>
                   </div>
-                  <div class="site-header__controls"><a class="site-header__control" href="javascript:void(0);">
-                      <svg>
-                        <use xlink:href="img/sprites/sprite.svg#favorite"></use>
-                      </svg></a><a class="site-header__control" href="javascript:void(0);">
-                      <svg>
-                        <use xlink:href="img/sprites/sprite.svg#basket"></use>
-                      </svg></a><a class="site-header__control" href="javascript:void(0);">
-                      <svg>
-                        <use xlink:href="img/sprites/sprite.svg#lk"></use>
-                      </svg></a></div>
+                      <button class="vt-btn vt-btn--ma" type="button" data-modal="#callbackModal"><span class="vt-btn__text">Заказать звонок</span><span class="vt-btn__separator"></span>
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#handset"></use>
+                        </svg>
+                      </button>
                 </div>
                 <div class="site-header__burger" data-js="mainBurgerOpen">
                   <svg> 
@@ -210,7 +211,7 @@
     <main class="site-main">
       <style type="text/css">
         .pages-list {
-            padding: 200px 0 0px;
+            padding-top: 200px;
         }
         
         .pages-list__links {
@@ -308,7 +309,7 @@
         
         @media (max-width: 1340px) {
             .pages-list {
-                padding: 140px 0 50px;
+                padding-top: 140px;
             }
         
             .pages-list__links {
@@ -323,7 +324,7 @@
         
         @media (max-width: 1023px) {
             .pages-list {
-                padding: 85px 0 50px;
+                padding-top: 85px;
             }
         
             .pages-list__links {
@@ -344,7 +345,7 @@
                 <div class="title pages-list__title title--80">
                   <h1>Страницы</h1>
                 </div>
-            <div class="pages-list__links"><a class="pages-list__link pages-list__link--check" href="home.html" target="_blank">Главная</a></div>
+            <div class="pages-list__links"><a class="pages-list__link pages-list__link--work" href="home.html" target="_blank">Главная</a></div>
           </div>
         </section>
       </div>
@@ -392,13 +393,13 @@
                     </form>
               </div>
               <div class="site-footer__bottom">
-                <div class="site-footer__row">
+                <div class="site-footer__row site-footer__row--top">
                   <div class="site-footer__left">
                         <div class="title  title--30 title--light title--upper">ООО «Вальв Тек Груп»
                         </div>
                     <div class="site-footer__address">Пермь, Чернышевского 28 оф.100</div>
                     <div class="site-footer__contacts">
-                          <div class="copy-text" data-js="copyText">
+                          <div class="copy-text copy-text--light" data-js="copyText">
                             <div class="copy-text__content" data-js="copyTextContent"><a class="site-footer__contact" href="mailto:info2@valvetechgroup.com">info2@valvetechgroup.com</a>
                             </div>
                             <div class="copy-text__notice" data-js="copyTextNotice">Скопировано</div>
@@ -456,84 +457,19 @@
             </div>
           </div>
         </footer>
-        <div class="preloader" data-js="preloader" style="mask: url(#diamonds);">
-          <div class="preloader__bg preloader__bg--start" data-js="preloaderBg"><img src="img/preloader/preloader_bg.webp" alt="">
-            <div class="preloader__line preloader__line--1" data-js="preloaderLine">
-              <div class="preloader__innerline"></div>
-            </div>
-            <div class="preloader__line preloader__line--2" data-js="preloaderLine">
-              <div class="preloader__innerline"></div>
-            </div>
-            <div class="preloader__line preloader__line--3" data-js="preloaderLine">
-              <div class="preloader__innerline"></div>
-            </div>
-            <div class="preloader__line preloader__line--4" data-js="preloaderLine">
-              <div class="preloader__innerline"></div>
-            </div>
-            <div class="preloader__line preloader__line--5" data-js="preloaderLine">
-              <div class="preloader__innerline"></div>
-            </div>
-            <div class="preloader__line preloader__line--6" data-js="preloaderLine">
-              <div class="preloader__innerline"></div>
-            </div>
-            <div class="preloader__line preloader__line--7" data-js="preloaderLine">
-              <div class="preloader__innerline"></div>
-            </div>
-            <div class="preloader__line preloader__line--8" data-js="preloaderLine">
-              <div class="preloader__innerline"></div>
-            </div>
-            <div class="preloader__line preloader__line--9" data-js="preloaderLine">
-              <div class="preloader__innerline"></div>
-            </div>
-            <div class="preloader__line preloader__line--10" data-js="preloaderLine">
-              <div class="preloader__innerline"></div>
-            </div>
-          </div>
+        <div class="preloader" data-js="preloader">
+          <div class="preloader__bg" data-js="preloaderBg"><img src="img/preloader_bg.webp" alt=""></div>
           <div class="vt-container preloader__content">
-            <div class="preloader__logo preloader__logo--start" data-js="preloaderLogo"><img src="img/logo.svg" alt=""></div>
-            <div class="height-anim" data-js="heightAnim">
-              <div class="preloader__logotext" data-js="heightAnimContent">
-                <svg>
-                  <use xlink:href="img/sprites/sprite.svg#logo_text"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="height-anim" data-js="heightAnim">
-              <div class="preloader__title" data-js="heightAnimContent">Фасады для Вашей мебели</div>
-            </div>
-            <div class="height-anim" data-js="heightAnim">
-              <div class="preloader__tag" data-js="heightAnimContent">Since 2012</div>
-            </div>
+            <div class="preloader__text" data-js="preloaderText">Точность <br>Скорость <br>Гарантии</div>
           </div>
         </div>
     <div class="main-burger" data-js="mainBurger">
       <div class="main-burger__overlay" data-js="mainBurgerClose"></div>
       <div class="main-burger__content">
-        <div class="main-burger__header">
-          <div class="site-header__location">
-            <form class="site-header__region" action="#">
-                  <label class="field   field--noFormSelect  " data-js="formField">
-                    <select class="field__select" data-placeholder="Выберите город" data-js="formSelect">
-                      <option value="Воронеж">Воронеж</option>
-                      <option value="Краснодар">Краснодар</option>
-                      <option value="Пятигорск" selected>Пятигорск</option>
-                      <option value="Санкт-Петербург">Санкт-Петербург</option>
-                      <option value="Севастополь">Севастополь</option>
-                      <option value="Сочи">Сочи</option>
-                    </select>
-                  </label>
-            </form>
-            <div class="site-header__address">
-              <svg>
-                <use xlink:href="img/sprites/sprite.svg#location"></use>
-              </svg><span>пос. Иноземцево, ул. Промышленная, д.11</span>
-            </div>
-          </div>
-          <div class="main-burger__close" data-js="mainBurgerClose">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#close"></use>
-            </svg>
-          </div>
+        <div class="main-burger__close" data-js="mainBurgerClose">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#close"></use>
+          </svg>
         </div>
         <div class="main-burger__body">
               <div class="main-menu main-menu--burger">
@@ -569,12 +505,17 @@
                   <div class="main-menu__item" data-js="mainMenuItem"><a class="main-menu__link" href="javascript:void(0);">О компании</a></div>
                 </div>
               </div>
-          <div class="site-header__contacts"><a class="site-header__contact" href="tel:+78002220026">+7 (800) 222-00-26</a>
-                <button class="vt-btn  vt-btn--transparent" type="button" data-modal="#callbackModal"><span class="vt-btn__text">Заказать звонок</span><span class="vt-btn__separator"></span>
-                  <svg> 
-                    <use xlink:href="img/sprites/sprite.svg#arrow_top_right"></use>
-                  </svg>
-                </button>
+          <div class="site-header__contacts">
+                <div class="copy-text" data-js="copyText">
+                  <div class="copy-text__content" data-js="copyTextContent"><a class="site-header__contact" href="mailto:info2@valvetechgroup.com">info2@valvetechgroup.com</a>
+                  </div>
+                  <div class="copy-text__notice" data-js="copyTextNotice">Скопировано</div>
+                  <div class="copy-text__btn" data-js="copyTextBtn">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#copy"></use>
+                    </svg>
+                  </div>
+                </div><a class="site-header__contact" href="tel:+78002220026">+7 (800) 222-00-26</a>
           </div>
         </div>
       </div>
