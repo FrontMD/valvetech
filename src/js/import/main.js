@@ -28,9 +28,9 @@ function getScrollbarWidth() {
     return scrollWidth
 }
 
-/*function delay(ms) {
+function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-}*/
+}
 
 const jsTemplatePath = (typeof SITE_TEMPLATE_PATH !== 'undefined' && SITE_TEMPLATE_PATH ? SITE_TEMPLATE_PATH + '/' : 'kjhkjhlkjhlkjhkljhkjh');
 

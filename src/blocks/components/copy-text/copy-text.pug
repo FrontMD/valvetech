@@ -1,0 +1,19 @@
+-
+    const defaultCopyTextProps = {
+        classes: '',
+    }
+
+mixin copy-text(props = defaultCopyTextProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCopyTextProps.classes,
+
+        }
+
+    .copy-text(class=checkProps.classes data-js="copyText")&attributes(attributes)
+        .copy-text__content(data-js='copyTextContent')
+            block
+        .copy-text__notice(data-js='copyTextNotice') Скопировано
+        .copy-text__btn(data-js='copyTextBtn')
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#copy`)

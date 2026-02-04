@@ -25,23 +25,25 @@ mixin btn(props = defaultBtnProps)
             iconLeft: props.iconLeft ? props.iconLeft : defaultBtnProps.iconLeft,
         }
 
-        let colorClass = checkProps.cMode ? ` d-btn--${checkProps.cMode}` : ''
-        let sizeClass = checkProps.sMode ? ` d-btn--${checkProps.sMode}` : ''
-        let iconPosClass = checkProps.iconLeft === true ? ` d-btn--reverse` : ''
+        let colorClass = checkProps.cMode ? ` vt-btn--${checkProps.cMode}` : ''
+        let sizeClass = checkProps.sMode ? ` vt-btn--${checkProps.sMode}` : ''
+        let iconPosClass = checkProps.iconLeft === true ? ` vt-btn--reverse` : ''
 
     - if(checkProps.type == 'link')
-        a.d-btn(class=checkProps.classes + colorClass + sizeClass + iconPosClass href= checkProps.link)&attributes(attributes)
+        a.vt-btn(class=checkProps.classes + colorClass + sizeClass + iconPosClass href= checkProps.link)&attributes(attributes)
             if(checkProps.sMode !== 'icon')
-                span!= checkProps.name
+                span.vt-btn__text!= checkProps.name
             if(checkProps.icon.length > 0)
+                span.vt-btn__separator
                 svg 
                     use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
 
     - else if(checkProps.type == 'button')
-        button.d-btn(class=checkProps.classes + colorClass + sizeClass + iconPosClass type= checkProps.buttonType)&attributes(attributes)
+        button.vt-btn(class=checkProps.classes + colorClass + sizeClass + iconPosClass type= checkProps.buttonType)&attributes(attributes)
             if(checkProps.sMode !== 'icon')
-                span!= checkProps.name
+                span.vt-btn__text!= checkProps.name
             if(checkProps.icon.length > 0)
+                span.vt-btn__separator
                 svg 
                     use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
 

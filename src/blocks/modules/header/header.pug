@@ -1,176 +1,36 @@
-mixin header(isFull=false)
+mixin header
+    header.site-header(data-js="siteHeader")
+        .section
+            .vt-container
+                .site-header__container
+                    .site-header__side.site-header__side--center
+                        a.site-header__logo(href="/")
+                            img(src="img/logo_full.svg" alt="")
+                        +main-menu({
+                            classes: 'site-header__menu'
+                        })
 
-    - if(isFull === true)
-        header.site-header.site-header--full(data-js="siteHeader")
-            .section
-                .vt-container
-                    .site-header__container
-                        .site-header__top
-                            .site-header__side(data-js="siteHeaderSide")
-                                .site-header__location
-                                    form(action="#").site-header__region
-                                        +field({
-                                            tag: 'select',
-                                            placeholder: 'Выберите город',
-                                            selectOptions: [
-                                                {
-                                                    value: 'Воронеж',
-                                                    isActive: false
-                                                },
-                                                {
-                                                    value: 'Краснодар',
-                                                    isActive: false
-                                                },
-                                                {
-                                                    value: 'Пятигорск',
-                                                    isActive: true
-                                                },
-                                                {
-                                                    value: 'Санкт-Петербург',
-                                                    isActive: false
-                                                },
-                                                {
-                                                    value: 'Севастополь',
-                                                    isActive: false
-                                                },
-                                                {
-                                                    value: 'Сочи',
-                                                    isActive: false
-                                                }
-                                            ],
-                                            selectNoForm: true,
-                                        })
+                    .site-header__side
+                        .site-header__contacts
+                            a.site-header__contact(href="tel:+78002220026") +7 (800) 222-00-26
+                            +btn({
+                                type: 'button',
+                                name: 'Заказать звонок',
+                                cMode: 'transparent',
+                                icon: 'arrow_top_right'
 
-                                    .site-header__address
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#location`)
-                                        span пос. Иноземцево, ул. Промышленная, д.11
+                            })(data-modal="#callbackModal")
+                        .site-header__controls
+                            a.site-header__control(href="javascript:void(0);")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#favorite`)
+                            a.site-header__control(href="javascript:void(0);")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#basket`)
+                            a.site-header__control(href="javascript:void(0);")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#lk`)
 
-                            a.site-header__logo(href="/")
-                                <svg width="140" height="81" viewBox="0 0 140 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path d="M69.1593 7.36521C71.9062 10.3135 73.5097 14.1075 73.7543 18.07C76.6243 14.9863 81.5394 14.1463 85.3754 16.8484L84.179 18.5582C80.1007 15.6854 74.4289 18.0421 73.5698 22.9664L73.133 25.47L72.9703 26.7773C72.8117 28.0502 72.828 29.3225 73.0084 30.5628C73.4639 33.6932 74.9628 36.6191 77.3197 38.8293L77.6477 39.1374L76.2255 40.6636L75.897 40.3561C73.2067 37.8331 71.491 34.4979 70.9572 30.928C69.2774 24.3434 63.0957 19.9382 56.3397 20.5221L53.235 20.7909L53.056 18.7092L56.1613 18.4409C62.2202 17.9172 67.8771 20.882 70.9918 25.8036L71.5893 21.0148C72.1452 16.5541 70.6973 12.0761 67.6374 8.79194L66.2763 7.33052L67.7976 5.9043L69.1593 7.36521Z" fill="url(#paint0_linear_215_1672)"/>
-                                        <path d="M95.088 25.1159L70.0526 50.2312L45.0166 25.1152L70.052 -6.54801e-05L95.088 25.1159ZM49.4345 25.1152L70.052 45.7985L90.6694 25.1152L70.052 4.43192L49.4345 25.1152Z" fill="url(#paint1_linear_215_1672)"/>
-                                    </g>
-                                    <g clip-path="url(#clip0_215_1672)">
-                                        <path d="M129.32 57.6271C132.206 57.6271 134.711 58.7288 136.823 60.9323C138.941 63.136 140 65.8846 140 69.1843C140 72.5796 138.936 75.3957 136.801 77.6387C134.672 79.8813 132.088 81 129.057 81C125.998 81 123.426 79.9038 121.342 77.7173C119.257 75.5306 118.215 72.7033 118.215 69.2292C118.215 65.6823 119.42 62.7875 121.823 60.5444C123.913 58.5996 126.412 57.6271 129.32 57.6271ZM129.007 58.8077C127.023 58.8077 125.426 59.5497 124.227 61.0335C122.731 62.8829 121.98 65.5868 121.98 69.1505C121.98 72.7987 122.753 75.6094 124.306 77.5766C125.499 79.0721 127.068 79.8197 129.024 79.8197C131.114 79.8197 132.834 78.9988 134.195 77.3631C135.557 75.7218 136.235 73.1416 136.235 69.6115C136.235 65.7835 135.484 62.9279 133.988 61.0504C132.789 59.5552 131.13 58.8077 129.007 58.8077Z" fill="#FEFEFE"/>
-                                        <path d="M99.5339 68.1164V59.3471H104.431C105.591 59.3471 106.443 59.4596 106.997 59.6789C107.547 59.8982 108.011 60.258 108.393 60.7471C108.768 61.2359 109.099 62.006 109.384 63.0573H109.956L109.721 58.133H93.1797V58.7402H93.9698C94.5076 58.7402 95.0119 58.8694 95.4826 59.1336C95.8244 59.3304 96.0485 59.5664 96.1607 59.842C96.3008 60.2015 96.3736 60.9492 96.3736 62.0793V76.5481C96.3736 77.886 96.2448 78.7292 95.9814 79.0832C95.5611 79.6172 94.8942 79.887 93.9698 79.887H93.1797V80.4941H102.728V79.887H101.932C101.405 79.887 100.907 79.7577 100.43 79.4935C100.083 79.2969 99.8532 79.0608 99.7467 78.7852C99.6066 78.4256 99.5339 77.6779 99.5339 76.5481V69.4991H103.568C104.319 69.4991 104.879 69.6003 105.26 69.8084C105.641 70.0106 105.938 70.3141 106.157 70.7245C106.37 71.1292 106.482 71.7701 106.493 72.6357H107.098V65.0471H106.493C106.348 66.2839 106.062 67.0989 105.625 67.5093C105.193 67.9139 104.504 68.1164 103.568 68.1164H99.5339Z" fill="#FEFEFE"/>
-                                        <path d="M70.936 68.1164V59.3471H75.8334C76.9932 59.3471 77.8449 59.4596 78.3996 59.6789C78.9487 59.8982 79.4138 60.258 79.7949 60.7471C80.1702 61.2359 80.501 62.006 80.7868 63.0573H81.3583L81.1228 58.133H64.582V58.7402H65.3719C65.91 58.7402 66.4143 58.8694 66.8849 59.1336C67.2267 59.3304 67.4509 59.5664 67.5629 59.842C67.703 60.2015 67.7759 60.9492 67.7759 62.0793V76.5481C67.7759 77.886 67.6469 78.7292 67.3835 79.0832C66.9634 79.6172 66.2966 79.887 65.3719 79.887H64.582V80.4941H74.1299V79.887H73.3343C72.8076 79.887 72.309 79.7577 71.8326 79.4935C71.4852 79.2969 71.2555 79.0608 71.1491 78.7852C71.009 78.4256 70.936 77.6779 70.936 76.5481V69.4991H74.9706C75.7212 69.4991 76.2816 69.6003 76.6627 69.8084C77.0436 70.0106 77.3406 70.3141 77.5592 70.7245C77.772 71.1292 77.8841 71.7701 77.8953 72.6357H78.5005V65.0471H77.8953C77.7496 66.2839 77.4638 67.0989 77.0269 67.5093C76.5955 67.9139 75.9063 68.1164 74.9706 68.1164H70.936Z" fill="#FEFEFE"/>
-                                        <path d="M40.6335 68.1838V59.3471H46.7412C47.845 59.3471 48.6182 59.4316 49.0552 59.5946C49.5988 59.8306 50.0135 60.168 50.2935 60.6121C50.5737 61.0561 50.826 61.8711 51.0557 63.0573H51.6944L51.4591 58.133H34.2793V58.7402H35.0695C35.994 58.7402 36.6496 58.9595 37.0475 59.3978C37.3332 59.7239 37.4733 60.5952 37.4733 62.0117V76.5481C37.4733 77.6388 37.4115 78.3582 37.2826 78.7123C37.1594 79.0663 36.9184 79.3307 36.5655 79.5049C36.0949 79.7577 35.5961 79.887 35.0695 79.887H34.2793V80.4941H51.4534L53.3754 74.8955H52.703C51.9914 76.267 51.2966 77.2958 50.6185 77.9759C50.0975 78.493 49.5484 78.8417 48.9825 79.0158C48.4109 79.1902 47.4976 79.2801 46.2424 79.2801H42.4713C41.8606 79.2801 41.4404 79.2182 41.2219 79.089C41.0033 78.9653 40.8521 78.791 40.7623 78.5773C40.6783 78.3638 40.6335 77.7624 40.6335 76.773V69.3979H45.5421C46.4721 69.3979 47.1613 69.5104 47.6096 69.7294C48.058 69.9488 48.3828 70.2524 48.579 70.6347C48.7302 70.9437 48.8871 71.6465 49.0385 72.7369H49.6435V64.9459H49.0385C48.9711 66.2163 48.6574 67.1045 48.0859 67.6105C47.6601 67.9927 46.8139 68.1838 45.5421 68.1838H40.6335Z" fill="#FEFEFE"/>
-                                        <path d="M9.06055 58.1328C12.3888 58.1328 14.922 58.5096 16.6533 59.2686C18.3901 60.0274 19.7855 61.2919 20.8389 63.0625C21.8979 64.8332 22.4248 66.8794 22.4248 69.1953C22.4248 72.3091 21.4829 74.9059 19.6006 76.9971C17.4881 79.33 14.2711 80.4941 9.94531 80.4941H0V79.8867H0.834961C1.77619 79.8867 2.44278 79.583 2.83496 78.9814C3.07588 78.6217 3.19433 77.8069 3.19434 76.5479V62.0791C3.19434 60.6849 3.04274 59.8135 2.73438 59.4648C2.30871 58.9816 1.6753 58.7402 0.834961 58.7402H0V58.1328H9.06055ZM9.70996 59.3809C8.72965 59.3809 7.60932 59.5381 6.35449 59.8584V78.8525C7.74395 79.1616 8.90355 79.3134 9.84473 79.3135C12.3773 79.3135 14.4788 78.4198 16.1543 76.627C17.8241 74.8393 18.6592 72.4102 18.6592 69.3467C18.6591 66.2609 17.824 63.827 16.1543 62.0508C14.4788 60.2689 12.3323 59.3809 9.70996 59.3809Z" fill="#FEFEFE"/>
-                                    </g>
-                                    <defs>
-                                    <linearGradient id="paint0_linear_215_1672" x1="53.3537" y1="21.5054" x2="84.7772" y2="21.5054" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#B58F7A"/>
-                                    <stop offset="1" stop-color="#96725F"/>
-                                    </linearGradient>
-                                    <linearGradient id="paint1_linear_215_1672" x1="45.0166" y1="25.1152" x2="95.088" y2="25.1145" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#BE9883"/>
-                                    <stop offset="1" stop-color="#8B6855"/>
-                                    </linearGradient>
-                                    <clipPath id="clip0_215_1672">
-                                    <rect width="140" height="23.3729" fill="white" transform="translate(0 57.627)"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-
-                            .site-header__side(data-js="siteHeaderSide")
-
-                                .site-header__contacts
-                                    a.site-header__contact(href="tel:+78002220026") +7 (800) 222-00-26
-                                    +btn({
-                                        type: 'button',
-                                        name: 'Заказать звонок',
-                                        cMode: 'transparent',
-                                        icon: 'arrow_top_right'
-
-                                    })(data-modal="#callbackModal")
-
-                                .site-header__controls
-                                    a.site-header__control(href="javascript:void(0);")
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#favorite`)
-                                    a.site-header__control(href="javascript:void(0);")
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#basket`)
-                                    a.site-header__control(href="javascript:void(0);")
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#lk`)
-
-                        nav.site-header__nav
-                            +main-menu({
-                                hasSearch: true
-                            })(data-js="siteHeaderMenu")
-
-                        .site-header__small(data-js="siteHeaderSmall")
-                            .site-header__side.site-header__side--center.site-header__side--mobile(data-js="siteHeaderSmallHeight")
-                                a.site-header__logo(href="/")
-                                    img(src="img/logo.svg" alt="")
-                                +main-menu({
-                                hasSearch: true
-                            })(data-js="siteHeaderMenuSmall")
-
-                            .site-header__side(data-js="siteHeaderSmallHeight")
-
-                                .site-header__contacts
-                                    a.site-header__contact(href="tel:+78002220026") +7 (800) 222-00-26
-                                    +btn({
-                                        type: 'button',
-                                        name: 'Заказать звонок',
-                                        cMode: 'transparent',
-                                        icon: 'arrow_top_right'
-
-                                    })(data-modal="#callbackModal")
-                                .site-header__controls
-                                    a.site-header__control(href="javascript:void(0);")
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#favorite`)
-                                    a.site-header__control(href="javascript:void(0);")
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#basket`)
-                                    a.site-header__control(href="javascript:void(0);")
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#lk`)
-
-                            .site-header__burger(data-js='mainBurgerOpen')
-                                svg 
-                                    use(xlink:href=`img/sprites/sprite.svg#main_burger`)    
-
-    - else
-        header.site-header(data-js="siteHeader")
-            .section
-                .vt-container
-                    .site-header__container
-                        .site-header__small
-                            .site-header__side.site-header__side--center.site-header__side--mobile
-                                a.site-header__logo(href="/")
-                                    img(src="img/logo.svg" alt="")
-                                +main-menu({
-                                hasSearch: true
-                            })(data-js="siteHeaderMenu")
-
-                            .site-header__side
-
-                                .site-header__contacts
-                                    a.site-header__contact(href="tel:+78002220026") +7 (800) 222-00-26
-                                    +btn({
-                                        type: 'button',
-                                        name: 'Заказать звонок',
-                                        cMode: 'transparent',
-                                        icon: 'arrow_top_right'
-
-                                    })(data-modal="#callbackModal")
-                                .site-header__controls
-                                    a.site-header__control(href="javascript:void(0);")
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#favorite`)
-                                    a.site-header__control(href="javascript:void(0);")
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#basket`)
-                                    a.site-header__control(href="javascript:void(0);")
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#lk`)
-
-                            .site-header__burger(data-js='mainBurgerOpen')
-                                svg 
-                                    use(xlink:href=`img/sprites/sprite.svg#main_burger`)
+                    .site-header__burger(data-js='mainBurgerOpen')
+                        svg 
+                            use(xlink:href=`img/sprites/sprite.svg#main_burger`)

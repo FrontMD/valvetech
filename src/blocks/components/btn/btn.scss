@@ -1,39 +1,70 @@
-.d-btn {
+.vt-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 20px;
     width: fit-content;
-    min-height: 59px;
-    padding: 10px 25px;
-    background-color: #fff;
-    background-image: linear-gradient(90deg, #B68C74 0%, $c-accent-hover 100%);
+    min-width: 230px;
+    min-height: 60px;
+    padding: 15px 20px;
+    background-color: $c-accent;
+    border-radius: 5px;
     font-family: $ff-main;
     color: $c-white;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 100%;
-    text-transform: uppercase;
-    text-align: center;
     cursor: pointer;
     transition: all $tr;
 
     @include max(large) {
-        font-size: 12px;
         min-height: 54px;
         padding: 10px 20px;
     }
 
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+    }
+
+    &__separator {
+        align-self: stretch;
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.4);
+        transition: background-color $tr;
+    }
+
     svg {
-        width: 16px;
-        height: 16px;
+        width: 13px;
+        height: 13px;
     }
 
     &:hover {
-        background-image: linear-gradient(180deg, #B68C74 0%, $c-accent-hover 100%);
+        background-color: $c-accent-hover;
     }
 
-    &--transparent {
+    &:hover &__separator,
+    &--white &__separator {
+        background-color: $c-accent-light;
+    }
+
+    &--white {
+        background-color: $c-white;
+        color: $c-accent;
+
+        &:hover {
+            background-color: $c-accent;
+            color: $c-white;
+        }
+    }
+
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+    /*&--transparent {
         padding: 0;
         color: $c-text;
         background-color: transparent;
@@ -52,19 +83,6 @@
         &:hover {
             color: $c-accent;
             background-image: none;
-        }
-    }
-
-    &--bordered {
-        background-color: transparent;
-        background-image: none;
-        transition: all $tr;
-        border: solid 1px $c-border;
-
-        &:hover {
-            background-image: none;
-            border-color: $c-accent;
-            color: $c-accent;
         }
     }
 
@@ -133,14 +151,6 @@
             color: $c-white;
             background-color: $c-accent-hover;
         }
-    }
-
-    &--reverse {
-        flex-direction: row-reverse;
-    }
-
-    &--full {
-        width: 100%;
     }
 
 

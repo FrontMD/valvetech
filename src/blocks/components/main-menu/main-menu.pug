@@ -12,48 +12,39 @@ mixin main-menu(props = defaultMainMenuProps)
     .main-menu(class= checkProps.classes)&attributes(attributes)
         .main-menu__items
             .main-menu__item(data-js="mainMenuItem")
-                a.main-menu__link(href="javascript:void(0);") Каталог
+                a.main-menu__link(href="javascript:void(0);") Подбор оборудования
                 .main-menu__chevron
                     svg
-                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+                        use(xlink:href=`img/sprites/sprite.svg#select_chevron`)
                 .submenu.main-menu__submenu
                     .submenu__item
-                        a.main-menu__link(href="javascript:void(0);") Виды продукции
+                        a.main-menu__link(href="javascript:void(0);") Товар 1
                     .submenu__item
-                        a.main-menu__link(href="javascript:void(0);") Декоративные элементы
+                        a.main-menu__link(href="javascript:void(0);") Товар 2
                     .submenu__item
-                        a.main-menu__link(href="javascript:void(0);") Фрезеровки
+                        a.main-menu__link(href="javascript:void(0);") Товар 3
                     .submenu__item
-                        a.main-menu__link(href="javascript:void(0);") Типы покрытия
+                        a.main-menu__link(href="javascript:void(0);") Товар 4
                     .submenu__item
-                        a.main-menu__link(href="javascript:void(0);") Торцы фасадов
+                        a.main-menu__link(href="javascript:void(0);") Товар 5
                     .submenu__item
-                        a.main-menu__link(href="javascript:void(0);") Патина
+                        a.main-menu__link(href="javascript:void(0);") Товар 6
 
             .main-menu__item(data-js="mainMenuItem")
-                a.main-menu__link(href="javascript:void(0);") Готовые решения
+                a.main-menu__link(href="javascript:void(0);") Услуги
                 .main-menu__chevron
                     svg
-                        use(xlink:href=`img/sprites/sprite.svg#arrow_chevron`)
+                        use(xlink:href=`img/sprites/sprite.svg#select_chevron`)
                 .submenu.main-menu__submenu
                     .submenu__item
-                        a.main-menu__link(href="javascript:void(0);") Эворон
+                        a.main-menu__link(href="javascript:void(0);") Услуга 1
                     .submenu__item
-                        a.main-menu__link(href="javascript:void(0);") Гокли
+                        a.main-menu__link(href="javascript:void(0);") Услуга 2
                     .submenu__item
-                        a.main-menu__link(href="javascript:void(0);") Эльтон
+                        a.main-menu__link(href="javascript:void(0);") Услуга 3
 
             .main-menu__item(data-js="mainMenuItem")
-                a.main-menu__link(href="javascript:void(0);") Галерея фасадов
+                a.main-menu__link(href="javascript:void(0);") Каталог теплообмеников
 
             .main-menu__item(data-js="mainMenuItem")
-                a.main-menu__link(href="javascript:void(0);") Акции
-
-            .main-menu__item(data-js="mainMenuItem")
-                a.main-menu__link(href="javascript:void(0);") Новости
-
-            .main-menu__item(data-js="mainMenuItem")
-                a.main-menu__link(href="javascript:void(0);") Партнерам
-
-            .main-menu__item(data-js="mainMenuItem")
-                a.main-menu__link(href="javascript:void(0);") Контакты
+                a.main-menu__link(href="javascript:void(0);") О компании
