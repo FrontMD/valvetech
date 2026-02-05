@@ -1,0 +1,22 @@
+-
+    const defaultInfoCardProps = {
+        classes: '',
+        title: 'Точность',
+        num: '01',
+        text: 'Подобранное оборудование точно подойдёт <br>для решения ваших задач'
+    }
+
+mixin info-card(props = defaultInfoCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultInfoCardProps.classes,
+            title: props.title ? props.title : defaultInfoCardProps.title,
+            num: props.num ? props.num : defaultInfoCardProps.num,
+            text: props.text ? props.text : defaultInfoCardProps.text,
+        }
+
+    .info-card(class=checkProps.classes)&attributes(attributes)
+        .info-card__top
+            .info-card__title!= checkProps.title
+            .info-card__num!= checkProps.num
+        .info-card__text.text-editor!= checkProps.text

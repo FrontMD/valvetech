@@ -1,0 +1,37 @@
+-
+    const defaultSAdvantagesProps = {
+        classes: ''
+    }
+
+mixin s-advantages(props = defaultSAdvantagesProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSAdvantagesProps.classes,
+        }
+
+    section.section.section--inner.s-advantages(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .section__header
+                +title({
+                    text: 'Преимущества',
+                    size: '80',
+                    tag: 'h2'
+                })
+            .s-advantages__items
+                +info-card
+                +info-card({
+                    title: 'Скорость',
+                    num: '02',
+                    text: 'Мы сделаем расчёт и доставим до вас'
+                })
+                +info-card({
+                    title: 'Гарантии',
+                    num: '03',
+                    text: 'Гарантия на подобранное оборудование <br>и его комплектующие до 5 лет'
+                })
+                +info-card({
+                    title: 'Альтернатива под бюджет',
+                    num: '04',
+                    text: 'Подбираем несколько вариантов, чтобы <br>вы могли остановиться на лучшем'
+                })
+

@@ -1,0 +1,26 @@
+-
+    const defaultCategoryCardProps = {
+        classes: '',
+        img: 'img/catalog/category_1.svg',
+        title: 'Блочные <br>тепловые пункты',
+        models: '5 моделей'
+    }
+
+mixin category-card(props = defaultCategoryCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCategoryCardProps.classes,
+            img: props.img ? props.img : defaultCategoryCardProps.img,
+            title: props.title ? props.title : defaultCategoryCardProps.title,
+            models: props.models ? props.models : defaultCategoryCardProps.models,
+        }
+
+    .category-card(class=checkProps.classes)&attributes(attributes)
+        a.category-card__link(href="javascript:void(0);")
+        .category-card__img
+            img(src=checkProps.img)
+        .category-card__title!= checkProps.title
+        .category-card__bottom
+            .category-card__models!= checkProps.models
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#btn_chevron`)

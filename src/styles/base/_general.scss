@@ -191,11 +191,59 @@ body.no-scroll {
 		width: 100%;
 		height: 100%;
 
+		@include max(laptop) {
+			opacity: 0.3;
+		}
+
 		img,
 		picture {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+	}
+
+	&--intro {
+		padding-top: 170px;
+		padding-bottom: 70px;
+
+		@include max(laptop) {
+			padding-top: 120px;
+		}
+
+		@include max(mobile) {
+			padding-top: 100px;
+		}
+	}
+
+	&--inner {
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		@include max(tablet) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 24px;
+		padding-bottom: 50px;
+
+		@include max(laptop) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		@include max(tablet) {
+			padding-bottom: 30px;
+		}
+
+		.vt-btn {
+			flex: 0 0 auto;
 		}
 	}
 
@@ -208,43 +256,6 @@ body.no-scroll {
 		}
 	}
 
-	&--top {
-		padding-top: 172px;
-
-		@include max(laptop) {
-			padding-top: 120px;
-		}
-
-		@include max(mobile) {
-			padding-top: 100px;
-		}
-	}
-
-	&--inner {
-		padding-top: 30px;
-		padding-bottom: 30px;
-
-		@include max(mobile) {
-			padding-top: 20px;
-			padding-bottom: 20px;
-		}
-	}
-
-	&__header {
-		display: flex;
-		align-items: flex-end;
-		justify-content: space-between;
-		gap: 24px;
-
-		@include max(laptop) {
-			flex-direction: column;
-			align-items: flex-start;
-		}
-
-		.d-btn {
-			flex: 0 0 auto;
-		}
-	}
 
 	&__header--full {
 		@include max(laptop) {
@@ -283,6 +294,41 @@ body.no-scroll {
 	}*/
 }
 
+.sidebar-layout {
+	display: flex;
+	align-items: stretch;
+	gap: 24px;
+
+	@include max(tablet) {
+		flex-direction: column;
+	}
+
+	&__sidebar {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		@include max(tablet) {
+			flex-direction: row;
+		}
+	}
+
+	&__main {
+		flex: 0 0 66.2%;
+		padding-left: 30px;
+		border-left: 1px solid $c-border;
+
+		@include max(tablet) {
+			padding-left: 0;
+			padding-top: 24px;
+			border-left: none;
+			border-top: 1px solid $c-border;
+		}
+	}
+}
+
 .vt-container {
 	position: relative;
 	width: 100%;
@@ -290,34 +336,14 @@ body.no-scroll {
 	margin: 0 auto;
 }
 
-/*.separator {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 10px;
-
-	&__center {
-		width: 7px;
-		height: 7px;
-		border-radius: 100%;
-		background-color: $c-accent;
-	}
-
-	&__side {
-		width: 150px;
-		height: 1px;
-		background-color: $c-accent;
-	}
-}*/
-
-/*.text-editor {
+.text-editor {
 	font-weight: 400;
-	font-size: 18px;
-	line-height: 160%;
-	color: $c-text-grey;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 130%;
 
 	@include max(laptop) {
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 	@include max(xs) {
@@ -356,7 +382,7 @@ body.no-scroll {
 		}
 	}
 
-	h2 {
+	/*h2 {
 		font-weight: 500;
 		font-size: 1.0625em;
 		line-height: 150%;
@@ -684,9 +710,9 @@ body.no-scroll {
 			overflow: hidden;
 			transition: all $tr;
 		}
-	}
+	}*/
 
-}*/
+}
 
 /*.my-fancybox {
 	.fancybox__viewport {

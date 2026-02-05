@@ -1,0 +1,37 @@
+-
+    const defaultSPartnersProps = {
+        classes: ''
+    }
+
+mixin s-partners(props = defaultSPartnersProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSPartnersProps.classes,
+        }
+
+    section.section.section--inner.s-partners(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .section__header
+                +title({
+                    text: 'Наши партнёры',
+                    size: '80',
+                    tag: 'h2'
+                })
+            .s-partners__items
+                .s-partners__item
+                    img(src="img/partners/partner_1.svg" alt="")
+                .s-partners__item
+                    img(src="img/partners/partner_2.svg" alt="")
+                .s-partners__item
+                    img(src="img/partners/partner_3.svg" alt="")
+                .s-partners__item
+                    img(src="img/partners/partner_4.svg" alt="")
+                .s-partners__item
+                    img(src="img/partners/partner_5.svg" alt="")
+                .s-partners__item
+                    img(src="img/partners/partner_6.svg" alt="")
+                .s-partners__item
+                    img(src="img/partners/partner_7.svg" alt="")
+                .s-partners__item
+                    img(src="img/partners/partner_8.svg" alt="")
+

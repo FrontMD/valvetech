@@ -1,0 +1,53 @@
+.category-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    background-color: $c-white;
+
+    &__link {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__title {
+        padding: 10px 0 25px;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 120%;
+    }
+
+    &__bottom {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 25px 0;
+        color: $c-text-grey;
+        transition: color $tr;
+
+        svg {
+            width: 13px;
+            height: 13px;
+        }
+    }
+
+    &:hover &__bottom {
+        color: $c-accent;
+    }
+}

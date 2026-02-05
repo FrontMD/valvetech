@@ -1,0 +1,32 @@
+-
+    const defaultSAboutProps = {
+        classes: ''
+    }
+
+mixin s-about(props = defaultSAboutProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSAboutProps.classes,
+        }
+
+    section.section.section--inner.s-about(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .sidebar-layout
+                .sidebar-layout__sidebar
+                    +title({
+                        text: 'О компании',
+                        size: '80',
+                        tag: 'h2'
+                    })
+                    +btn({
+                        name: 'О компании',
+                        icon: 'btn_chevron'
+                    })
+                .sidebar-layout__main
+                    .s-about__content
+                        .s-about__info
+                            .s-about__title Компания ВАЛЬВ ТЕК ГРУП поставляет теплообменное оборудование, насосные станции и блочные тепловые пункты для производственных и строительных организаций, осуществляющих свою деятельность в РФ и СНГ.
+                            .s-about__text.text-editor
+                                p Мы поставляем современное оборудование высокого качества в соответствии с международными стандартами. <br>В нашей компании работают высококвалифицированные специалисты, которые помогут подобрать необходимое оборудование в зависимости от ваших задач, предложат ряд вариантов и подробно раскроют все нюансы. <br>Мы гарантируем бережную и своевременную транспортировку продукции, а также несём полную ответственность за поставленное оборудование.
+                        .s-about__name ООО «ВАЛЬВ ТЕК ГРУП»
+

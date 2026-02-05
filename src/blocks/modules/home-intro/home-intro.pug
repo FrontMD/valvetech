@@ -1,0 +1,24 @@
+-
+    const defaultHomeIntroProps = {
+        classes: ''
+    }
+
+mixin home-intro(props = defaultHomeIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeIntroProps.classes,
+        }
+
+    section.section.section--intro.home-intro(class= checkProps.classes)&attributes(attributes)
+        .section__bg
+            img(src="img/home/home_intro_bg.webp")
+        .vt-container.home-intro__content
+            +title({
+                classes: 'home-intro__title',
+                text: 'Теплообменники, <br>Насосные станции, <br>БЛОЧНЫЕ ТЕПЛОВЫЕ <br>ПУНКТЫ',
+                tag: 'h1',
+                size: '68',
+                upper: true
+            })
+            .home-intro__bottom
+                .home-intro__text Теплообменники всех крупных брендов <br>(Alfa Laval, Ridan, Nord, Sondex, Funke, Danfoss) со скидкой до 45. Подберём оптимальный вариант для ваших задач.

@@ -51,6 +51,10 @@
         color: $c-text;
         transition: opacity 1.5s linear;
 
+        @include max(mobile) {
+            font-size: 10vw;
+        }
+
         &.animated {
             opacity: 1;
         }

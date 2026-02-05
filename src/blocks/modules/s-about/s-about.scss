@@ -1,0 +1,51 @@
+.s-about {
+    &__content {
+        display: flex;
+        align-items: flex-end;
+
+        @include max(laptop) {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        @include max(tablet) {
+            gap: 20px;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 120%;
+
+        @include max(laptop) {
+            font-size: 30px;
+        }
+    }
+
+    &__title+&__text {
+        margin-top: 100px;
+
+        @include max(laptop) {
+            margin-top: 70px;
+        }
+
+        @include max(tablet) {
+            margin-top: 50px;
+        }
+    }
+
+    &__text {
+        max-width: 820px;
+    }
+
+    &__name {
+        flex: 0 0 auto;
+        max-width: 200px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        text-transform: uppercase;
+    }
+}

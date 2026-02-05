@@ -37,7 +37,13 @@
         font-weight: 600;
         line-height: 110%;
 
-        @include max(large) {}
+        @include max(large) {
+            font-size: 64px;
+        }
+
+        @include max(laptop) {
+            font-size: 50px;
+        }
 
         @include max(tablet) {}
 
@@ -51,7 +57,13 @@
         font-size: 68px;
         line-height: 110%;
 
-        @include max(large) {}
+        @include max(large) {
+            font-size: 56px;
+        }
+
+        @include max(laptop) {
+            font-size: 45px;
+        }
 
         @include max(mobile) {}
 
