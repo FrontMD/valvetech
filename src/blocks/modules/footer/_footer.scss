@@ -71,6 +71,10 @@
         font-size: 21px;
         line-height: 150%;
         color: $c-border;
+
+        @include max(mobile) {
+            font-size: 16px;
+        }
     }
 
     &__contacts {
@@ -89,6 +93,10 @@
 
         @include max(large) {
             font-size: 20px;
+        }
+
+        @include max(mobile) {
+            font-size: 18px;
         }
     }
 

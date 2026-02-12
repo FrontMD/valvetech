@@ -4,6 +4,10 @@
     display: flex;
     align-items: stretch;
 
+    @include max(mobile) {
+        min-height: auto;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -16,18 +20,31 @@
 
     &__bottom {
         margin-top: auto;
+
+        @include max(mobile) {
+            margin-top: 30px;
+        }
     }
 
     &__text {
-        max-width: 720px;
-        font-weight: 400;
-        font-size: 28px;
+        max-width: 630px;
+        font-weight: 500;
+        font-size: 30px;
         line-height: 130%;
         color: $c-title;
 
         @include max(laptop) {
             font-size: 24px;
             max-width: 620px;
+        }
+
+        @include max(mobile) {
+            font-size: 22px;
+            max-width: 620px;
+        }
+
+        @include max(xs) {
+            font-size: 16px;
         }
     }
 }

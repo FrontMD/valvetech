@@ -114,6 +114,7 @@ html {
 	-o-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	text-size-adjust: 100%;
+	font-variant-numeric: lining-nums proportional-nums;
 }
 
 html.hystmodal__opened {
@@ -212,7 +213,8 @@ body.no-scroll {
 		}
 
 		@include max(mobile) {
-			padding-top: 100px;
+			padding-top: 80px;
+			padding-bottom: 30px;
 		}
 	}
 
@@ -312,6 +314,11 @@ body.no-scroll {
 
 		@include max(tablet) {
 			flex-direction: row;
+			gap: 24px;
+		}
+
+		@include max(mobile) {
+			flex-direction: column;
 		}
 	}
 
@@ -337,13 +344,16 @@ body.no-scroll {
 }
 
 .text-editor {
-	font-weight: 400;
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 20px;
 	line-height: 130%;
 
 	@include max(laptop) {
 		font-size: 18px;
+	}
+
+	@include max(mobile) {
+		font-size: 16px;
 	}
 
 	@include max(xs) {

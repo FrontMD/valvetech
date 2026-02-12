@@ -10,6 +10,10 @@
         min-height: 210px;
     }
 
+    @include max(xs) {
+        min-height: 150px;
+    }
+
     &__top {
         display: flex;
         align-items: flex-start;
@@ -21,11 +25,15 @@
         @include max(tablet) {
             padding: 20px;
         }
+
+        @include max(mobile) {
+            padding: 15px;
+        }
     }
 
     &__title {
-        font-weight: 400;
-        font-size: 45px;
+        font-weight: 700;
+        font-size: 48px;
         line-height: 120%;
 
         @include max(laptop) {
@@ -34,6 +42,10 @@
 
         @include max(tablet) {
             font-size: 26px;
+        }
+
+        @include max(mobile) {
+            font-size: 20px;
         }
     }
 
@@ -44,6 +56,10 @@
         font-size: 20px;
         line-height: 100%;
         color: $c-border;
+
+        @include max(mobile) {
+            font-size: 16px;
+        }
     }
 
     &__text {
@@ -56,6 +72,11 @@
             br {
                 display: none;
             }
+        }
+
+        @include max(mobile) {
+            padding: 15px;
+            //font-size: 16px;
         }
     }
 }

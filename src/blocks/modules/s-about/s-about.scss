@@ -15,12 +15,20 @@
     }
 
     &__title {
-        font-weight: 400;
-        font-size: 38px;
+        font-weight: 600;
+        font-size: 40px;
         line-height: 120%;
 
         @include max(laptop) {
             font-size: 30px;
+        }
+
+        @include max(mobile) {
+            font-size: 24px;
+        }
+
+        @include max(xs) {
+            font-size: 20px;
         }
     }
 
@@ -33,6 +41,10 @@
 
         @include max(tablet) {
             margin-top: 50px;
+        }
+
+        @include max(xs) {
+            margin-top: 30px;
         }
     }
 

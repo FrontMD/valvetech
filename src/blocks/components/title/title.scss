@@ -32,9 +32,9 @@
         text-transform: uppercase;
     }
 
-    &--80 {
-        font-size: 80px;
-        font-weight: 600;
+    &--85 {
+        font-size: 85px;
+        font-weight: 700;
         line-height: 110%;
 
         @include max(large) {
@@ -45,16 +45,18 @@
             font-size: 50px;
         }
 
-        @include max(tablet) {}
+        @include max(mobile) {
+            font-size: 40px;
+        }
 
-        @include max(mobile) {}
-
-        @include max(xs) {}
+        @include max(xs) {
+            font-size: 32px;
+        }
     }
 
-    &--68 {
+    &--70 {
         font-weight: 700;
-        font-size: 68px;
+        font-size: 70px;
         line-height: 110%;
 
         @include max(large) {
@@ -65,9 +67,13 @@
             font-size: 45px;
         }
 
-        @include max(mobile) {}
+        @include max(mobile) {
+            font-size: 36px;
+        }
 
-        @include max(xs) {}
+        @include max(xs) {
+            font-size: 26px;
+        }
     }
 
     &--30 {
@@ -75,9 +81,9 @@
         font-weight: 700;
         line-height: 110%;
 
-        @include max(laptop) {}
-
-        @include max(tablet) {}
+        @include max(mobile) {
+            font-size: 22px;
+        }
     }
 
     /*

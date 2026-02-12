@@ -5,6 +5,10 @@
     padding: 0 30px;
     background-color: $c-white;
 
+    @include max(mobile) {
+        padding: 0 15px;
+    }
+
     &__link {
         position: absolute;
         left: 0;
@@ -26,9 +30,14 @@
 
     &__title {
         padding: 10px 0 25px;
-        font-weight: 400;
-        font-size: 21px;
+        font-weight: 600;
+        font-size: 22px;
         line-height: 120%;
+
+        @include max(mobile) {
+            font-size: 20px;
+            padding: 10px 0 15px;
+        }
     }
 
     &__bottom {
@@ -41,9 +50,23 @@
         color: $c-text-grey;
         transition: color $tr;
 
+        @include max(mobile) {
+            padding: 15px 0;
+        }
+
         svg {
             width: 13px;
             height: 13px;
+        }
+    }
+
+    &__models {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+
+        @include max(mobile) {
+            font-size: 18px;
         }
     }
 
