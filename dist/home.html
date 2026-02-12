@@ -143,7 +143,7 @@
         <header class="site-header" data-js="siteHeader">
           <div class="section">
             <div class="vt-container">
-              <div class="site-header__container">
+              <div class="site-header__container" data-aos="fade-down">
                 <div class="site-header__side site-header__side--bg"><a class="site-header__logo" href="/"><img src="img/logo_full.svg" alt=""></a>
                   <div class="site-header__separator"></div>
                       <div class="main-menu site-header__menu">
@@ -211,21 +211,21 @@
     <main class="site-main">
       <div class="page" data-js="page">
         <div class="page-layout">
-              <section class="section section--intro home-intro">
-                <div class="section__bg"><img src="img/home/home_intro_bg.webp"></div>
+              <section class="section section--intro home-intro" data-anim-id="homeIntro">
+                <div class="section__bg" data-aos="fade-in" data-aos-duration="1000" data-aos-anchor="[data-anim-id='homeIntro']"><img src="img/home/home_intro_bg.webp"></div>
                 <div class="vt-container home-intro__content">
-                      <div class="title home-intro__title title--70 title--upper">
+                      <div class="title home-intro__title title--70 title--upper" data-aos="fade-right" data-aos-anchor="[data-anim-id='homeIntro']">
                         <h1>Теплообменники, <br>Насосные станции, <br>БЛОЧНЫЕ ТЕПЛОВЫЕ <br>ПУНКТЫ</h1>
                       </div>
-                  <div class="home-intro__bottom">
+                  <div class="home-intro__bottom" data-aos="fade-right" data-aos-delay="400" data-aos-anchor="[data-anim-id='homeIntro']">
                     <div class="home-intro__text">Теплообменники всех крупных брендов <br>(Alfa Laval, Ridan, Nord, Sondex, Funke, Danfoss) со скидкой до 45. Подберём оптимальный вариант для ваших задач.</div>
                   </div>
                 </div>
               </section>
-              <section class="section section--inner categories-list">
+              <section class="section section--inner categories-list" data-anim-list>
                 <div class="vt-container">
                   <div class="categories-list__items">
-                        <div class="category-card"><a class="category-card__link" href="javascript:void(0);"></a>
+                        <div class="category-card" data-anim-item><a class="category-card__link" href="javascript:void(0);"></a>
                           <div class="category-card__img"><img src="img/catalog/category_1.svg"></div>
                           <div class="category-card__title">Блочные <br>тепловые пункты</div>
                           <div class="category-card__bottom">
@@ -235,7 +235,7 @@
                             </svg>
                           </div>
                         </div>
-                        <div class="category-card"><a class="category-card__link" href="javascript:void(0);"></a>
+                        <div class="category-card" data-anim-item><a class="category-card__link" href="javascript:void(0);"></a>
                           <div class="category-card__img"><img src="img/catalog/category_2.svg"></div>
                           <div class="category-card__title">Насосные <br>станции</div>
                           <div class="category-card__bottom">
@@ -245,7 +245,7 @@
                             </svg>
                           </div>
                         </div>
-                        <div class="category-card"><a class="category-card__link" href="javascript:void(0);"></a>
+                        <div class="category-card" data-anim-item><a class="category-card__link" href="javascript:void(0);"></a>
                           <div class="category-card__img"><img src="img/catalog/category_3.svg"></div>
                           <div class="category-card__title">Пластинчатые <br>теплообменники</div>
                           <div class="category-card__bottom">
@@ -255,7 +255,7 @@
                             </svg>
                           </div>
                         </div>
-                        <div class="category-card"><a class="category-card__link" href="javascript:void(0);"></a>
+                        <div class="category-card" data-anim-item><a class="category-card__link" href="javascript:void(0);"></a>
                           <div class="category-card__img"><img src="img/catalog/category_4.svg"></div>
                           <div class="category-card__title">Паяные <br>теплообменники</div>
                           <div class="category-card__bottom">
@@ -265,7 +265,7 @@
                             </svg>
                           </div>
                         </div>
-                        <div class="category-card"><a class="category-card__link" href="javascript:void(0);"></a>
+                        <div class="category-card" data-anim-item><a class="category-card__link" href="javascript:void(0);"></a>
                           <div class="category-card__img"><img src="img/catalog/category_5.svg"></div>
                           <div class="category-card__title">Пластины <br>и прокладки (ЗИП)</div>
                           <div class="category-card__bottom">
@@ -281,33 +281,33 @@
               <section class="section section--inner s-advantages">
                 <div class="vt-container">
                   <div class="section__header">
-                        <div class="title  title--85">
+                        <div class="title  title--85" data-aos="fade-right">
                           <h2>Преимущества</h2>
                         </div>
                   </div>
-                  <div class="s-advantages__items">
-                        <div class="info-card">
+                  <div class="s-advantages__items" data-anim-list>
+                        <div class="info-card" data-anim-item>
                           <div class="info-card__top">
                             <div class="info-card__title">Точность</div>
                             <div class="info-card__num">01</div>
                           </div>
                           <div class="info-card__text text-editor">Подобранное оборудование точно подойдёт <br>для решения ваших задач</div>
                         </div>
-                        <div class="info-card">
+                        <div class="info-card" data-anim-item>
                           <div class="info-card__top">
                             <div class="info-card__title">Скорость</div>
                             <div class="info-card__num">02</div>
                           </div>
                           <div class="info-card__text text-editor">Мы сделаем расчёт и доставим до вас</div>
                         </div>
-                        <div class="info-card">
+                        <div class="info-card" data-anim-item>
                           <div class="info-card__top">
                             <div class="info-card__title">Гарантии</div>
                             <div class="info-card__num">03</div>
                           </div>
                           <div class="info-card__text text-editor">Гарантия на подобранное оборудование <br>и его комплектующие до 5 лет</div>
                         </div>
-                        <div class="info-card">
+                        <div class="info-card" data-anim-item>
                           <div class="info-card__top">
                             <div class="info-card__title">Альтернатива под бюджет</div>
                             <div class="info-card__num">04</div>
@@ -320,7 +320,7 @@
               <section class="section section--inner s-about">
                 <div class="vt-container">
                   <div class="sidebar-layout">
-                    <div class="sidebar-layout__sidebar">
+                    <div class="sidebar-layout__sidebar" data-aos="fade-right" data-delay="500">
                           <div class="title  title--85">
                             <h2>О компании</h2>
                           </div><a class="vt-btn" href="javascript:void(0);"><span class="vt-btn__text">О компании</span><span class="vt-btn__separator"></span>
@@ -328,7 +328,7 @@
                               <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
                             </svg></a>
                     </div>
-                    <div class="sidebar-layout__main">
+                    <div class="sidebar-layout__main" data-aos="fade-left">
                       <div class="s-about__content">
                         <div class="s-about__info">
                           <div class="s-about__title">Компания ВАЛЬВ ТЕК ГРУП поставляет теплообменное оборудование, насосные станции и блочные тепловые пункты для производственных и строительных организаций, осуществляющих свою деятельность в РФ и СНГ.</div>
@@ -345,21 +345,21 @@
               <section class="section section--inner s-partners">
                 <div class="vt-container">
                   <div class="section__header">
-                        <div class="title  title--85">
+                        <div class="title  title--85" data-aos="fade-right">
                           <h2>Наши партнёры</h2>
                         </div>
                   </div>
-                  <div class="s-partners__items">
-                    <div class="s-partners__item"><img src="img/partners/partner_1.svg" alt=""></div>
-                    <div class="s-partners__item"><img src="img/partners/partner_2.svg" alt=""></div>
-                    <div class="s-partners__item"><img src="img/partners/partner_3.svg" alt=""></div>
-                    <div class="s-partners__item"><img src="img/partners/partner_4.svg" alt=""></div>
-                    <div class="s-partners__item"><img src="img/partners/partner_5.svg" alt=""></div>
-                    <div class="s-partners__item"><img src="img/partners/partner_6.svg" alt=""></div>
-                    <div class="s-partners__item"><img src="img/partners/partner_7.svg" alt=""></div>
-                    <div class="s-partners__item"><img src="img/partners/partner_4.svg" alt=""></div>
-                    <div class="s-partners__item"><img src="img/partners/partner_2.svg" alt=""></div>
-                    <div class="s-partners__item"><img src="img/partners/partner_8.svg" alt=""></div>
+                  <div class="s-partners__items" data-anim-list>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_1.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_2.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_3.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_4.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_5.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_6.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_7.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_4.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_2.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_8.svg" alt=""></div>
                   </div>
                 </div>
               </section>
@@ -370,7 +370,7 @@
           <div class="section__bg"><img src="img/footer_bg.webp" alt=""></div>
           <div class="vt-container">
             <div class="site-footer__container">
-              <div class="site-footer__top">
+              <div class="site-footer__top" data-aos="fade-right">
                     <form class="form site-footer__form form--light" action="#" data-validate novalidate>
                       <div class="form__content" data-js="formContent">
                         <div class="form__title">Подобрать оборудование</div>
@@ -408,9 +408,9 @@
                       </div>
                     </form>
               </div>
-              <div class="site-footer__bottom">
+              <div class="site-footer__bottom" data-anim-list>
                 <div class="site-footer__row site-footer__row--top">
-                  <div class="site-footer__left">
+                  <div class="site-footer__left" data-anim-item>
                         <div class="title  title--30 title--light title--upper">ООО «Вальв Тек Груп»
                         </div>
                     <div class="site-footer__address">Пермь, Чернышевского 28 оф.100</div>
@@ -428,7 +428,7 @@
                     </div>
                   </div>
                   <div class="site-footer__right">
-                    <div class="site-footer__column">
+                    <div class="site-footer__column" data-anim-item>
                       <div class="site-footer__title">Каталог</div>
                       <ul class="site-footer__list">
                         <li><a class="site-footer__link" href="javascript:void(0);">Пластинчатые теплообменники</a></li>
@@ -438,7 +438,7 @@
                         <li><a class="site-footer__link" href="javascript:void(0);">Пластины и прокладки (ЗИП)</a></li>
                       </ul>
                     </div>
-                    <div class="site-footer__column">
+                    <div class="site-footer__column" data-anim-item>
                       <div class="site-footer__title">Услуги</div>
                       <ul class="site-footer__list">
                         <li> <a class="site-footer__link" href="javascript:void(0);">Подбор аналогов</a></li>
@@ -446,7 +446,7 @@
                         <li> <a class="site-footer__link" href="javascript:void(0);">Инжиниринг и проектирование</a></li>
                       </ul>
                     </div>
-                    <div class="site-footer__column">
+                    <div class="site-footer__column" data-anim-item>
                       <div class="site-footer__title">Клиентам</div>
                       <ul class="site-footer__list">
                         <li> <a class="site-footer__link" href="javascript:void(0);">О компании</a></li>
@@ -459,12 +459,12 @@
                   </div>
                 </div>
                 <div class="site-footer__row">
-                  <div class="site-footer__left">
+                  <div class="site-footer__left" data-anim-item>
                     <div class="site-footer__text">© 2026 Все права защищены</div>
                   </div>
                   <div class="site-footer__right">
-                    <div class="site-footer__column"><a class="site-footer__text" href="javascript:void(0);">Пользовательское соглашение</a></div>
-                    <div class="site-footer__column">
+                    <div class="site-footer__column" data-anim-item><a class="site-footer__text" href="javascript:void(0);">Пользовательское соглашение</a></div>
+                    <div class="site-footer__column" data-anim-item>
                       <div class="site-footer__text">Сделано в <a href="https://itspace.group/" target="_blank">ITS</a></div>
                     </div>
                   </div>

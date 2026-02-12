@@ -5,7 +5,7 @@ mixin footer
             img(src="img/footer_bg.webp" alt="")
         .vt-container
             .site-footer__container
-                .site-footer__top
+                .site-footer__top(data-aos="fade-right")
                     +form({
                         classes: 'site-footer__form form--light',
                         btnText: 'Отправить заявку',
@@ -47,9 +47,9 @@ mixin footer
                             placeholder: 'Комментарий',
                         })
 
-                .site-footer__bottom
+                .site-footer__bottom(data-anim-list)
                     .site-footer__row.site-footer__row--top
-                        .site-footer__left
+                        .site-footer__left(data-anim-item)
                             +title({
                                 text: 'ООО «Вальв Тек Груп»',
                                 size: '30',
@@ -63,7 +63,7 @@ mixin footer
                                 a.site-footer__contact(href="tel:+73422482063") +7 (342) 248-20-63
 
                         .site-footer__right
-                            .site-footer__column
+                            .site-footer__column(data-anim-item)
                                 .site-footer__title Каталог
                                 ul.site-footer__list
                                     li
@@ -77,7 +77,7 @@ mixin footer
                                     li
                                         a.site-footer__link(href="javascript:void(0);") Пластины и прокладки (ЗИП)
 
-                            .site-footer__column
+                            .site-footer__column(data-anim-item)
                                 .site-footer__title Услуги
                                 ul.site-footer__list
                                     li 
@@ -87,7 +87,7 @@ mixin footer
                                     li 
                                         a.site-footer__link(href="javascript:void(0);") Инжиниринг и проектирование
 
-                            .site-footer__column
+                            .site-footer__column(data-anim-item)
                                 .site-footer__title Клиентам
                                 ul.site-footer__list
                                     li 
@@ -102,12 +102,12 @@ mixin footer
                                         a.site-footer__link(href="javascript:void(0);") Документация
 
                     .site-footer__row
-                        .site-footer__left
+                        .site-footer__left(data-anim-item)
                             .site-footer__text © 2026 Все права защищены
                         .site-footer__right
-                            .site-footer__column
+                            .site-footer__column(data-anim-item)
                                 a.site-footer__text(href="javascript:void(0);") Пользовательское соглашение
-                            .site-footer__column
+                            .site-footer__column(data-anim-item)
                                 .site-footer__text
                                     | Сделано в 
                                     a(href="https://itspace.group/" target="_blank") ITS

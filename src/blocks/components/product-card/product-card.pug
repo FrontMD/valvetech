@@ -1,0 +1,12 @@
+-
+    const defaultProductCardProps = {
+        classes: ''
+    }
+
+mixin product-card(props = defaultProductCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultProductCardProps.classes,
+        }
+
+    .product-card(class= checkProps.classes)&attributes(attributes)

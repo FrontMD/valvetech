@@ -9,28 +9,28 @@ mixin categories-list(props = defaultCategoriesListProps)
             classes: props.classes ? props.classes : defaultCategoriesListProps.classes,
         }
 
-    section.section.section--inner.categories-list(class= checkProps.classes)&attributes(attributes)
+    section.section.section--inner.categories-list(class= checkProps.classes data-anim-list)&attributes(attributes)
         .vt-container
             .categories-list__items
-                +category-card
+                +category-card()(data-anim-item)
                 +category-card({
                     img: 'img/catalog/category_2.svg',
                     title: 'Насосные <br>станции',
                     models: '12 моделей'
-                })
+                })(data-anim-item)
                 +category-card({
                     img: 'img/catalog/category_3.svg',
                     title: 'Пластинчатые <br>теплообменники',
                     models: '35 моделей'
-                })
+                })(data-anim-item)
                 +category-card({
                     img: 'img/catalog/category_4.svg',
                     title: 'Паяные <br>теплообменники',
                     models: '14 моделей'
-                })
+                })(data-anim-item)
                 +category-card({
                     img: 'img/catalog/category_5.svg',
                     title: 'Пластины <br>и прокладки (ЗИП)',
                     models: '28 моделей'
-                })
+                })(data-anim-item)
 

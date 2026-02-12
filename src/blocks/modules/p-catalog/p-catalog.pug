@@ -1,0 +1,19 @@
+-
+    const defaultPCatalogProps = {
+        classes: ''
+    }
+
+mixin p-catalog(props = defaultPCatalogProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPCatalogProps.classes,
+        }
+
+    section.section.section--inner.p-catalog(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .p-catalog__container
+                .p-catalog__sidebar
+                    +catalog-filter
+                .p-catalog__main
+
+

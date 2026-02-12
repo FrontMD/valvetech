@@ -12,7 +12,7 @@ mixin s-about(props = defaultSAboutProps)
     section.section.section--inner.s-about(class= checkProps.classes)&attributes(attributes)
         .vt-container
             .sidebar-layout
-                .sidebar-layout__sidebar
+                .sidebar-layout__sidebar(data-aos="fade-right" data-delay="500")
                     +title({
                         text: 'О компании',
                         tag: 'h2'
@@ -21,7 +21,7 @@ mixin s-about(props = defaultSAboutProps)
                         name: 'О компании',
                         icon: 'btn_chevron'
                     })
-                .sidebar-layout__main
+                .sidebar-layout__main(data-aos="fade-left")
                     .s-about__content
                         .s-about__info
                             .s-about__title Компания ВАЛЬВ ТЕК ГРУП поставляет теплообменное оборудование, насосные станции и блочные тепловые пункты для производственных и строительных организаций, осуществляющих свою деятельность в РФ и СНГ.

@@ -1,0 +1,12 @@
+-
+    const defaultCatalogFilterProps = {
+        classes: ''
+    }
+
+mixin catalog-filter(props = defaultCatalogFilterProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCatalogFilterProps.classes,
+        }
+
+    form.catalog-filter(action="#" class= checkProps.classes)&attributes(attributes)

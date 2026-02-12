@@ -1,0 +1,36 @@
+.img-intro {
+    min-height: 500px;
+    display: flex;
+    align-items: stretch;
+
+    @include max(mobile) {
+        min-height: auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    &__title {
+        max-width: 1230px;
+    }
+
+    &__bottom {
+        margin-top: auto;
+
+        @include max(mobile) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.img-intro {
+    &--full {
+        padding-bottom: 50px;
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+}

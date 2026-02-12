@@ -2,6 +2,7 @@
     position: relative;
     color: $c-white;
     background-color: $c-black;
+    overflow: hidden;
 
     &__container {
         padding: 50px 0;

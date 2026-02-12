@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Каталог</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body>
+        <noindex>
+          <div>
+                <div class="modal hystmodal" id="callbackModal" aria-hidden="true" data-js="callbackModal">
+                  <div class="hystmodal__wrap">
+                    <div class="hystmodal__window" role="dialog" aria-modal="true">
+                      <div class="modal__content">
+                        <div class="modal__close" data-hystclose>
+                          <svg> 
+                            <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                        <div class="modal__inner" data-js="modalInner">
+                              <form class="form form--modal" action="#" data-validate novalidate>
+                                <div class="form__content" data-js="formContent">
+                                  <div class="form__title">Оставить заявку</div>
+                                  <div class="form__fields" data-js="formFields">
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="tel" placeholder="Телефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                  </div>
+                                  <div class="form__privacy form-privacy" data-js="formField">
+                                    <div class="form-privacy__flex">
+                                      <label>
+                                        <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                      </label><span class="form-privacy__text">Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных</span>
+                                    </div><span class="field__error" data-js="fieldError"></span>
+                                  </div>
+                                      <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
+                                        <svg> 
+                                          <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                        </svg>
+                                      </button>
+                                </div>
+                                <div class="form__thanks" data-js="form-thanks">
+                                  <div class="form__title">Ваша заявка отправлена!</div>
+                                  <div class="form__image-success"><img src="img/success.png"></div>
+                                  <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                                </div>
+                              </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal hystmodal" id="faqModal" aria-hidden="true" data-js="faqModal">
+                  <div class="hystmodal__wrap">
+                    <div class="hystmodal__window" role="dialog" aria-modal="true">
+                      <div class="modal__content">
+                        <div class="modal__close" data-hystclose>
+                          <svg> 
+                            <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                        <div class="modal__inner" data-js="modalInner">
+                              <form class="form form--modal" action="#" data-validate novalidate>
+                                <div class="form__content" data-js="formContent">
+                                  <div class="form__title">Задать вопрос</div>
+                                  <div class="form__fields" data-js="formFields">
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="tel" placeholder="Телефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                        <label class="field     " data-js="formField">
+                                          <textarea class="field__textarea" rows="6" placeholder="Вопрос"></textarea>
+                                        </label>
+                                  </div>
+                                  <div class="form__privacy form-privacy" data-js="formField">
+                                    <div class="form-privacy__flex">
+                                      <label>
+                                        <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                      </label><span class="form-privacy__text">Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных</span>
+                                    </div><span class="field__error" data-js="fieldError"></span>
+                                  </div>
+                                      <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить вопрос</span><span class="vt-btn__separator"></span>
+                                        <svg> 
+                                          <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                        </svg>
+                                      </button>
+                                </div>
+                                <div class="form__thanks" data-js="form-thanks">
+                                  <div class="form__title">Ваша заявка отправлена!</div>
+                                  <div class="form__image-success"><img src="img/success.png"></div>
+                                  <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                                </div>
+                              </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal hystmodal modal--3d" id="piSliderModel" aria-hidden="true" data-js="piSliderModel">
+                  <div class="hystmodal__wrap">
+                    <div class="hystmodal__window" role="dialog" aria-modal="true">
+                      <div class="modal__content">
+                        <div class="modal__close" data-hystclose>
+                          <svg> 
+                            <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                        <div class="modal__inner" data-js="modalInner"><div id="d3-model-wrap" class="d3-model-wrap" data-mtl="public/3d-models/model-1/r32.mtl" data-obj="public/3d-models/model-1/r32.obj">
+<canvas id="model_3d"></canvas>
+</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </noindex>
+        <header class="site-header" data-js="siteHeader">
+          <div class="section">
+            <div class="vt-container">
+              <div class="site-header__container" data-aos="fade-down">
+                <div class="site-header__side site-header__side--bg"><a class="site-header__logo" href="/"><img src="img/logo_full.svg" alt=""></a>
+                  <div class="site-header__separator"></div>
+                      <div class="main-menu site-header__menu">
+                        <div class="main-menu__items">
+                          <div class="main-menu__item" data-js="mainMenuItem"><a class="main-menu__link" href="javascript:void(0);">Подбор оборудования</a>
+                            <div class="main-menu__chevron">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#select_chevron"></use>
+                              </svg>
+                            </div>
+                            <div class="submenu main-menu__submenu">
+                              <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 1</a></div>
+                              <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 2</a></div>
+                              <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 3</a></div>
+                              <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 4</a></div>
+                              <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 5</a></div>
+                              <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 6</a></div>
+                            </div>
+                          </div>
+                          <div class="main-menu__item" data-js="mainMenuItem"><a class="main-menu__link" href="javascript:void(0);">Услуги</a>
+                            <div class="main-menu__chevron">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#select_chevron"></use>
+                              </svg>
+                            </div>
+                            <div class="submenu main-menu__submenu">
+                              <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Услуга 1</a></div>
+                              <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Услуга 2</a></div>
+                              <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Услуга 3</a></div>
+                            </div>
+                          </div>
+                          <div class="main-menu__item" data-js="mainMenuItem"><a class="main-menu__link" href="javascript:void(0);">Каталог теплообмеников</a></div>
+                          <div class="main-menu__item" data-js="mainMenuItem"><a class="main-menu__link" href="javascript:void(0);">О компании</a></div>
+                        </div>
+                      </div>
+                </div>
+                <div class="site-header__side">
+                  <div class="site-header__contacts">
+                        <div class="copy-text" data-js="copyText">
+                          <div class="copy-text__content" data-js="copyTextContent"><a class="site-header__contact" href="mailto:info2@valvetechgroup.com">info2@valvetechgroup.com</a>
+                          </div>
+                          <div class="copy-text__notice" data-js="copyTextNotice">Скопировано</div>
+                          <div class="copy-text__btn" data-js="copyTextBtn">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#copy"></use>
+                            </svg>
+                          </div>
+                        </div><a class="site-header__contact" href="tel:+78002220026">+7 (800) 222-00-26</a>
+                  </div>
+                      <button class="vt-btn vt-btn--ma" type="button" data-modal="#callbackModal"><span class="vt-btn__text">Заказать звонок</span><span class="vt-btn__separator"></span>
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#handset"></use>
+                        </svg>
+                      </button>
+                </div>
+                <div class="site-header__burger" data-js="mainBurgerOpen">
+                  <svg> 
+                    <use xlink:href="img/sprites/sprite.svg#main_burger"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+    <main class="site-main">
+      <div class="page" data-js="page">
+        <div class="page-layout">
+              <section class="section section--intro img-intro" data-anim-id="homeIntro">
+                <div class="section__bg" data-aos="fade-in" data-aos-duration="1000" data-aos-anchor="[data-anim-id='homeIntro']"><img src="img/catalog/catalog_intro.webp"></div>
+                <div class="vt-container img-intro__content">
+                      <div class="title img-intro__title title--70 title--upper" data-aos="fade-right" data-aos-anchor="[data-anim-id='homeIntro']">
+                        <h1>Каталог <br>Теплообменников</h1>
+                      </div>
+                </div>
+              </section>
+              <section class="section section--inner p-catalog">
+                <div class="vt-container">
+                  <div class="p-catalog__container">
+                    <div class="p-catalog__sidebar">
+                          <form class="catalog-filter" action="#"></form>
+                    </div>
+                    <div class="p-catalog__main"></div>
+                  </div>
+                </div>
+              </section>
+        </div>
+      </div>
+    </main>
+        <footer class="site-footer section">
+          <div class="section__bg"><img src="img/footer_bg.webp" alt=""></div>
+          <div class="vt-container">
+            <div class="site-footer__container">
+              <div class="site-footer__top" data-aos="fade-right">
+                    <form class="form site-footer__form form--light" action="#" data-validate novalidate>
+                      <div class="form__content" data-js="formContent">
+                        <div class="form__title">Подобрать оборудование</div>
+                        <div class="form__fields" data-js="formFields">
+                              <label class="field     " data-js="formField">
+                                <input class="field__input" type="text" placeholder="Ваше имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                              </label>
+                              <label class="field     " data-js="formField">
+                                <input class="field__input" type="tel" placeholder="Tелефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                              </label>
+                              <label class="field     " data-js="formField">
+                                <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                              </label>
+                              <label class="field     " data-js="formField">
+                                <textarea class="field__textarea" rows="6" placeholder="Комментарий"></textarea>
+                              </label>
+                        </div>
+                        <div class="form__privacy form-privacy" data-js="formField">
+                          <div class="form-privacy__flex">
+                            <label>
+                              <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                            </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с политикой <a href="javascript:void(0);" target="_blank">конфиденциальности</a></span>
+                          </div><span class="field__error" data-js="fieldError"></span>
+                        </div>
+                            <button class="vt-btn form__submit vt-btn--white" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
+                              <svg> 
+                                <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                              </svg>
+                            </button>
+                      </div>
+                      <div class="form__thanks" data-js="form-thanks">
+                        <div class="form__title">Ваша заявка отправлена!</div>
+                        <div class="form__image-success"><img src="img/success.png"></div>
+                        <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                      </div>
+                    </form>
+              </div>
+              <div class="site-footer__bottom" data-anim-list>
+                <div class="site-footer__row site-footer__row--top">
+                  <div class="site-footer__left" data-anim-item>
+                        <div class="title  title--30 title--light title--upper">ООО «Вальв Тек Груп»
+                        </div>
+                    <div class="site-footer__address">Пермь, Чернышевского 28 оф.100</div>
+                    <div class="site-footer__contacts">
+                          <div class="copy-text copy-text--light" data-js="copyText">
+                            <div class="copy-text__content" data-js="copyTextContent"><a class="site-footer__contact" href="mailto:info2@valvetechgroup.com">info2@valvetechgroup.com</a>
+                            </div>
+                            <div class="copy-text__notice" data-js="copyTextNotice">Скопировано</div>
+                            <div class="copy-text__btn" data-js="copyTextBtn">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#copy"></use>
+                              </svg>
+                            </div>
+                          </div><a class="site-footer__contact" href="tel:+73422482063">+7 (342) 248-20-63</a>
+                    </div>
+                  </div>
+                  <div class="site-footer__right">
+                    <div class="site-footer__column" data-anim-item>
+                      <div class="site-footer__title">Каталог</div>
+                      <ul class="site-footer__list">
+                        <li><a class="site-footer__link" href="javascript:void(0);">Пластинчатые теплообменники</a></li>
+                        <li><a class="site-footer__link" href="javascript:void(0);">Паяные теплообменники</a></li>
+                        <li><a class="site-footer__link" href="javascript:void(0);">Насосные станции</a></li>
+                        <li><a class="site-footer__link" href="javascript:void(0);">Блочные тепловые пункты</a></li>
+                        <li><a class="site-footer__link" href="javascript:void(0);">Пластины и прокладки (ЗИП)</a></li>
+                      </ul>
+                    </div>
+                    <div class="site-footer__column" data-anim-item>
+                      <div class="site-footer__title">Услуги</div>
+                      <ul class="site-footer__list">
+                        <li> <a class="site-footer__link" href="javascript:void(0);">Подбор аналогов</a></li>
+                        <li> <a class="site-footer__link" href="javascript:void(0);">Поставка запчастей</a></li>
+                        <li> <a class="site-footer__link" href="javascript:void(0);">Инжиниринг и проектирование</a></li>
+                      </ul>
+                    </div>
+                    <div class="site-footer__column" data-anim-item>
+                      <div class="site-footer__title">Клиентам</div>
+                      <ul class="site-footer__list">
+                        <li> <a class="site-footer__link" href="javascript:void(0);">О компании</a></li>
+                        <li> <a class="site-footer__link" href="javascript:void(0);">Условия оплаты</a></li>
+                        <li> <a class="site-footer__link" href="javascript:void(0);">Доставка и логистика</a></li>
+                        <li> <a class="site-footer__link" href="javascript:void(0);">Гарантия и возврат</a></li>
+                        <li> <a class="site-footer__link" href="javascript:void(0);">Документация</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="site-footer__row">
+                  <div class="site-footer__left" data-anim-item>
+                    <div class="site-footer__text">© 2026 Все права защищены</div>
+                  </div>
+                  <div class="site-footer__right">
+                    <div class="site-footer__column" data-anim-item><a class="site-footer__text" href="javascript:void(0);">Пользовательское соглашение</a></div>
+                    <div class="site-footer__column" data-anim-item>
+                      <div class="site-footer__text">Сделано в <a href="https://itspace.group/" target="_blank">ITS</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <div class="preloader" data-js="preloader">
+          <div class="preloader__bg" data-js="preloaderBg"><img src="img/preloader_bg.webp" alt=""></div>
+          <div class="vt-container preloader__content">
+            <div class="preloader__text" data-js="preloaderText"> <span>Точность<br></span><span>Скорость<br></span><span>Гарантии</span></div>
+          </div>
+        </div>
+    <div class="main-burger" data-js="mainBurger">
+      <div class="main-burger__overlay" data-js="mainBurgerClose"></div>
+      <div class="main-burger__content">
+        <div class="main-burger__close" data-js="mainBurgerClose">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#close"></use>
+          </svg>
+        </div>
+        <div class="main-burger__body">
+              <div class="main-menu main-menu--burger">
+                <div class="main-menu__items">
+                  <div class="main-menu__item" data-js="mainMenuItem"><a class="main-menu__link" href="javascript:void(0);">Подбор оборудования</a>
+                    <div class="main-menu__chevron">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#select_chevron"></use>
+                      </svg>
+                    </div>
+                    <div class="submenu main-menu__submenu">
+                      <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 1</a></div>
+                      <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 2</a></div>
+                      <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 3</a></div>
+                      <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 4</a></div>
+                      <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 5</a></div>
+                      <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Товар 6</a></div>
+                    </div>
+                  </div>
+                  <div class="main-menu__item" data-js="mainMenuItem"><a class="main-menu__link" href="javascript:void(0);">Услуги</a>
+                    <div class="main-menu__chevron">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#select_chevron"></use>
+                      </svg>
+                    </div>
+                    <div class="submenu main-menu__submenu">
+                      <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Услуга 1</a></div>
+                      <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Услуга 2</a></div>
+                      <div class="submenu__item"><a class="main-menu__link" href="javascript:void(0);">Услуга 3</a></div>
+                    </div>
+                  </div>
+                  <div class="main-menu__item" data-js="mainMenuItem"><a class="main-menu__link" href="javascript:void(0);">Каталог теплообмеников</a></div>
+                  <div class="main-menu__item" data-js="mainMenuItem"><a class="main-menu__link" href="javascript:void(0);">О компании</a></div>
+                </div>
+              </div>
+          <div class="site-header__contacts">
+                <div class="copy-text" data-js="copyText">
+                  <div class="copy-text__content" data-js="copyTextContent"><a class="site-header__contact" href="mailto:info2@valvetechgroup.com">info2@valvetechgroup.com</a>
+                  </div>
+                  <div class="copy-text__notice" data-js="copyTextNotice">Скопировано</div>
+                  <div class="copy-text__btn" data-js="copyTextBtn">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#copy"></use>
+                    </svg>
+                  </div>
+                </div><a class="site-header__contact" href="tel:+78002220026">+7 (800) 222-00-26</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <noindex>
+      <div>
+            <div class="modal hystmodal" id="callbackModal" aria-hidden="true" data-js="callbackModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form form--modal" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="formContent">
+                              <div class="form__title">Оставить заявку</div>
+                              <div class="form__fields" data-js="formFields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="Телефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <div class="form-privacy__flex">
+                                  <label>
+                                    <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                  </label><span class="form-privacy__text">Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных</span>
+                                </div><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                                  <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
+                                    <svg> 
+                                      <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                    </svg>
+                                  </button>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__title">Ваша заявка отправлена!</div>
+                              <div class="form__image-success"><img src="img/success.png"></div>
+                              <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal" id="faqModal" aria-hidden="true" data-js="faqModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form form--modal" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="formContent">
+                              <div class="form__title">Задать вопрос</div>
+                              <div class="form__fields" data-js="formFields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="Телефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="6" placeholder="Вопрос"></textarea>
+                                    </label>
+                              </div>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <div class="form-privacy__flex">
+                                  <label>
+                                    <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                  </label><span class="form-privacy__text">Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных</span>
+                                </div><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                                  <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить вопрос</span><span class="vt-btn__separator"></span>
+                                    <svg> 
+                                      <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                    </svg>
+                                  </button>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__title">Ваша заявка отправлена!</div>
+                              <div class="form__image-success"><img src="img/success.png"></div>
+                              <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal modal--3d" id="piSliderModel" aria-hidden="true" data-js="piSliderModel">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner"><div id="d3-model-wrap" class="d3-model-wrap" data-mtl="public/3d-models/model-1/r32.mtl" data-obj="public/3d-models/model-1/r32.obj">
+<canvas id="model_3d"></canvas>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </noindex>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

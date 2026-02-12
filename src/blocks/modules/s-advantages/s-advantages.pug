@@ -15,22 +15,22 @@ mixin s-advantages(props = defaultSAdvantagesProps)
                 +title({
                     text: 'Преимущества',
                     tag: 'h2'
-                })
-            .s-advantages__items
-                +info-card
+                })(data-aos="fade-right")
+            .s-advantages__items(data-anim-list)
+                +info-card()(data-anim-item)
                 +info-card({
                     title: 'Скорость',
                     num: '02',
                     text: 'Мы сделаем расчёт и доставим до вас'
-                })
+                })(data-anim-item)
                 +info-card({
                     title: 'Гарантии',
                     num: '03',
                     text: 'Гарантия на подобранное оборудование <br>и его комплектующие до 5 лет'
-                })
+                })(data-anim-item)
                 +info-card({
                     title: 'Альтернатива под бюджет',
                     num: '04',
                     text: 'Подбираем несколько вариантов, чтобы <br>вы могли остановиться на лучшем'
-                })
+                })(data-anim-item)
 

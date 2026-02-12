@@ -36,6 +36,11 @@ function preloader() {
         await delay(1000 + coeff)
         preloader.style.opacity = '0',
         await delay(1000)
+        AOS.init({
+            offset: 100,
+            duration: 600,
+            delay: 100,
+        });
         preloader.remove()
         unlockBody()
     }
