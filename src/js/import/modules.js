@@ -2,10 +2,12 @@
 @@include("../../blocks/modules/modals/modals.js")
 @@include("../../blocks/modules/main-burger/main-burger.js")
 @@include("../../blocks/modules/preloader/preloader.js")
+@@include("../../blocks/modules/p-catalog/p-catalog.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     header();
     preloader();
     modalsInit();
     mainBurger();
+    pCatalogBanner();
 })

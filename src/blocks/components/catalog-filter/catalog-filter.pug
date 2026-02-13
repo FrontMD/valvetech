@@ -10,3 +10,356 @@ mixin catalog-filter(props = defaultCatalogFilterProps)
         }
 
     form.catalog-filter(action="#" class= checkProps.classes)&attributes(attributes)
+        .catalog-filter__blocks
+            .filter-block
+                .filter-block__header
+                    .filter-block__title Цена
+                .filter-block__content
+
+            .filter-block(data-js="filterBlock" collapsible)
+                .filter-block__header(data-js="filterBlockHeader")
+                    .filter-block__title Производитель
+                    .filter-block__icon
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#filter_chevron`)
+                .filter-block__content(data-js="filterBlockContent")
+                    .checkboxes-list
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Брант',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Теплосилат',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Феникс',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Alfa Laval',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Clever',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Danfoss',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Брант',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Теплосилат',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Феникс',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Alfa Laval',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Clever',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Danfoss',
+                            inputAttr: {
+                                'name': 'brand'
+                            }
+                        })
+
+            .filter-block(data-js="filterBlock" collapsible)
+                .filter-block__header(data-js="filterBlockHeader")
+                    .filter-block__title Вид
+                    .filter-block__icon
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#filter_chevron`)
+                .filter-block__content(data-js="filterBlockContent")
+                    .checkboxes-list
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Разборные',
+                            inputAttr: {
+                                'name': 'view'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Паянные',
+                            inputAttr: {
+                                'name': 'view'
+                            }
+                        })
+
+            .filter-block(data-js="filterBlock" collapsible)
+                .filter-block__header(data-js="filterBlockHeader")
+                    .filter-block__title Страна производства
+                    .filter-block__icon
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#filter_chevron`)
+                .filter-block__content(data-js="filterBlockContent")
+                    .checkboxes-list
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Россия',
+                            inputAttr: {
+                                'name': 'country'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Китай',
+                            inputAttr: {
+                                'name': 'country'
+                            }
+                        })
+
+            .filter-block(data-js="filterBlock" collapsible)
+                .filter-block__header(data-js="filterBlockHeader")
+                    .filter-block__title Среда
+                    .filter-block__icon
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#filter_chevron`)
+                .filter-block__content(data-js="filterBlockContent")
+                    .checkboxes-list
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Вода-Вода',
+                            inputAttr: {
+                                'name': 'environment'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Водоводяной',
+                            inputAttr: {
+                                'name': 'environment'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Вода-гликоль',
+                            inputAttr: {
+                                'name': 'environment'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Антифриз-масло',
+                            inputAttr: {
+                                'name': 'environment'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Пар-вода',
+                            inputAttr: {
+                                'name': 'environment'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Фреон-вода',
+                            inputAttr: {
+                                'name': 'environment'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Для воды',
+                            inputAttr: {
+                                'name': 'environment'
+                            }
+                        })
+
+            .filter-block(data-js="filterBlock" collapsible)
+                .filter-block__header(data-js="filterBlockHeader")
+                    .filter-block__title Сфера применения
+                    .filter-block__icon
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#filter_chevron`)
+                .filter-block__content(data-js="filterBlockContent")
+                    .checkboxes-list
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Для производства сахара',
+                            inputAttr: {
+                                'name': 'scope'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Для производства пива и сусла',
+                            inputAttr: {
+                                'name': 'scope'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Для нефтяной и газовой промышленности',
+                            inputAttr: {
+                                'name': 'scope'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Для котельной',
+                            inputAttr: {
+                                'name': 'scope'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Для бассейна',
+                            inputAttr: {
+                                'name': 'scope'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: 'Для ИТП',
+                            inputAttr: {
+                                'name': 'scope'
+                            }
+                        })
+
+            .filter-block(data-js="filterBlock" collapsible)
+                .filter-block__header(data-js="filterBlockHeader")
+                    .filter-block__title ДУ (мм.)
+                    .filter-block__icon
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#filter_chevron`)
+                .filter-block__content(data-js="filterBlockContent")
+                    .checkboxes-list
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '1120',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '3230',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '400-2000',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '4039',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '457',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '490-2900',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '1120',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '3230',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '400-2000',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '4039',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '457',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+                        +field({
+                            type: 'checkbox',
+                            checkboxText: '490-2900',
+                            inputAttr: {
+                                'name': 'diameter'
+                            }
+                        })
+
+        +btn({
+            classes: 'vt-btn--justify catalog-filter__btn',
+            name: 'Подобрать',
+            sMode: 'full',
+            icon: 'btn_chevron'
+        })

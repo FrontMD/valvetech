@@ -202,14 +202,233 @@
                       </div>
                 </div>
               </section>
-              <section class="section section--inner p-catalog">
+              <section class="section section--inner p-catalog" data-js="pCatalog">
                 <div class="vt-container">
                   <div class="p-catalog__container">
                     <div class="p-catalog__sidebar">
-                          <form class="catalog-filter" action="#"></form>
+                          <form class="catalog-filter p-catalog__filter" action="#">
+                            <div class="catalog-filter__blocks">
+                              <div class="filter-block">
+                                <div class="filter-block__header">
+                                  <div class="filter-block__title">Цена</div>
+                                </div>
+                                <div class="filter-block__content"></div>
+                              </div>
+                              <div class="filter-block" data-js="filterBlock" collapsible>
+                                <div class="filter-block__header" data-js="filterBlockHeader">
+                                  <div class="filter-block__title">Производитель</div>
+                                  <div class="filter-block__icon">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#filter_chevron"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="filter-block__content" data-js="filterBlockContent">
+                                  <div class="checkboxes-list">
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Брант</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Теплосилат</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Феникс</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Alfa Laval</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Clever</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Danfoss</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Брант</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Теплосилат</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Феникс</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Alfa Laval</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Clever</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="brand"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Danfoss</span></span>
+                                        </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="filter-block" data-js="filterBlock" collapsible>
+                                <div class="filter-block__header" data-js="filterBlockHeader">
+                                  <div class="filter-block__title">Вид</div>
+                                  <div class="filter-block__icon">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#filter_chevron"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="filter-block__content" data-js="filterBlockContent">
+                                  <div class="checkboxes-list">
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="view"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Разборные</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="view"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Паянные</span></span>
+                                        </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="filter-block" data-js="filterBlock" collapsible>
+                                <div class="filter-block__header" data-js="filterBlockHeader">
+                                  <div class="filter-block__title">Страна производства</div>
+                                  <div class="filter-block__icon">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#filter_chevron"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="filter-block__content" data-js="filterBlockContent">
+                                  <div class="checkboxes-list">
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="country"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Россия</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="country"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Китай</span></span>
+                                        </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="filter-block" data-js="filterBlock" collapsible>
+                                <div class="filter-block__header" data-js="filterBlockHeader">
+                                  <div class="filter-block__title">Среда</div>
+                                  <div class="filter-block__icon">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#filter_chevron"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="filter-block__content" data-js="filterBlockContent">
+                                  <div class="checkboxes-list">
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="environment"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Вода-Вода</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="environment"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Водоводяной</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="environment"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Вода-гликоль</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="environment"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Антифриз-масло</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="environment"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Пар-вода</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="environment"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Фреон-вода</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="environment"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Для воды</span></span>
+                                        </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="filter-block" data-js="filterBlock" collapsible>
+                                <div class="filter-block__header" data-js="filterBlockHeader">
+                                  <div class="filter-block__title">Сфера применения</div>
+                                  <div class="filter-block__icon">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#filter_chevron"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="filter-block__content" data-js="filterBlockContent">
+                                  <div class="checkboxes-list">
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="scope"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Для производства сахара</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="scope"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Для производства пива и сусла</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="scope"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Для нефтяной и газовой промышленности</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="scope"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Для котельной</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="scope"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Для бассейна</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="scope"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">Для ИТП</span></span>
+                                        </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="filter-block" data-js="filterBlock" collapsible>
+                                <div class="filter-block__header" data-js="filterBlockHeader">
+                                  <div class="filter-block__title">ДУ (мм.)</div>
+                                  <div class="filter-block__icon">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#filter_chevron"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="filter-block__content" data-js="filterBlockContent">
+                                  <div class="checkboxes-list">
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">1120</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">3230</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">400-2000</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">4039</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">457</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">490-2900</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">1120</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">3230</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">400-2000</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">4039</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">457</span></span>
+                                        </label>
+                                        <label class="field     field--checkbox" data-js="formField">
+                                          <input class="field__input" type="checkbox" placeholder="" name="diameter"><span class="fake-checkbox"><span class="fake-checkbox__input"></span><span class="fake-checkbox__text">490-2900</span></span>
+                                        </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div><a class="vt-btn vt-btn--justify catalog-filter__btn vt-btn--full" href="javascript:void(0);"><span class="vt-btn__text">Подобрать</span><span class="vt-btn__separator"></span>
+                                  <svg> 
+                                    <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                  </svg></a>
+                          </form>
                     </div>
                     <div class="p-catalog__main">
-                      <div class="p-catalog__list">
+                      <div class="p-catalog__list" data-js="pCatalogList">
                             <div class="product-card">
                               <div class="product-card__img"><img src="img/catalog/product_1.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №07</div>
@@ -567,7 +786,7 @@
                             <div class="product-banner__bg"><img src="img/catalog/product_banner.webp" alt=""></div>
                             <div class="product-banner__content">
                               <div class="product-banner__info">
-                                    <div class="title  title--28 title--light">Не нашли подходящий?
+                                    <div class="title  title--28 title--light title--upper">Не нашли подходящий?
                                     </div>
                                 <div class="product-banner__text">Оставьте заявку и наш эксперт поможет вам с подбором</div>
                               </div><a class="vt-btn  vt-btn--white" href="javascript:void(0);" data-modal="#selectionModal"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>

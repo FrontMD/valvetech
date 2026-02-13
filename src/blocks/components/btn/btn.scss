@@ -60,6 +60,10 @@
         flex-direction: row-reverse;
     }
 
+    &--justify &__text {
+        margin-right: auto;
+    }
+
     &--full {
         width: 100%;
     }

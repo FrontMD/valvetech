@@ -86,21 +86,22 @@
         }
     }
 
-    /*
+    &--28 {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 130%;
 
-    &--26 {
-        font-weight: 500;
-        font-size: 26px;
-        line-height: 120%;
-
-        @include max(tablet) {
+        /*@include max(tablet) {
             font-size: 20px;
         }
 
         @include max(xs) {
             font-size: 18px;
-        }
+        }*/
     }
+
+    /*
+
 
     &--22 {
         font-weight: 500;

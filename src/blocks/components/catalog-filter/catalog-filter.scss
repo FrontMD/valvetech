@@ -1,1 +1,88 @@
-.catalog-filter {}
+.catalog-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+    background-color: $c-white;
+
+    &__blocks {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+    }
+
+    &__btn {
+        flex: 0 0 auto;
+    }
+}
+
+.filter-block {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    &__title {
+        flex: 1 1 auto;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+    }
+
+    &__icon {
+        flex: 0 0 auto;
+        transition: transform $tr-long;
+
+        svg {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    &__content,
+    &--collapsible.expanded &__content {
+        padding-top: 20px;
+        overflow: hidden;
+    }
+
+    &--collapsible &__content {
+        transition: max-height $tr-long, padding-top $tr-long;
+        max-height: 0;
+        overflow: hidden;
+        padding-top: 0;
+    }
+
+    &--collapsible.expanded &__icon {
+        transform: rotate(180deg);
+    }
+}
+
+.checkboxes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 22px;
+    overflow-y: auto;
+    max-height: 238px;
+
+    &::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $c-bg-main;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 2px solid transparent;
+        background-color: $c-border;
+        border-radius: 10px;
+        background-clip: content-box;
+    }
+}

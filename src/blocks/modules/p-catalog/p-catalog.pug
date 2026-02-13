@@ -9,13 +9,15 @@ mixin p-catalog(props = defaultPCatalogProps)
             classes: props.classes ? props.classes : defaultPCatalogProps.classes,
         }
 
-    section.section.section--inner.p-catalog(class= checkProps.classes)&attributes(attributes)
+    section.section.section--inner.p-catalog(class= checkProps.classes data-js="pCatalog")&attributes(attributes)
         .vt-container
             .p-catalog__container
                 .p-catalog__sidebar
-                    +catalog-filter
+                    +catalog-filter({
+                        classes: 'p-catalog__filter'
+                    })
                 .p-catalog__main
-                    .p-catalog__list
+                    .p-catalog__list(data-js="pCatalogList")
                         +product-card
                         +product-card({
                             img: 'img/catalog/product_2.webp',

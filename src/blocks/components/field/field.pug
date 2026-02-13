@@ -4,6 +4,7 @@
         tag: 'input',
         type: 'text',
         placeholder: '',
+        checkboxText: '',
         inputAttr: {},
         selectOptions: [
             {
@@ -26,6 +27,7 @@ mixin field(props = defaultFieldProps)
             tag: props.tag ? props.tag : defaultFieldProps.tag,
             type: props.type ? props.type : defaultFieldProps.type,
             placeholder: props.placeholder ? props.placeholder : defaultFieldProps.placeholder,
+            checkboxText: props.checkboxText ? props.checkboxText : defaultFieldProps.checkboxText,
             inputAttr: props.inputAttr ? props.inputAttr : defaultFieldProps.inputAttr,
             selectOptions: props.selectOptions ? props.selectOptions : defaultFieldProps.selectOptions,
             selectNoForm: props.selectNoForm ? props.selectNoForm : defaultFieldProps.selectNoForm,
@@ -37,9 +39,15 @@ mixin field(props = defaultFieldProps)
             input.field__input(type=checkProps.type placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
             - if(checkProps.type === 'radio')
                 span.fake-radio
+                    span.fake-radio__input
+                    - if(checkProps.checkboxText.length > 0)
+                        span.fake-radio__text!= checkProps.checkboxText
 
             - else if(checkProps.type === 'checkbox')
                 span.fake-checkbox
+                    span.fake-checkbox__input
+                    - if(checkProps.checkboxText.length > 0)
+                        span.fake-checkbox__text!= checkProps.checkboxText
                 - if(checkProps.hasError === true)
                     span.field__error(data-js='fieldError') Нужно обязательно ознакомиться и согласиться
 
