@@ -218,6 +218,13 @@
         }
     }
 
+    &--modal .form__title {
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 120%;
+        text-transform: none;
+    }
+
     &--modal .form__fields {
         max-width: calc(100% + 8px);
         overflow: auto;
@@ -240,6 +247,16 @@
         }
     }
 
+    &--modal .form-privacy__text a {
+
+        color: $c-link;
+        text-decoration: none;
+
+        &:hover {
+            color: $c-accent-hover;
+        }
+
+    }
 }
 
 .form {

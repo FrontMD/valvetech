@@ -15,5 +15,108 @@ mixin p-catalog(props = defaultPCatalogProps)
                 .p-catalog__sidebar
                     +catalog-filter
                 .p-catalog__main
+                    .p-catalog__list
+                        +product-card
+                        +product-card({
+                            img: 'img/catalog/product_2.webp',
+                            title: 'Теплообменник пластинчатый разборный Ридан НН №09',
+                            price: [
+                                '154 858',
+                                '168 800'
+                            ]
+                        })
+                        +product-card({
+                            img: 'img/catalog/product_3.webp',
+                            title: 'Теплообменник пластинчатый разборный Ридан НН №14',
+                            price: [
+                                '113 113',
+                                '123 300'
+                            ]
+                        })
+                        +product-card({
+                            img: 'img/catalog/product_4.webp',
+                            title: 'Теплообменник пластинчатый разборный Ридан НН №19',
+                            price: [
+                                '174 043',
+                                '189 800'
+                            ]
+                        })
+                        +product-card({
+                            img: 'img/catalog/product_5.webp',
+                            title: 'Теплообменник пластинчатый разборный Ридан НН №21',
+                            price: [
+                                '271 785',
+                                '296 300'
+                            ]
+                        })
+                        +product-card({
+                            img: 'img/catalog/product_6.webp',
+                            title: 'Теплообменник пластинчатый разборный Ридан НН №41',
+                            price: [
+                                '520 269',
+                                '567 100'
+                            ]
+                        })
+                        +product-card({
+                            img: 'img/catalog/product_7.webp',
+                            title: 'Теплообменник пластинчатый разборный Ридан HH №43',
+                            price: [
+                                '520 269',
+                                '567 100'
+                            ]
+                        })
+                        +product-card({
+                            img: 'img/catalog/product_8.webp',
+                            title: 'Теплообменник пластинчатый разборный Ридан НН №47',
+                            price: [
+                                '520 269',
+                                '567 100'
+                            ]
+                        })
+                        +product-card({
+                            img: 'img/catalog/product_9.webp',
+                            title: 'Теплообменник пластинчатый паяный Kaori K030',
+                            price: [
+                                '520 269',
+                                '567 100'
+                            ]
+                        })
+                        +product-card({
+                            img: 'img/catalog/product_10.webp',
+                            title: 'Теплообменник пластинчатый паяный Kaori K040',
+                            price: [
+                                '520 269',
+                                '567 100'
+                            ]
+                        })
+                        +product-card({
+                            img: 'img/catalog/product_11.webp',
+                            title: 'Теплообменник пластинчатый паяный Kaori K050',
+                            price: [
+                                '520 269',
+                                '567 100'
+                            ]
+                        })
+                        +product-card({
+                            img: 'img/catalog/product_12.webp',
+                            title: 'Теплообменник Феникс APR-4',
+                            price: [
+                                '520 269',
+                                '567 100'
+                            ]
+                        })
+
+                    .p-catalog__controls
+                        +btn({
+                            classes: 'p-catalog__more',
+                            name: 'Загрузить еще',
+                            cMode: 'white',
+                            sMode: 'full'
+                        })
+                        +pagination
+
+                    +product-banner({
+                        classes: 'p-catalog__banner'
+                    })
 
 

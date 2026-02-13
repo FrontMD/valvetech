@@ -9,6 +9,15 @@
 
 @font-face {
     font-family: 'Raleway';
+    src: url('../fonts/Raleway/Raleway-Medium.woff2') format('woff2'),
+        url('../fonts/Raleway/Raleway-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
     src: url('../fonts/Raleway/Raleway-SemiBold.woff2') format('woff2'),
         url('../fonts/Raleway/Raleway-SemiBold.woff') format('woff');
     font-weight: 600;

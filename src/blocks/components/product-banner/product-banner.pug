@@ -1,0 +1,27 @@
+-
+    const defaultProductBannerProps = {
+        classes: ''
+    }
+
+mixin product-banner(props = defaultProductBannerProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultProductBannerProps.classes,
+        }
+
+    .product-banner(class= checkProps.classes data-js="productBanner")&attributes(attributes)
+        .product-banner__bg
+            img(src="img/catalog/product_banner.webp" alt="")
+        .product-banner__content
+            .product-banner__info
+                +title({
+                    text: 'Не нашли подходящий?',
+                    size: '28',
+                    cMode: 'light'
+                })
+                .product-banner__text Оставьте заявку и наш эксперт поможет вам с подбором
+            +btn({
+                name: 'Отправить заявку',
+                cMode: 'white',
+                icon: 'btn_chevron'
+            })(data-modal="#selectionModal")

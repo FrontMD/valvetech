@@ -1,1 +1,40 @@
-.p-catalog {}
+.p-catalog {
+    &__container {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    &__sidebar {
+        padding-right: 24px;
+        border-right: 1px solid $c-border;
+        flex: 0 0 440px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    &__controls {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    &__more {
+        border-radius: 0;
+        color: $c-text;
+
+        &:hover {
+            border-radius: 0;
+        }
+    }
+
+    &__controls+&__banner {
+        margin-top: 30px;
+    }
+}

@@ -1,12 +1,63 @@
 -
     const defaultProductCardProps = {
-        classes: ''
+        classes: '',
+        img: 'img/catalog/product_1.webp',
+        title: 'Теплообменник пластинчатый разборный Ридан НН №07',
+        chars: [
+            {
+                name: 'Производитель:',
+                value: 'РИДАН'
+            },
+            {
+                name: 'ДУ (мм.):',
+                value: '500'
+            },
+            {
+                name: 'Максимальный расход (м3/час):',
+                value: '40'
+            },
+        ],
+        price: [
+            '84 636',
+            '88 900'
+        ]
     }
 
 mixin product-card(props = defaultProductCardProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultProductCardProps.classes,
+            img: props.img ? props.img : defaultProductCardProps.img,
+            title: props.title ? props.title : defaultProductCardProps.title,
+            chars: props.chars ? props.chars : defaultProductCardProps.chars,
+            price: props.price ? props.price : defaultProductCardProps.price,
         }
 
     .product-card(class= checkProps.classes)&attributes(attributes)
+        .product-card__img
+            img(src=checkProps.img, alt="")
+        .product-card__title!= checkProps.title
+        .product-card__chars
+            - let charsCount = 0
+            - let charsList = checkProps.chars
+            - while(charsCount < charsList.length)
+                - let char = charsList[charsCount]
+                .product-card__char
+                    .product-card__param!= char.name
+                    .product-card__value!= char.value
+
+                - charsCount++
+
+        .product-card__bottom
+            .card-price
+                .card-price__current
+                    != 'от '
+                    span.num!= checkProps.price[0]
+                    span.symbol!= ' ₽'
+                .card-price__old
+                    != checkProps.price[1]
+                    span!= ' ₽'
+            a.product-card__btn(href="javascript:void(0);")
+                span Заказать
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#chevron_card`)

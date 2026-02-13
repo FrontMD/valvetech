@@ -259,7 +259,7 @@ function inputMasksInit(form) {
         })
     }
 
-    function dateMask(e) {
+    /*function dateMask(e) {
 
         let val = e.target.value.replace(/\D/g, "");
 
@@ -290,5 +290,5 @@ function inputMasksInit(form) {
         }
         
         this.value = val;
-    }
+    }*/
 }

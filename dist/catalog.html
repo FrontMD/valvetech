@@ -53,7 +53,7 @@
                                     <div class="form-privacy__flex">
                                       <label>
                                         <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
-                                      </label><span class="form-privacy__text">Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных</span>
+                                      </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
                                     </div><span class="field__error" data-js="fieldError"></span>
                                   </div>
                                       <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
@@ -73,7 +73,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="modal hystmodal" id="faqModal" aria-hidden="true" data-js="faqModal">
+                <div class="modal hystmodal" id="selectionModal" aria-hidden="true" data-js="selectionModal">
                   <div class="hystmodal__wrap">
                     <div class="hystmodal__window" role="dialog" aria-modal="true">
                       <div class="modal__content">
@@ -85,7 +85,7 @@
                         <div class="modal__inner" data-js="modalInner">
                               <form class="form form--modal" action="#" data-validate novalidate>
                                 <div class="form__content" data-js="formContent">
-                                  <div class="form__title">Задать вопрос</div>
+                                  <div class="form__title">Рассчитать теплообменник</div>
                                   <div class="form__fields" data-js="formFields">
                                         <label class="field     " data-js="formField">
                                           <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
@@ -94,17 +94,17 @@
                                           <input class="field__input" type="tel" placeholder="Телефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
                                         </label>
                                         <label class="field     " data-js="formField">
-                                          <textarea class="field__textarea" rows="6" placeholder="Вопрос"></textarea>
+                                          <input class="field__input" type="email" placeholder="Email" data-v-name="email" required=""><span class="field__error" data-js="fieldError"></span>
                                         </label>
                                   </div>
                                   <div class="form__privacy form-privacy" data-js="formField">
                                     <div class="form-privacy__flex">
                                       <label>
                                         <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
-                                      </label><span class="form-privacy__text">Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных</span>
+                                      </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
                                     </div><span class="field__error" data-js="fieldError"></span>
                                   </div>
-                                      <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить вопрос</span><span class="vt-btn__separator"></span>
+                                      <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить</span><span class="vt-btn__separator"></span>
                                         <svg> 
                                           <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
                                         </svg>
@@ -116,23 +116,6 @@
                                   <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
                                 </div>
                               </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal hystmodal modal--3d" id="piSliderModel" aria-hidden="true" data-js="piSliderModel">
-                  <div class="hystmodal__wrap">
-                    <div class="hystmodal__window" role="dialog" aria-modal="true">
-                      <div class="modal__content">
-                        <div class="modal__close" data-hystclose>
-                          <svg> 
-                            <use xlink:href="./img/sprites/sprite.svg#close"></use>
-                          </svg>
-                        </div>
-                        <div class="modal__inner" data-js="modalInner"><div id="d3-model-wrap" class="d3-model-wrap" data-mtl="public/3d-models/model-1/r32.mtl" data-obj="public/3d-models/model-1/r32.obj">
-<canvas id="model_3d"></canvas>
-</div>
                         </div>
                       </div>
                     </div>
@@ -225,7 +208,375 @@
                     <div class="p-catalog__sidebar">
                           <form class="catalog-filter" action="#"></form>
                     </div>
-                    <div class="p-catalog__main"></div>
+                    <div class="p-catalog__main">
+                      <div class="p-catalog__list">
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_1.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №07</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">84 636</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">88 900<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_2.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №09</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">154 858</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">168 800<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_3.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №14</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">113 113</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">123 300<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_4.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №19</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">174 043</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">189 800<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_5.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №21</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">271 785</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">296 300<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_6.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №41</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">520 269</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">567 100<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_7.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан HH №43</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">520 269</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">567 100<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_8.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №47</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">520 269</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">567 100<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_9.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник пластинчатый паяный Kaori K030</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">520 269</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">567 100<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_10.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник пластинчатый паяный Kaori K040</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">520 269</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">567 100<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_11.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник пластинчатый паяный Kaori K050</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">520 269</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">567 100<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                            <div class="product-card">
+                              <div class="product-card__img"><img src="img/catalog/product_12.webp" alt=""></div>
+                              <div class="product-card__title">Теплообменник Феникс APR-4</div>
+                              <div class="product-card__chars">
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Производитель:</div>
+                                  <div class="product-card__value">РИДАН</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">ДУ (мм.):</div>
+                                  <div class="product-card__value">500</div>
+                                </div>
+                                <div class="product-card__char">
+                                  <div class="product-card__param">Максимальный расход (м3/час):</div>
+                                  <div class="product-card__value">40</div>
+                                </div>
+                              </div>
+                              <div class="product-card__bottom">
+                                <div class="card-price">
+                                  <div class="card-price__current">от <span class="num">520 269</span><span class="symbol"> ₽</span>
+                                  </div>
+                                  <div class="card-price__old">567 100<span> ₽</span>
+                                  </div>
+                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#chevron_card"></use>
+                                  </svg></a>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="p-catalog__controls"><a class="vt-btn p-catalog__more vt-btn--white vt-btn--full" href="javascript:void(0);"><span class="vt-btn__text">Загрузить еще</span></a>
+                            <div class="pagination" data-js="pagination"><a class="pagination__page active" href="javascript:void(0);"><span>1</span></a><a class="pagination__page" href="javascript:void(0);"><span>2</span></a><a class="pagination__page" href="javascript:void(0);"><span>3</span></a>
+                            </div>
+                      </div>
+                          <div class="product-banner p-catalog__banner" data-js="productBanner">
+                            <div class="product-banner__bg"><img src="img/catalog/product_banner.webp" alt=""></div>
+                            <div class="product-banner__content">
+                              <div class="product-banner__info">
+                                    <div class="title  title--28 title--light">Не нашли подходящий?
+                                    </div>
+                                <div class="product-banner__text">Оставьте заявку и наш эксперт поможет вам с подбором</div>
+                              </div><a class="vt-btn  vt-btn--white" href="javascript:void(0);" data-modal="#selectionModal"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
+                                    <svg> 
+                                      <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                    </svg></a>
+                            </div>
+                          </div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -429,7 +780,7 @@
                                 <div class="form-privacy__flex">
                                   <label>
                                     <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
-                                  </label><span class="form-privacy__text">Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных</span>
+                                  </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
                                 </div><span class="field__error" data-js="fieldError"></span>
                               </div>
                                   <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
@@ -449,7 +800,7 @@
                 </div>
               </div>
             </div>
-            <div class="modal hystmodal" id="faqModal" aria-hidden="true" data-js="faqModal">
+            <div class="modal hystmodal" id="selectionModal" aria-hidden="true" data-js="selectionModal">
               <div class="hystmodal__wrap">
                 <div class="hystmodal__window" role="dialog" aria-modal="true">
                   <div class="modal__content">
@@ -461,7 +812,7 @@
                     <div class="modal__inner" data-js="modalInner">
                           <form class="form form--modal" action="#" data-validate novalidate>
                             <div class="form__content" data-js="formContent">
-                              <div class="form__title">Задать вопрос</div>
+                              <div class="form__title">Рассчитать теплообменник</div>
                               <div class="form__fields" data-js="formFields">
                                     <label class="field     " data-js="formField">
                                       <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
@@ -470,17 +821,17 @@
                                       <input class="field__input" type="tel" placeholder="Телефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
                                     </label>
                                     <label class="field     " data-js="formField">
-                                      <textarea class="field__textarea" rows="6" placeholder="Вопрос"></textarea>
+                                      <input class="field__input" type="email" placeholder="Email" data-v-name="email" required=""><span class="field__error" data-js="fieldError"></span>
                                     </label>
                               </div>
                               <div class="form__privacy form-privacy" data-js="formField">
                                 <div class="form-privacy__flex">
                                   <label>
                                     <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
-                                  </label><span class="form-privacy__text">Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных</span>
+                                  </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
                                 </div><span class="field__error" data-js="fieldError"></span>
                               </div>
-                                  <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить вопрос</span><span class="vt-btn__separator"></span>
+                                  <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить</span><span class="vt-btn__separator"></span>
                                     <svg> 
                                       <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
                                     </svg>
@@ -492,23 +843,6 @@
                               <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
                             </div>
                           </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal hystmodal modal--3d" id="piSliderModel" aria-hidden="true" data-js="piSliderModel">
-              <div class="hystmodal__wrap">
-                <div class="hystmodal__window" role="dialog" aria-modal="true">
-                  <div class="modal__content">
-                    <div class="modal__close" data-hystclose>
-                      <svg> 
-                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
-                      </svg>
-                    </div>
-                    <div class="modal__inner" data-js="modalInner"><div id="d3-model-wrap" class="d3-model-wrap" data-mtl="public/3d-models/model-1/r32.mtl" data-obj="public/3d-models/model-1/r32.obj">
-<canvas id="model_3d"></canvas>
-</div>
                     </div>
                   </div>
                 </div>

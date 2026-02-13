@@ -10,8 +10,7 @@ noindex
                 text: '',
                 btnText: 'Отправить заявку',
                 btnCMode: 'accent',
-                privacyText: 'Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных',
-                design2: true,
+                privacyText: 'Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a>',
                 })
                     +field({
                         classes: '',
@@ -37,16 +36,16 @@ noindex
                         hasError: true
                     })
 
-        //- обратный звонок
-        +modal({modalId:"faqModal"})(data-js="faqModal")
+        //- заявка на подбор
+        +modal({modalId:"selectionModal"})(data-js="selectionModal")
             +form({
                 classes: 'form--modal',
-                title: 'Задать вопрос',
+                title: 'Рассчитать теплообменник',
                 text: '',
-                btnText: 'Отправить вопрос',
+                btnText: 'Отправить',
+                btnIcon: '',
                 btnCMode: 'accent',
-                privacyText: 'Я прочитал и согласен с <a href="javascript:void(0);" target="_blank">политикой</a> в отношении обработки персональных данных',
-                design2: true,
+                privacyText: 'Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a>',
                 })
                     +field({
                         classes: '',
@@ -73,14 +72,12 @@ noindex
                     })
                     +field({
                         classes: '',
-                        tag: 'textarea',
-                        type: '',
+                        type: 'email',
                         title: '',
-                        placeholder: 'Вопрос',
+                        placeholder: 'Email',
+                        inputAttr: {
+                            'data-v-name': 'email',
+                            'required': '',
+                        },
+                        hasError: true
                     })
-
-        //- 3D модель 
-        +modal({modalId:"piSliderModel", classes: 'modal--3d'})(data-js="piSliderModel")
-            <div id="d3-model-wrap" class="d3-model-wrap" data-mtl="public/3d-models/model-1/r32.mtl" data-obj="public/3d-models/model-1/r32.obj">
-                <canvas id="model_3d"></canvas>
-            </div>
