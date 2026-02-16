@@ -68,6 +68,16 @@
         width: 100%;
     }
 
+    &--bordered {
+        background-color: transparent;
+        color: $c-accent;
+        border: 1px solid $c-accent;
+
+        &:hover {
+            color: $c-white;
+        }
+    }
+
     &--ma {
         min-width: auto;
 
@@ -245,11 +255,6 @@
             opacity: 0.7;
         }
     }
-
-
-    
-
-    
 
     &--bordered-dark {
         color: $c-text;

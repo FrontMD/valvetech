@@ -35,7 +35,9 @@ function delay(ms) {
 const jsTemplatePath = (typeof SITE_TEMPLATE_PATH !== 'undefined' && SITE_TEMPLATE_PATH ? SITE_TEMPLATE_PATH + '/' : '');
 
 document.addEventListener('DOMContentLoaded', () => {
- 
+    $('[data-js="customScrollbar"]').each((index, el) => {
+        new SimpleBar(el, { autoHide: false });
+    })
 })
 
 // Фоновый слайдер
@@ -54,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Инициализация фансибокса
-/*function fancyboxInit() {
+function fancyboxInit() {
     Fancybox.bind("[data-fancybox]", {
         placeFocusBack: false,
         mainClass: 'my-fancybox',
@@ -81,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     });
-}*/
+}
 
 // добавление аттрибутов элементу
 function setAttributes(el, list) {

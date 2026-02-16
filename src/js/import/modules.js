@@ -3,6 +3,7 @@
 @@include("../../blocks/modules/main-burger/main-burger.js")
 @@include("../../blocks/modules/preloader/preloader.js")
 @@include("../../blocks/modules/p-catalog/p-catalog.js")
+@@include("../../blocks/modules/catalog-item/catalog-item.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     header();
@@ -10,4 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
     modalsInit();
     mainBurger();
     pCatalogBanner();
+    ciMedia();
 })
