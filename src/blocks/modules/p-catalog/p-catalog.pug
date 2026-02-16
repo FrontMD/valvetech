@@ -15,10 +15,10 @@ mixin p-catalog(props = defaultPCatalogProps)
                 .p-catalog__sidebar
                     +catalog-filter({
                         classes: 'p-catalog__filter'
-                    })
+                    })(data-aos="fade-right")
                 .p-catalog__main
-                    .p-catalog__list(data-js="pCatalogList")
-                        +product-card
+                    .p-catalog__list(data-js="pCatalogList" data-anim-list)
+                        +product-card()(data-anim-item)
                         +product-card({
                             img: 'img/catalog/product_2.webp',
                             title: 'Теплообменник пластинчатый разборный Ридан НН №09',
@@ -26,7 +26,7 @@ mixin p-catalog(props = defaultPCatalogProps)
                                 '154 858',
                                 '168 800'
                             ]
-                        })
+                        })(data-anim-item)
                         +product-card({
                             img: 'img/catalog/product_3.webp',
                             title: 'Теплообменник пластинчатый разборный Ридан НН №14',
@@ -34,7 +34,7 @@ mixin p-catalog(props = defaultPCatalogProps)
                                 '113 113',
                                 '123 300'
                             ]
-                        })
+                        })(data-anim-item)
                         +product-card({
                             img: 'img/catalog/product_4.webp',
                             title: 'Теплообменник пластинчатый разборный Ридан НН №19',
@@ -42,7 +42,7 @@ mixin p-catalog(props = defaultPCatalogProps)
                                 '174 043',
                                 '189 800'
                             ]
-                        })
+                        })(data-anim-item)
                         +product-card({
                             img: 'img/catalog/product_5.webp',
                             title: 'Теплообменник пластинчатый разборный Ридан НН №21',
@@ -50,7 +50,7 @@ mixin p-catalog(props = defaultPCatalogProps)
                                 '271 785',
                                 '296 300'
                             ]
-                        })
+                        })(data-anim-item)
                         +product-card({
                             img: 'img/catalog/product_6.webp',
                             title: 'Теплообменник пластинчатый разборный Ридан НН №41',
@@ -58,7 +58,7 @@ mixin p-catalog(props = defaultPCatalogProps)
                                 '520 269',
                                 '567 100'
                             ]
-                        })
+                        })(data-anim-item)
                         +product-card({
                             img: 'img/catalog/product_7.webp',
                             title: 'Теплообменник пластинчатый разборный Ридан HH №43',
@@ -66,7 +66,7 @@ mixin p-catalog(props = defaultPCatalogProps)
                                 '520 269',
                                 '567 100'
                             ]
-                        })
+                        })(data-anim-item)
                         +product-card({
                             img: 'img/catalog/product_8.webp',
                             title: 'Теплообменник пластинчатый разборный Ридан НН №47',
@@ -74,7 +74,7 @@ mixin p-catalog(props = defaultPCatalogProps)
                                 '520 269',
                                 '567 100'
                             ]
-                        })
+                        })(data-anim-item)
                         +product-card({
                             img: 'img/catalog/product_9.webp',
                             title: 'Теплообменник пластинчатый паяный Kaori K030',
@@ -82,7 +82,7 @@ mixin p-catalog(props = defaultPCatalogProps)
                                 '520 269',
                                 '567 100'
                             ]
-                        })
+                        })(data-anim-item)
                         +product-card({
                             img: 'img/catalog/product_10.webp',
                             title: 'Теплообменник пластинчатый паяный Kaori K040',
@@ -90,7 +90,7 @@ mixin p-catalog(props = defaultPCatalogProps)
                                 '520 269',
                                 '567 100'
                             ]
-                        })
+                        })(data-anim-item)
                         +product-card({
                             img: 'img/catalog/product_11.webp',
                             title: 'Теплообменник пластинчатый паяный Kaori K050',
@@ -98,7 +98,7 @@ mixin p-catalog(props = defaultPCatalogProps)
                                 '520 269',
                                 '567 100'
                             ]
-                        })
+                        })(data-anim-item)
                         +product-card({
                             img: 'img/catalog/product_12.webp',
                             title: 'Теплообменник Феникс APR-4',
@@ -106,19 +106,19 @@ mixin p-catalog(props = defaultPCatalogProps)
                                 '520 269',
                                 '567 100'
                             ]
-                        })
+                        })(data-anim-item)
 
-                    .p-catalog__controls
+                    .p-catalog__controls(data-anim-list)
                         +btn({
                             classes: 'p-catalog__more',
                             name: 'Загрузить еще',
                             cMode: 'white',
                             sMode: 'full'
-                        })
-                        +pagination
+                        })(data-anim-item)
+                        +pagination()(data-anim-item)
 
                     +product-banner({
                         classes: 'p-catalog__banner'
-                    })
+                    })(data-anim-item)
 
 

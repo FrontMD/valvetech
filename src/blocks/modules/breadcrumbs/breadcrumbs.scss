@@ -1,0 +1,93 @@
+.breadcrumbs {
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    width: 100%;
+
+    &.section {
+        padding-top: 160px;
+        padding-bottom: 30px;
+
+        @include max(large) {
+            padding-top: 110px;
+        }
+
+        @include max(laptop) {
+            padding-top: 100px;
+        }
+
+        @include max(mobile) {
+            padding-top: 80px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        font-weight: 300;
+        gap: 10px;
+        font-size: 15px;
+        color: $c-white;
+
+        @include max(mobile) {
+            font-size: 12px;
+        }
+    }
+
+    &__scroll {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $c-accent-hover;
+            border-radius: 2px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+
+        a {
+            transition: all $tr;
+            cursor: pointer;
+            color: $c-white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $c-accent;
+        }
+    }
+
+    &__item--current {
+        pointer-events: none;
+    }
+
+    &__separator {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 16px;
+            height: 16px;
+
+            @include max(mobile) {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+}

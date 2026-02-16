@@ -91,13 +91,13 @@
         font-weight: 700;
         line-height: 130%;
 
-        /*@include max(tablet) {
-            font-size: 20px;
+        @include max(tablet) {
+            font-size: 22px;
         }
 
         @include max(xs) {
             font-size: 18px;
-        }*/
+        }
     }
 
     /*

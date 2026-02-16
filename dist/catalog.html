@@ -206,13 +206,34 @@
                 <div class="vt-container">
                   <div class="p-catalog__container">
                     <div class="p-catalog__sidebar">
-                          <form class="catalog-filter p-catalog__filter" action="#">
+                          <div class="catalog-filter__open" data-js="catalogFilterOpen">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#filter"></use>
+                            </svg>
+                          </div>
+                          <div class="catalog-filter__overlay" data-js="catalogFilterClose"></div>
+                          <form class="catalog-filter p-catalog__filter" action="#" data-js="catalogFilter" data-aos="fade-right">
+                            <div class="catalog-filter__close" data-js="catalogFilterClose">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#close"></use>
+                              </svg>
+                            </div>
                             <div class="catalog-filter__blocks">
                               <div class="filter-block">
                                 <div class="filter-block__header">
                                   <div class="filter-block__title">Цена</div>
                                 </div>
-                                <div class="filter-block__content"></div>
+                                <div class="filter-block__content">
+                                      <div class="field-range" data-js="fieldRange" data-type="range" data-unit=" ₽" data-min="80000" data-max="520000" data-step="1000">
+                                        <input class="field-range__input field-range__input--min" type="number" min="80000" max="520000" data-js="fieldRangeMin">
+                                        <input class="field-range__input field-range__input--max" type="number" min="80000" max="520000" data-js="fieldRangeMax">
+                                        <div class="field-range__range" data-js="fieldRangeSlider"></div>
+                                        <div class="field-range__values">
+                                          <div class="field-range__value" data-js="fieldRangeMinVal"></div>
+                                          <div class="field-range__value" data-js="fieldRangeMaxVal"></div>
+                                        </div>
+                                      </div>
+                                </div>
                               </div>
                               <div class="filter-block" data-js="filterBlock" collapsible>
                                 <div class="filter-block__header" data-js="filterBlockHeader">
@@ -421,15 +442,17 @@
                                   </div>
                                 </div>
                               </div>
-                            </div><a class="vt-btn vt-btn--justify catalog-filter__btn vt-btn--full" href="javascript:void(0);"><span class="vt-btn__text">Подобрать</span><span class="vt-btn__separator"></span>
+                            </div>
+                                <button class="vt-btn vt-btn--justify catalog-filter__btn vt-btn--full" type="submit"><span class="vt-btn__text">Подобрать</span><span class="vt-btn__separator"></span>
                                   <svg> 
                                     <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
-                                  </svg></a>
+                                  </svg>
+                                </button>
                           </form>
                     </div>
                     <div class="p-catalog__main">
-                      <div class="p-catalog__list" data-js="pCatalogList">
-                            <div class="product-card">
+                      <div class="p-catalog__list" data-js="pCatalogList" data-anim-list>
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_1.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №07</div>
                               <div class="product-card__chars">
@@ -458,7 +481,7 @@
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card">
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_2.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №09</div>
                               <div class="product-card__chars">
@@ -487,7 +510,7 @@
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card">
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_3.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №14</div>
                               <div class="product-card__chars">
@@ -516,7 +539,7 @@
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card">
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_4.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №19</div>
                               <div class="product-card__chars">
@@ -545,7 +568,7 @@
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card">
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_5.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №21</div>
                               <div class="product-card__chars">
@@ -574,7 +597,7 @@
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card">
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_6.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №41</div>
                               <div class="product-card__chars">
@@ -603,7 +626,7 @@
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card">
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_7.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый разборный Ридан HH №43</div>
                               <div class="product-card__chars">
@@ -632,7 +655,7 @@
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card">
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_8.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №47</div>
                               <div class="product-card__chars">
@@ -661,7 +684,7 @@
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card">
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_9.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый паяный Kaori K030</div>
                               <div class="product-card__chars">
@@ -690,7 +713,7 @@
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card">
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_10.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый паяный Kaori K040</div>
                               <div class="product-card__chars">
@@ -719,7 +742,7 @@
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card">
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_11.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник пластинчатый паяный Kaori K050</div>
                               <div class="product-card__chars">
@@ -748,7 +771,7 @@
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card">
+                            <div class="product-card" data-anim-item>
                               <div class="product-card__img"><img src="img/catalog/product_12.webp" alt=""></div>
                               <div class="product-card__title">Теплообменник Феникс APR-4</div>
                               <div class="product-card__chars">
@@ -778,11 +801,11 @@
                               </div>
                             </div>
                       </div>
-                      <div class="p-catalog__controls"><a class="vt-btn p-catalog__more vt-btn--white vt-btn--full" href="javascript:void(0);"><span class="vt-btn__text">Загрузить еще</span></a>
-                            <div class="pagination" data-js="pagination"><a class="pagination__page active" href="javascript:void(0);"><span>1</span></a><a class="pagination__page" href="javascript:void(0);"><span>2</span></a><a class="pagination__page" href="javascript:void(0);"><span>3</span></a>
+                      <div class="p-catalog__controls" data-anim-list><a class="vt-btn p-catalog__more vt-btn--white vt-btn--full" href="javascript:void(0);" data-anim-item><span class="vt-btn__text">Загрузить еще</span></a>
+                            <div class="pagination" data-js="pagination" data-anim-item><a class="pagination__page active" href="javascript:void(0);"><span>1</span></a><a class="pagination__page" href="javascript:void(0);"><span>2</span></a><a class="pagination__page" href="javascript:void(0);"><span>3</span></a>
                             </div>
                       </div>
-                          <div class="product-banner p-catalog__banner" data-js="productBanner">
+                          <div class="product-banner p-catalog__banner" data-js="productBanner" data-anim-item>
                             <div class="product-banner__bg"><img src="img/catalog/product_banner.webp" alt=""></div>
                             <div class="product-banner__content">
                               <div class="product-banner__info">

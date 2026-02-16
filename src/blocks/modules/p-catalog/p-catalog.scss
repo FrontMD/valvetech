@@ -1,8 +1,17 @@
 .p-catalog {
     &__container {
         display: flex;
-        align-items: flex-start;
+        align-items: stretch;
         gap: 24px;
+
+        @include max(laptop) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include max(mobile) {
+            gap: 16px;
+        }
     }
 
     &__sidebar {
@@ -11,6 +20,17 @@
         flex: 0 0 437px;
         overflow: hidden;
         max-width: calc(100% - (100% - 437px));
+
+        @include max(large) {
+            flex: 0 0 390px;
+            max-width: calc(100% - (100% - 390px));
+        }
+
+        @include max(laptop) {
+            border-right: none;
+            flex: 0 0 auto;
+            max-width: none;
+        }
     }
 
     &__filter {
@@ -21,6 +41,18 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 24px;
+
+        @include max(large) {
+            gap: 16px;
+        }
+
+        @include max(laptop) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include max(xs) {
+            grid-template-columns: minmax(0, 1fr);
+        }
     }
 
     &__controls {

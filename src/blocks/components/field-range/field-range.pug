@@ -1,0 +1,32 @@
+-
+    const defaultFieldRangeProps = {
+        classes: '',
+        isRange: false,
+        unit: ' ₽',
+        min: '80000',
+        max: '520000',
+        step: '1000',
+    }
+
+mixin field-range(props = defaultFieldRangeProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultFieldRangeProps.classes,
+            isRange: props.isRange ? props.isRange : defaultFieldRangeProps.isRange,
+            unit: props.unit ? props.unit : defaultFieldRangeProps.unit,
+            min: props.min ? props.min : defaultFieldRangeProps.min,
+            max: props.max ? props.max : defaultFieldRangeProps.max,
+            step: props.step ? props.step : defaultFieldRangeProps.step,
+        }
+
+        let sliderType = checkProps.isRange === true ? 'range' : 'single'
+
+
+    .field-range(class=checkProps.classes data-js="fieldRange" data-type=sliderType data-unit=checkProps.unit data-min=checkProps.min data-max=checkProps.max data-step=checkProps.step)
+        input.field-range__input.field-range__input--min(type='number' min=checkProps.min max=checkProps.max data-js="fieldRangeMin")
+        - if(checkProps.isRange === true)
+            input.field-range__input.field-range__input--max(type='number' min=checkProps.min max=checkProps.max data-js="fieldRangeMax")
+        .field-range__range(data-js="fieldRangeSlider")
+        .field-range__values
+            .field-range__value(data-js="fieldRangeMinVal")
+            .field-range__value(data-js="fieldRangeMaxVal")

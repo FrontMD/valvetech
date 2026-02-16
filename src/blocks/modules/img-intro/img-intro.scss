@@ -4,7 +4,7 @@
     align-items: stretch;
 
     @include max(mobile) {
-        min-height: auto;
+        min-height: 300px;
     }
 
     &__content {

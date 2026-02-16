@@ -1,0 +1,94 @@
+.field-range {
+    position: relative;
+    padding-bottom: 100px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include max(mobile) {
+        width: 100%;
+    }
+
+    &__input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+    }
+
+    &__values {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    &__value {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        flex: 0 0 calc((100% - 10px) / 2);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        color: $c-text;
+        padding: 17px 15px;
+        background-color: $c-bg-main;
+        border-radius: $br-5;
+
+        span {
+            color: $c-text-grey;
+        }
+    }
+
+    .noUi-horizontal {
+        height: 10px;
+    }
+
+    .noUi-target {
+        position: absolute;
+        top: 11px;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        border: none;
+        background-color: $c-border;
+        box-shadow: none;
+        border-radius: 2px;
+    }
+
+    .noUi-connect {
+        background-color: $c-link;
+        border-radius: 0;
+    }
+
+    .noUi-handle {
+        width: 25px;
+        height: 25px;
+        right: 0;
+        top: -11px;
+        background-color: $c-link;
+        border: none;
+        box-shadow: none;
+        border-radius: 100%;
+        cursor: pointer;
+
+        &::after,
+        &::before {
+            content: none;
+        }
+    }
+
+    .noUi-handle.noUi-handle-lower {
+        right: -25px;
+    }
+
+}

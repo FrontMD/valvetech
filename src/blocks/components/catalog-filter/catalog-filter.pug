@@ -9,12 +9,22 @@ mixin catalog-filter(props = defaultCatalogFilterProps)
             classes: props.classes ? props.classes : defaultCatalogFilterProps.classes,
         }
 
-    form.catalog-filter(action="#" class= checkProps.classes)&attributes(attributes)
+    .catalog-filter__open(data-js="catalogFilterOpen")
+        svg
+            use(xlink:href=`img/sprites/sprite.svg#filter`)
+    .catalog-filter__overlay(data-js="catalogFilterClose")
+    form.catalog-filter(action="#" class= checkProps.classes data-js="catalogFilter")&attributes(attributes)
+        .catalog-filter__close(data-js="catalogFilterClose")
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#close`)
         .catalog-filter__blocks
             .filter-block
                 .filter-block__header
                     .filter-block__title Цена
                 .filter-block__content
+                    +field-range({
+                        isRange: true
+                    })
 
             .filter-block(data-js="filterBlock" collapsible)
                 .filter-block__header(data-js="filterBlockHeader")
@@ -359,6 +369,8 @@ mixin catalog-filter(props = defaultCatalogFilterProps)
 
         +btn({
             classes: 'vt-btn--justify catalog-filter__btn',
+            type: 'button',
+            buttonType: 'submit',
             name: 'Подобрать',
             sMode: 'full',
             icon: 'btn_chevron'

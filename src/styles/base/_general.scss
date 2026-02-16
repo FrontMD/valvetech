@@ -193,7 +193,12 @@ body.no-scroll {
 		height: 100%;
 
 		@include max(laptop) {
-			opacity: 0.3;
+
+			img,
+			video,
+			picture {
+				opacity: 0.3;
+			}
 		}
 
 		img,

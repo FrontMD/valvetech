@@ -10,7 +10,6 @@ function pCatalogBanner() {
         if(banner && list) {
             const columns = getGridColumnCount(list)
             const items = list.children
-            console.log(columns)
             banner.style.gridColumn = `1 / ${columns + 1}`
             list.insertBefore(banner, items[columns - 1].nextSibling)
 

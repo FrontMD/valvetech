@@ -4,6 +4,10 @@
     padding: 20px;
     background-color: $c-white;
 
+    @include max(mobile) {
+        padding: 16px 12px;
+    }
+
     &__img {
         width: 100%;
         aspect-ratio: 1 / 0.88;
@@ -20,6 +24,10 @@
         font-weight: 600;
         font-size: 22px;
         line-height: 120%;
+
+        @include max(mobile) {
+            font-size: 18px;
+        }
     }
 
     &__chars {
@@ -33,6 +41,14 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
+
+        @include max(large) {
+            font-size: 14px;
+        }
+
+        @include max(mobile) {
+            font-size: 12px;
+        }
     }
 
     &__param {
@@ -47,7 +63,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 10px;
+        flex-wrap: wrap;
+        gap: 20px 10px;
         margin-top: 20px;
         padding-top: 20px;
         border-top: 1px solid $c-border;
