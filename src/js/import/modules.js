@@ -4,6 +4,7 @@
 @@include("../../blocks/modules/preloader/preloader.js")
 @@include("../../blocks/modules/p-catalog/p-catalog.js")
 @@include("../../blocks/modules/catalog-item/catalog-item.js")
+@@include("../../blocks/modules/p-list/p-list.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     header();
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
     mainBurger();
     pCatalogBanner();
     ciMedia();
+    pListCentered();
 })

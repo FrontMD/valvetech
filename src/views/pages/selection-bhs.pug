@@ -1,0 +1,33 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Подбор БТП" 
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +img-intro({
+                classes: 'img-intro--full',
+                img: 'img/selection/selection_bhs.webp',
+                title: 'Подбор и расчет стоимости БТП удобным для вас способом',
+                hasBottom: true
+            })
+                .img-intro__desc
+                    .img-intro__text.text-editor
+                        p Сэкономьте время и деньги на монтаже, получите заводское качество с готовым для согласования проектом. Гарантия на всё оборудование.
+
+                    .img-intro__btns
+                        +btn({
+                            name: 'Подобрать БТП',
+                            icon: 'filter'
+                        })(data-modal="#selectionModal")
+
+                        +btn({
+                            name: 'Найти аналог своему БТП',
+                            icon: 'catalog',
+                            cMode: 'bordered'
+                        })
+
+            +p-list
+
+

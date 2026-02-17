@@ -4,7 +4,6 @@
     justify-content: center;
     gap: 20px;
     width: fit-content;
-    min-width: 230px;
     min-height: 60px;
     padding: 15px 20px;
     background-color: $c-accent;
@@ -33,8 +32,8 @@
     }
 
     svg {
-        width: 13px;
-        height: 13px;
+        width: 18px;
+        height: 18px;
     }
 
     &:hover {
@@ -76,6 +75,12 @@
         &:hover {
             color: $c-white;
         }
+
+    }
+
+    &--bordered &__separator {
+        background-color: $c-accent;
+        opacity: 0.3;
     }
 
     &--ma {
@@ -131,6 +136,13 @@
 
         @include max(laptop) {
             display: none;
+        }
+    }
+
+    &--i13 {
+        svg {
+            width: 13px;
+            height: 13px;
         }
     }
 

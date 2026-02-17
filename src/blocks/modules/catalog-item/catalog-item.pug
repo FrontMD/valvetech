@@ -18,10 +18,10 @@ mixin catalog-item(props = defaultCatalogItemProps)
                     size: '70',
                     tag: 'h1',
                     upper: true  
-                })
+                })(data-aos="fade-right")
 
-                .ci-intro
-                    .ci-media(data-js="ciMedia")
+                .ci-intro(data-anim-list)
+                    .ci-media(data-js="ciMedia" data-anim-item)
                         .ci-media__thumbs(data-js="ciMediaThumbs")
                             .swiper-wrapper
                                 .swiper-slide.ci-media__thumb
@@ -39,7 +39,7 @@ mixin catalog-item(props = defaultCatalogItemProps)
                                 a.swiper-slide.ci-media__slide(data-fancybox="ciMedia" href="img/catalog/product_14.webp" thumb="img/catalog/product_14.webp")
                                     img(src="img/catalog/product_14.webp" alt="")
 
-                    .ci-desc
+                    .ci-desc(data-anim-item)
                         .ci-desc__block
                             .ci-desc__text.text-editor
                                 | Теплообменник Ридан НН № 07 (НН № 07а) Ду 50 широко применяется в системах отопления. Данная установка предназначена для теплообмена между жидкостями и газами. Отличается высокой износостойкостью деталей и рабочих элементов, качественной сборкой и надёжностью в работе.
@@ -70,7 +70,7 @@ mixin catalog-item(props = defaultCatalogItemProps)
                                 cMode: 'white'
                             })
 
-                    .ci-controls
+                    .ci-controls(data-anim-item)
                         .ci-price
                             .ci-price__current
                                 svg
@@ -93,5 +93,70 @@ mixin catalog-item(props = defaultCatalogItemProps)
                                     use(xlink:href=`img/sprites/sprite.svg#note_snowflake`)
                             .ci-note__text Стоимость теплообменника рассчитывается индивидуально для конкретного объекта и зависит от конструктивных особенностей аппарата, параметров системы.
 
-                .ci-chars(id='ciChars')
-                +product-banner
+                .ci-chars(id='ciChars' data-anim-list)
+                    .ci-chars__title(data-aos="fade-right") Характеристики
+                    .ci-chars__list
+                        .ci-chars__column(data-anim-item)
+                            .ci-chars__block
+                                .ci-chars__subtitle Основные параметры
+                                .ci-chars__row
+                                    .ci-chars__param Рабочая температура:
+                                    .ci-chars__dots
+                                    .ci-chars__value.ci-chars__value--width °C: -30...200
+                                .ci-chars__row
+                                    .ci-chars__param Теплоноситель:
+                                    .ci-chars__dots
+                                    .ci-chars__value.ci-chars__value--width Вода, Пар, Этиленгликоль, Масла, Нефть, Кислоты, Пищевые жидкости, Фреон
+                                .ci-chars__row
+                                    .ci-chars__param Материал пластины:
+                                    .ci-chars__dots
+                                    .ci-chars__value.ci-chars__value--width SMO 254, AISI 304, AISI 316, Titan, Hastelloy
+                                .ci-chars__row
+                                    .ci-chars__param Тип пластины:
+                                    .ci-chars__dots
+                                    .ci-chars__value.ci-chars__value--width TK, TL, TM
+
+                        .ci-chars__column(data-anim-item)
+                            .ci-chars__block
+                                .ci-chars__subtitle Технические данные
+                                .ci-chars__row
+                                    .ci-chars__param Макс. рабочее давление, бар:
+                                    .ci-chars__dots
+                                    .ci-chars__value 25
+                                .ci-chars__row
+                                    .ci-chars__param Макс. расход, м3/ч:
+                                    .ci-chars__dots
+                                    .ci-chars__value 40
+
+                            .ci-chars__block
+                                .ci-chars__subtitle Материалы
+                                .ci-chars__row
+                                    .ci-chars__param Материал уплотнения:
+                                    .ci-chars__dots
+                                    .ci-chars__value Nitril, EPDM, Silicone, Viton
+
+                        .ci-chars__column(data-anim-item)
+                            .ci-chars__block
+                                .ci-chars__subtitle Технические данные
+                                .ci-chars__row
+                                    .ci-chars__param Диаметр присоединения:
+                                    .ci-chars__dots
+                                    .ci-chars__value °C: -30...200
+                                .ci-chars__row
+                                    .ci-chars__param Срок эксплуатации:
+                                    .ci-chars__dots
+                                    .ci-chars__value не менее 10 лет
+                                .ci-chars__row
+                                    .ci-chars__param Срок эксплуатации:
+                                    .ci-chars__dots
+                                    .ci-chars__value 0.07
+                                .ci-chars__row
+                                    .ci-chars__param Макс. площадь теплообмена, м2:
+                                    .ci-chars__dots
+                                    .ci-chars__value 7.96
+                                .ci-chars__row
+                                    .ci-chars__param Макс. кол-во пластин, шт:
+                                    .ci-chars__dots
+                                    .ci-chars__value 125
+
+                +product-banner()(data-aos="fade-up")

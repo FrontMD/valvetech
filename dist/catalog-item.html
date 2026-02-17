@@ -56,7 +56,7 @@
                                       </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
                                     </div><span class="field__error" data-js="fieldError"></span>
                                   </div>
-                                      <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
+                                      <button class="vt-btn form__submit  vt-btn--accent vt-btn--i13" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
                                         <svg> 
                                           <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
                                         </svg>
@@ -104,9 +104,9 @@
                                       </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
                                     </div><span class="field__error" data-js="fieldError"></span>
                                   </div>
-                                      <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить</span><span class="vt-btn__separator"></span>
+                                      <button class="vt-btn form__submit  vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить</span><span class="vt-btn__separator"></span>
                                         <svg> 
-                                          <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                          <use xlink:href="img/sprites/sprite.svg#filter"></use>
                                         </svg>
                                       </button>
                                 </div>
@@ -227,11 +227,11 @@
               <section class="section section--inner catalog-item">
                 <div class="vt-container">
                   <div class="catalog-item__container">
-                        <div class="title catalog-item__title title--70 title--upper">
+                        <div class="title catalog-item__title title--70 title--upper" data-aos="fade-right">
                           <h1>Теплообменник пластинчатый разборный Ридан НН №07</h1>
                         </div>
-                    <div class="ci-intro">
-                      <div class="ci-media" data-js="ciMedia">
+                    <div class="ci-intro" data-anim-list>
+                      <div class="ci-media" data-js="ciMedia" data-anim-item>
                         <div class="ci-media__thumbs" data-js="ciMediaThumbs">
                           <div class="swiper-wrapper">
                             <div class="swiper-slide ci-media__thumb"><img src="img/catalog/product_2.webp" alt=""></div>
@@ -243,7 +243,7 @@
                           <div class="swiper-wrapper"><a class="swiper-slide ci-media__slide" data-fancybox="ciMedia" href="img/catalog/product_2.webp" thumb="img/catalog/product_2.webp"><img src="img/catalog/product_2.webp" alt=""></a><a class="swiper-slide ci-media__slide" data-fancybox="ciMedia" href="img/catalog/product_13.webp" thumb="img/catalog/product_13.webp"><img src="img/catalog/product_13.webp" alt=""></a><a class="swiper-slide ci-media__slide" data-fancybox="ciMedia" href="img/catalog/product_14.webp" thumb="img/catalog/product_14.webp"><img src="img/catalog/product_14.webp" alt=""></a></div>
                         </div>
                       </div>
-                      <div class="ci-desc">
+                      <div class="ci-desc" data-anim-item>
                         <div class="ci-desc__block">
                           <div class="ci-desc__text text-editor">Теплообменник Ридан НН № 07 (НН № 07а) Ду 50 широко применяется в системах отопления. Данная установка предназначена для теплообмена между жидкостями и газами. Отличается высокой износостойкостью деталей и рабочих элементов, качественной сборкой и надёжностью в работе.</div>
                           <div class="ci-desc__char">
@@ -273,7 +273,7 @@
                           </div><a class="vt-btn ci-desc__btn vt-btn--white" href="#ciChars"><span class="vt-btn__text">Все характеристики</span></a>
                         </div>
                       </div>
-                      <div class="ci-controls">
+                      <div class="ci-controls" data-anim-item>
                         <div class="ci-price">
                           <div class="ci-price__current">
                             <svg>
@@ -292,15 +292,97 @@
                         </div>
                       </div>
                     </div>
-                    <div class="ci-chars" id="ciChars"></div>
-                        <div class="product-banner" data-js="productBanner">
+                    <div class="ci-chars" id="ciChars" data-anim-list>
+                      <div class="ci-chars__title" data-aos="fade-right">Характеристики</div>
+                      <div class="ci-chars__list">
+                        <div class="ci-chars__column" data-anim-item>
+                          <div class="ci-chars__block">
+                            <div class="ci-chars__subtitle">Основные параметры</div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Рабочая температура:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value ci-chars__value--width">°C: -30...200</div>
+                            </div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Теплоноситель:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value ci-chars__value--width">Вода, Пар, Этиленгликоль, Масла, Нефть, Кислоты, Пищевые жидкости, Фреон</div>
+                            </div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Материал пластины:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value ci-chars__value--width">SMO 254, AISI 304, AISI 316, Titan, Hastelloy</div>
+                            </div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Тип пластины:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value ci-chars__value--width">TK, TL, TM</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ci-chars__column" data-anim-item>
+                          <div class="ci-chars__block">
+                            <div class="ci-chars__subtitle">Технические данные</div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Макс. рабочее давление, бар:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value">25</div>
+                            </div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Макс. расход, м3/ч:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value">40</div>
+                            </div>
+                          </div>
+                          <div class="ci-chars__block">
+                            <div class="ci-chars__subtitle">Материалы</div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Материал уплотнения:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value">Nitril, EPDM, Silicone, Viton</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ci-chars__column" data-anim-item>
+                          <div class="ci-chars__block">
+                            <div class="ci-chars__subtitle">Технические данные</div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Диаметр присоединения:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value">°C: -30...200</div>
+                            </div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Срок эксплуатации:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value">не менее 10 лет</div>
+                            </div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Срок эксплуатации:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value">0.07</div>
+                            </div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Макс. площадь теплообмена, м2:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value">7.96</div>
+                            </div>
+                            <div class="ci-chars__row">
+                              <div class="ci-chars__param">Макс. кол-во пластин, шт:</div>
+                              <div class="ci-chars__dots"></div>
+                              <div class="ci-chars__value">125</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                        <div class="product-banner" data-js="productBanner" data-aos="fade-up">
                           <div class="product-banner__bg"><img src="img/catalog/product_banner.webp" alt=""></div>
                           <div class="product-banner__content">
                             <div class="product-banner__info">
                                   <div class="title  title--28 title--light title--upper">Не нашли подходящий?
                                   </div>
                               <div class="product-banner__text">Оставьте заявку и наш эксперт поможет вам с подбором</div>
-                            </div><a class="vt-btn  vt-btn--white" href="javascript:void(0);" data-modal="#selectionModal"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
+                            </div><a class="vt-btn  vt-btn--white vt-btn--i13" href="javascript:void(0);" data-modal="#selectionModal"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
                                   <svg> 
                                     <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
                                   </svg></a>
@@ -341,7 +423,7 @@
                             </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с политикой <a href="javascript:void(0);" target="_blank">конфиденциальности</a></span>
                           </div><span class="field__error" data-js="fieldError"></span>
                         </div>
-                            <button class="vt-btn form__submit vt-btn--white" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
+                            <button class="vt-btn form__submit  vt-btn--white vt-btn--i13" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
                               <svg> 
                                 <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
                               </svg>
@@ -512,7 +594,7 @@
                                   </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
                                 </div><span class="field__error" data-js="fieldError"></span>
                               </div>
-                                  <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
+                                  <button class="vt-btn form__submit  vt-btn--accent vt-btn--i13" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
                                     <svg> 
                                       <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
                                     </svg>
@@ -560,9 +642,9 @@
                                   </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
                                 </div><span class="field__error" data-js="fieldError"></span>
                               </div>
-                                  <button class="vt-btn form__submit vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить</span><span class="vt-btn__separator"></span>
+                                  <button class="vt-btn form__submit  vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить</span><span class="vt-btn__separator"></span>
                                     <svg> 
-                                      <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                      <use xlink:href="img/sprites/sprite.svg#filter"></use>
                                     </svg>
                                   </button>
                             </div>

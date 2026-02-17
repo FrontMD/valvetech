@@ -1,5 +1,5 @@
-function pCatalogBanner() {
-    const catalogSections = document.querySelectorAll('[data-js="pCatalog"]')
+function pListCentered() {
+    /*const catalogSections = document.querySelectorAll('[data-js="pCatalog"]')
 
     if(!catalogSections.length) return
 
@@ -14,5 +14,5 @@ function pCatalogBanner() {
             list.insertBefore(banner, items[columns - 1].nextSibling)
 
         }
-    })
+    })*/
 }

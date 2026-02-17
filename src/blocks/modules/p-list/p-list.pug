@@ -1,0 +1,51 @@
+-
+    const defaultPListProps = {
+        classes: '',
+        cards: [
+            {
+                classes: 'product-card--short',
+                img: 'img/catalog/product_1.webp',
+                title: 'Теплообменник пластинчатый разборный Ридан НН №07',
+                chars: [],
+                price: []
+            },
+            {
+                classes: 'product-card--short',
+                img: 'img/catalog/product_1.webp',
+                title: 'Теплообменник пластинчатый разборный Ридан НН №07',
+                chars: [],
+                price: []
+            },
+            {
+                classes: 'product-card--short',
+                img: 'img/catalog/product_1.webp',
+                title: 'Теплообменник пластинчатый разборный Ридан НН №07',
+                chars: [],
+                price: []
+            },
+            {
+                classes: 'product-card--short',
+                img: 'img/catalog/product_1.webp',
+                title: 'Теплообменник пластинчатый разборный Ридан НН №07',
+                chars: [],
+                price: []
+            },
+        ]
+    }
+
+mixin p-list(props = defaultPListProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPListProps.classes,
+            cards: props.cards ? props.cards : defaultPListProps.cards,
+        }
+
+    section.section.section--inner.p-list(class= checkProps.classes data-js="pList")&attributes(attributes)
+        .vt-container
+            .p-list__items(data-js="pListItems" data-anim-list)
+                - let cardsCount = 0
+                - let cardsList = checkProps.cards
+                - while(cardsCount < cardsList.length)
+                    +product-card(checkProps.cards[cardsCount])(data-anim-item)
+
+                    - cardsCount++

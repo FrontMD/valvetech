@@ -94,3 +94,18 @@ function setAttributes(el, list) {
 
     }
 }
+
+// подсчёт колонок в гриде
+function getGridColumnCount(gridElement) {
+    if (!gridElement) return 0;
+    
+    const computedStyle = window.getComputedStyle(gridElement);
+    if (computedStyle.display !== 'grid') {
+        return 0;
+    }
+    
+    const templateColumns = computedStyle.getPropertyValue('grid-template-columns');
+    const columns = templateColumns.split(' ').filter(width => width !== '0px').length;
+    
+    return columns || 1;
+}

@@ -28,9 +28,10 @@ mixin btn(props = defaultBtnProps)
         let colorClass = checkProps.cMode ? ` vt-btn--${checkProps.cMode}` : ''
         let sizeClass = checkProps.sMode ? ` vt-btn--${checkProps.sMode}` : ''
         let iconPosClass = checkProps.iconLeft === true ? ` vt-btn--reverse` : ''
+        let iconSizeClass = checkProps.icon == 'btn_chevron' ? ' vt-btn--i13' : ''
 
     - if(checkProps.type == 'link')
-        a.vt-btn(class=checkProps.classes + colorClass + sizeClass + iconPosClass href= checkProps.link)&attributes(attributes)
+        a.vt-btn(class=checkProps.classes + colorClass + sizeClass + iconPosClass + iconSizeClass href= checkProps.link)&attributes(attributes)
             if(checkProps.sMode !== 'icon')
                 span.vt-btn__text!= checkProps.name
             if(checkProps.icon.length > 0)
@@ -39,7 +40,7 @@ mixin btn(props = defaultBtnProps)
                     use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
 
     - else if(checkProps.type == 'button')
-        button.vt-btn(class=checkProps.classes + colorClass + sizeClass + iconPosClass type= checkProps.buttonType)&attributes(attributes)
+        button.vt-btn(class=checkProps.classes + colorClass + sizeClass + iconPosClass + iconSizeClass type= checkProps.buttonType)&attributes(attributes)
             if(checkProps.sMode !== 'icon')
                 span.vt-btn__text!= checkProps.name
             if(checkProps.icon.length > 0)

@@ -1,0 +1,38 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Подбор теплообменника" 
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +img-intro({
+                classes: 'img-intro--full',
+                img: 'img/selection/selection_he.webp',
+                title: 'Подбор и расчет стоимости теплообменника удобным для вас способом',
+                hasBottom: true
+            })
+                .img-intro__desc
+                    .img-intro__text.text-editor
+                        p Важно чтобы теплообменник соответствовал тем параметрам системы, в которой он установлен. Для этого любой поставляемый аппарат рассчитывается индивидуально, исходя из особенностей объекта заказчика.
+                        ul
+                            li Точный технический расчет без погрешностей.
+                            li Не удешевляем, манипулируя техническими параметрами.
+                            li Для самых сложных задач подключаем инженеров завода-производителя.
+                            li Учитываем технические нюансы, поможем собрать необходимые данные для расчета.
+
+                    .img-intro__btns
+                        +btn({
+                            name: 'Рассчитать теплообменник',
+                            icon: 'filter'
+                        })(data-modal="#selectionModal")
+
+                        +btn({
+                            name: 'Каталог',
+                            icon: 'catalog',
+                            cMode: 'bordered'
+                        })
+
+            +p-list
+
+

@@ -4,7 +4,9 @@
         title: '',
         text: '',
         btnText: '',
+        btnIcon: 'btn_chevron',
         btnCMode: 'accent',
+        btnClass: '',
         innerThanks: true,
         privacyText: 'Нажимая кнопку “Отправить” вы соглашаетесь с политикой <a href="javascript:void(0);" target="_blank">конфиденциальности</a>',
         successTitle: 'Ваша заявка отправлена!',
@@ -18,7 +20,9 @@ mixin form(props = defaultFormProps)
             title: props.title ? props.title : defaultFormProps.title,
             text: props.text ? props.text : defaultFormProps.text,
             btnText: props.btnText ? props.btnText : defaultFormProps.btnText,
+            btnIcon: props.btnIcon ? props.btnIcon : defaultFormProps.btnIcon,
             btnCMode: props.btnCMode ? props.btnCMode : defaultFormProps.btnCMode,
+            btnClass: props.btnClass ? props.btnClass : defaultFormProps.btnClass,
             innerThanks: props.innerThanks ? props.innerThanks : defaultFormProps.innerThanks,
             privacyText: props.privacyText ? props.privacyText : defaultFormProps.privacyText,
             successTitle: props.successTitle ? props.successTitle : defaultFormProps.successTitle,
@@ -43,12 +47,12 @@ mixin form(props = defaultFormProps)
                     span.form-privacy__text!= checkProps.privacyText
                 span.field__error(data-js='fieldError')
             +btn({
-                classes: 'form__submit',
+                classes: `form__submit ${checkProps.btnClass.length > 0 ? checkProps.btnClass : ''}`,
                 type: 'button',
                 buttonType: 'submit',
                 name: checkProps.btnText,
                 cMode: checkProps.btnCMode,
-                icon: 'btn_chevron'
+                icon: checkProps.btnIcon
             })
 
         - if(checkProps.innerThanks === true)

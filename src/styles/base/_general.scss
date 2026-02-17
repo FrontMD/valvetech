@@ -364,7 +364,7 @@ body.no-scroll {
 .text-editor {
 	font-weight: 500;
 	font-size: 20px;
-	line-height: 130%;
+	line-height: 160%;
 
 	@include max(laptop) {
 		font-size: 18px;
@@ -396,7 +396,7 @@ body.no-scroll {
 	iframe,
 	video,
 	img {
-		margin: 0 0 1.25em;
+		margin: 0 0 1em;
 	}
 
 	a {
@@ -408,6 +408,30 @@ body.no-scroll {
 			text-decoration: underline;
 			color: $c-accent;
 		}
+	}
+
+	ul>li {
+		position: relative;
+	}
+
+	ul>li+li {
+		margin-top: 1em;
+	}
+
+	ul>li::before {
+		content: '';
+		position: absolute;
+		top: 0.6375em;
+		left: -1.2em;
+		width: 0.325em;
+		height: 0.325em;
+		background-color: $c-accent;
+		border-radius: 100%;
+	}
+
+	ul,
+	ol {
+		padding-left: 1.8em;
 	}
 
 	/*h2 {
@@ -432,24 +456,6 @@ body.no-scroll {
 		}
 	}
 
-	ul>li {
-		position: relative;
-	}
-
-	ul>li+li {
-		margin-top: 0.9375em;
-	}
-
-	ul>li::before {
-		content: '';
-		position: absolute;
-		top: 0.59375em;
-		left: -1.075em;
-		width: 0.3125em;
-		height: 0.3125em;
-		background-color: $c-accent;
-		border-radius: 100%;
-	}
 
 	h2 {
 		margin-top: 2.94em;
@@ -544,17 +550,6 @@ body.no-scroll {
 
 		&--attention::before {
 			background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10.5' cy='10.5' r='9.5' stroke='%23EB5757' stroke-width='2'/%3E%3Cpath d='M10.5 10L10.5 15M10.5 6L10.5 7' stroke='%23EB5757' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-		}
-	}
-
-	ul>ul,
-	ol>ul,
-	ul>ol,
-	ol>ol {
-		padding-left: 0.75em;
-
-		@include max(tablet) {
-			padding-left: 0.5em;
 		}
 	}
 

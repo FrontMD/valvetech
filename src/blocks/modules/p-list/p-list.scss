@@ -1,0 +1,19 @@
+.p-list {
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+
+        @include max(large) {
+            gap: 16px;
+        }
+
+        @include max(laptop) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include max(xs) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+}

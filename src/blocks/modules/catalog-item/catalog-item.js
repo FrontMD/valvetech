@@ -13,7 +13,12 @@ function ciMedia() {
             thumbsEx = new Swiper(thumbs, {
                 slidesPerView: 'auto',
                 direction: 'vertical',
-                spaceBetween: 24
+                spaceBetween: 10,
+                breakpoints: {
+                    1801: {
+                        spaceBetween: 24
+                    }
+                }
             })
         }
 

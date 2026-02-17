@@ -25,6 +25,20 @@
             margin-top: 30px;
         }
     }
+
+    &__desc {
+        max-width: 1052px;
+        padding: 60px;
+        background-color: $c-white;
+        border-radius: $br-5;
+    }
+
+    &__btns {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 }
 
 .img-intro {
@@ -32,5 +46,10 @@
         padding-bottom: 50px;
         min-height: 100vh;
         min-height: 100dvh;
+    }
+
+    &--full &__content {
+        gap: 60px;
+        justify-content: space-between;
     }
 }

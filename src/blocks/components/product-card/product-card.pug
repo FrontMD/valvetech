@@ -37,27 +37,29 @@ mixin product-card(props = defaultProductCardProps)
         .product-card__img
             img(src=checkProps.img, alt="")
         .product-card__title!= checkProps.title
-        .product-card__chars
-            - let charsCount = 0
-            - let charsList = checkProps.chars
-            - while(charsCount < charsList.length)
-                - let char = charsList[charsCount]
-                .product-card__char
-                    .product-card__param!= char.name
-                    .product-card__value!= char.value
+        - if(checkProps.chars.length > 0)
+            .product-card__chars
+                - let charsCount = 0
+                - let charsList = checkProps.chars
+                - while(charsCount < charsList.length)
+                    - let char = charsList[charsCount]
+                    .product-card__char
+                        .product-card__param!= char.name
+                        .product-card__value!= char.value
 
-                - charsCount++
+                    - charsCount++
 
         .product-card__bottom
-            .card-price
-                .card-price__current
-                    != 'от '
-                    span.num!= checkProps.price[0]
-                    span.symbol!= ' ₽'
-                .card-price__old
-                    != checkProps.price[1]
-                    span!= ' ₽'
+            - if(checkProps.price.length > 0)
+                .card-price
+                    .card-price__current
+                        != 'от '
+                        span.num!= checkProps.price[0]
+                        span.symbol!= ' ₽'
+                    .card-price__old
+                        != checkProps.price[1]
+                        span!= ' ₽'
             a.product-card__btn(href="javascript:void(0);")
                 span Заказать
                 svg
-                    use(xlink:href=`img/sprites/sprite.svg#chevron_card`)
+                    use(xlink:href=`img/sprites/sprite.svg#card_chevron`)
