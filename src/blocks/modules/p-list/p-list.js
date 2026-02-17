@@ -1,18 +1,24 @@
 function pListCentered() {
-    /*const catalogSections = document.querySelectorAll('[data-js="pCatalog"]')
+    const blocks = document.querySelectorAll('[data-js="pList"]')
 
-    if(!catalogSections.length) return
+    if(!blocks.length) return
 
-    catalogSections.forEach(section => {
-        const banner = section.querySelector('[data-js="productBanner"]')
-        const list = section.querySelector('[data-js="pCatalogList"]')
-
-        if(banner && list) {
+    blocks.forEach(block => {
+        const list = block.querySelector('[data-js="pListItems"]')
+        
+        if(list) {
             const columns = getGridColumnCount(list)
-            const items = list.children
-            banner.style.gridColumn = `1 / ${columns + 1}`
-            list.insertBefore(banner, items[columns - 1].nextSibling)
+            const cards = [...list.children]
+            const width = cards[0].offsetWidth
 
+            if(cards.length < columns) {
+                cards.forEach(card => {
+                    card.style.width = width + 'px'
+                })
+    
+                list.style.display = `flex`
+                list.style.justifyContent = `center`
+            }
         }
-    })*/
+    })
 }

@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     $('[data-js="customScrollbar"]').each((index, el) => {
         new SimpleBar(el, { autoHide: false });
     })
+    fancyboxInit()
 })
 
 // Фоновый слайдер

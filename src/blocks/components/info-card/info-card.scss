@@ -76,7 +76,29 @@
 
         @include max(mobile) {
             padding: 15px;
-            //font-size: 16px;
+        }
+    }
+}
+
+.info-card {
+
+    &--small &__top {
+        min-height: 140px;
+    }
+
+    &--small &__title {
+        font-weight: 600;
+        font-size: 29px;
+        line-height: 110%;
+
+        @include max(laptop) {}
+
+        @include max(tablet) {
+            font-size: 26px;
+        }
+
+        @include max(mobile) {
+            font-size: 20px;
         }
     }
 }

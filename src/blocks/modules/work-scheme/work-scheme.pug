@@ -1,0 +1,56 @@
+-
+    const defaultworkSchemeProps = {
+        classes: ''
+    }
+
+mixin work-scheme(props = defaultworkSchemeProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultworkSchemeProps.classes,
+        }
+
+    section.section.section--inner.work-scheme(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .section__header
+                +title({
+                    text: 'Схема работы',
+                    tag: 'h2'
+                })(data-aos="fade-right")
+            .work-scheme__items(data-anim-list)
+                +info-card({
+                    classes: 'info-card--small',
+                    title: 'Первичное интервью, сбор технических данных',
+                    num: '01',
+                    text: '10-20 минут после заявки. Совместное изучение нюансов технического проекта'
+                })(data-anim-item)
+                +info-card({
+                    classes: 'info-card--small',
+                    title: 'Подбор оборудования',
+                    num: '02',
+                    text: '1-5 дней, в зависимости от сложности оборудования'
+                })(data-anim-item)
+                +info-card({
+                    classes: 'info-card--small',
+                    title: 'Согласование договора',
+                    num: '03',
+                    text: 'Уточняем все нюансы и способы оплаты, подписываем договор'
+                })(data-anim-item)
+                +info-card({
+                    classes: 'info-card--small',
+                    title: 'Запуск в производство',
+                    num: '04',
+                    text: 'Производство продукции в оговоренные сроки'
+                })(data-anim-item)
+                +info-card({
+                    classes: 'info-card--small',
+                    title: 'Отгрузка продукции',
+                    num: '05',
+                    text: 'Быстрая, надежная доставка по всей РФ и СНГ от 2х до 8-ми дней'
+                })(data-anim-item)
+                +info-card({
+                    classes: 'info-card--small',
+                    title: 'Сервисное обслуживание',
+                    num: '06',
+                    text: 'Гарантия на продукцию в течение 5 лет'
+                })(data-anim-item)
+
