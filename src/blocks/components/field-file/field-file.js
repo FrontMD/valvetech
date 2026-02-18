@@ -10,6 +10,8 @@ function fileFieldInit() {
         let fileMaxSize = parseInt(field.getAttribute("data-size"));
         let fileError = fieldLabel.querySelector('[data-js="fieldError"]');
 
+        setupFileDrop(fieldLabel)
+
         field.addEventListener('change', () => {
             if(field.files.length > 0) {
                 let isInvalidType = true;
@@ -95,4 +97,36 @@ function fileFieldInit() {
         })
 
     })
+}
+
+function setupFileDrop(element) {
+  const fileInput = element.querySelector('input[type="file"]');
+  if (!fileInput) return;
+
+  element.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    element.classList.add('drag-over');
+  });
+
+  element.addEventListener('dragleave', (e) => {
+    if (!element.contains(e.relatedTarget)) {
+      element.classList.remove('drag-over');
+    }
+  });
+
+  element.addEventListener('drop', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    element.classList.remove('drag-over');
+
+    const files = Array.from(e.dataTransfer.files);
+    if (files.length > 0) {
+      const dt = new DataTransfer();
+      dt.items.add(files[0]);
+      fileInput.files = dt.files;
+      
+      fileInput.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+  });
 }

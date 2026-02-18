@@ -333,9 +333,15 @@
                                       <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
                                     </label>
                                     <div class="field-file" data-js="formField" data-placeholder="Выберите файл или перетащите его на это поле">
-                                      <input class="field-file__input" type="file" id="sSelection" placeholder="Выберите файл или перетащите его на это поле" required="" data-v-name="file" data-size="5242880" accept=".xlsx, .png, .jpg">
+                                      <input class="field-file__input" type="file" id="sSelection" required="" data-v-name="file" data-size="5242880" accept=".xlsx">
                                       <div class="field-file__fakeinput">
+                                        <div class="field-file__icon">
+                                          <svg>
+                                            <use xlink:href="img/sprites/sprite.svg#download"></use>
+                                          </svg>
+                                        </div>
                                         <div class="field-file__name" data-js="fileName">Выберите файл или перетащите его на это поле</div>
+                                        <div class="field-file__conf">Формат XLSX. <br>Размер не более 5 Мб.</div>
                                         <div class="field-file__error" data-js="fieldError"></div>
                                       </div>
                                     </div>
@@ -359,6 +365,32 @@
                               <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
                             </div>
                           </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="section section--inner gallery-slider" data-js="gallerySlider">
+                <div class="vt-container">
+                  <div class="section__header">
+                        <div class="title  title--85">
+                          <h2>Галерея готового оборудования</h2>
+                        </div>
+                        <div class="slider-controls" data-js="sliderControls">
+                          <button class="slider-control slider-control--prev" type="button" data-js="sliderPrev">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#slider_prev"></use>
+                            </svg>
+                          </button>
+                          <div class="slider-controls__sep"></div>
+                          <button class="slider-control slider-control--next" type="button" data-js="sliderNext">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#slider_next"></use>
+                            </svg>
+                          </button>
+                        </div>
+                  </div>
+                  <div class="gallery-slider__slider">
+                    <div class="swiper-wrapper"><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_5.webp" data-thumb="img/solutions/gallery_5.webp"><img src="img/solutions/gallery_5.webp"></a><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_6.webp" data-thumb="img/solutions/gallery_6.webp"><img src="img/solutions/gallery_6.webp"></a><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_1.webp" data-thumb="img/solutions/gallery_1.webp"><img src="img/solutions/gallery_1.webp"></a><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_2.webp" data-thumb="img/solutions/gallery_2.webp"><img src="img/solutions/gallery_2.webp"></a><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_3.webp" data-thumb="img/solutions/gallery_3.webp"><img src="img/solutions/gallery_3.webp"></a><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_4.webp" data-thumb="img/solutions/gallery_4.webp"><img src="img/solutions/gallery_4.webp"></a>
                     </div>
                   </div>
                 </div>

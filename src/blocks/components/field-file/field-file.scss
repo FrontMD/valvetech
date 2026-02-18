@@ -1,7 +1,5 @@
 .field-file {
     position: relative;
-    display: flex;
-    gap: 12px;
     width: 100%;
     padding: 0;
     border: none;
@@ -17,56 +15,48 @@
     }
 
     &--full {
-        .field-file__fakeinput {
-            padding-top: 24px;
-            padding-bottom: 6px;
-
-            @include max(mobile) {
-                padding-top: 19px;
-                padding-bottom: 3px;
-            }
-        }
-
-        .field-file__placeholder {
-            font-size: 12px;
-            top: 6px;
-            transform: translateY(0);
-
-            @include max(mobile) {
-                font-size: 10px;
-                top: 3px;
-            }
+        .field-file__name {
+            color: $c-accent;
         }
     }
 
+    &.drag-over &__fakeinput {
+        border-color: $c-accent;
+    }
+
     &__fakeinput {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
         flex: 1 1 auto;
         width: 100%;
         padding: 30px;
+        font-weight: 400;
         font-size: 16px;
-        line-height: 1.5em;
-        font-weight: 600;
+        line-height: 120%;
+        text-align: center;
         outline: none;
-        color: $c-text;
+        color: $c-text-grey;
         background-color: transparent;
         border-radius: $br-5;
         border: 1px dotted $c-border;
         transition: all $tr;
-        min-height: 56px;
+        min-height: 170px;
+    }
 
-        @include max(mobile) {
-            font-size: 14px;
-            padding: 11px;
-            min-height: 48px;
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 32px;
+            height: 32px;
         }
     }
 
     &__name {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: 0;
-        color: $c-text-grey;
         transition: all 0.2s linear;
 
         @include max(mobile) {
@@ -83,19 +73,9 @@
         font-size: 12px;
         font-weight: 500;
         line-height: 1.18em;
+        text-align: start;
         color: $c-error;
         display: none;
-    }
-
-    &__btn.btn {
-        flex: 0 0 auto;
-
-        @include max(xs) {
-            .btn__text {
-                display: none;
-            }
-        }
-
     }
 
     &__input {

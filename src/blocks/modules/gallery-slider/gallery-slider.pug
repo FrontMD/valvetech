@@ -1,0 +1,38 @@
+-
+    const defaultGallerySliderProps = {
+        classes: '',
+        slides: [
+            'img/solutions/gallery_1.webp',
+            'img/solutions/gallery_2.webp',
+            'img/solutions/gallery_3.webp',
+            'img/solutions/gallery_4.webp',
+            'img/solutions/gallery_5.webp',
+            'img/solutions/gallery_6.webp',
+        ]
+    }
+
+mixin gallery-slider(props = defaultGallerySliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultGallerySliderProps.classes,
+            slides: props.slides ? props.slides : defaultGallerySliderProps.slides,
+        }
+
+    section.section.section--inner.gallery-slider(class= checkProps.classes data-js="gallerySlider")&attributes(attributes)
+        .vt-container
+            .section__header
+                +title({
+                    tag: 'h2',
+                    text: 'Галерея готового оборудования',
+                })
+                +slider-controls
+            .gallery-slider__slider
+                .swiper-wrapper
+                    - let counter = 0
+                    - let list = checkProps.slides 
+                    - while(counter < list.length)
+                        a.swiper-slide.gallery-slider__slide(data-fancybox href=list[counter] data-thumb=list[counter])
+                            img(src=list[counter])
+
+                        - counter++
+

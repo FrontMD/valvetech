@@ -18,9 +18,13 @@ mixin field-file(props = defaultFieldFileProps)
         }
 
     .field-file(class= checkProps.classes data-js="formField" data-placeholder= checkProps.placeholder)&attributes(attributes)
-        input.field-file__input(type='file' id=checkProps.id placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
+        input.field-file__input(type='file' id=checkProps.id)&attributes(checkProps.inputAttr)
 
         .field-file__fakeinput
+            .field-file__icon
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#download`)
             .field-file__name(data-js='fileName')!= checkProps.placeholder
+            .field-file__conf Формат XLSX. <br>Размер не более 5 Мб.
             .field-file__error(data-js='fieldError')
 
