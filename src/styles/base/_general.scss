@@ -65,6 +65,7 @@ span {
 *::before,
 *::after {
 	box-sizing: border-box;
+	font-variant-numeric: lining-nums proportional-nums;
 }
 
 a,
@@ -161,9 +162,9 @@ body.no-scroll {
 	overflow: hidden;
 }
 
-/*[data-fancybox] {
+[data-fancybox] {
 	cursor: pointer;
-}*/
+}
 
 .section {
 	position: relative;
@@ -267,51 +268,6 @@ body.no-scroll {
 		}
 	}
 
-	/*&--fh {
-		min-height: 100vh;
-		min-height: 100dvh;
-
-		@include max(tablet) {
-			min-height: auto;
-		}
-	}
-
-
-	&__header--full {
-		@include max(laptop) {
-			flex-direction: row;
-			align-items: flex-end;
-		}
-
-		@include max(mobile) {
-			flex-direction: column;
-			align-items: flex-start;
-		}
-	}
-
-	&__title-block {
-		flex: 1 1 auto;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 24px;
-		max-width: 753px;
-
-		@include max(laptop) {
-			gap: 12px;
-		}
-	}
-
-	&__bg--overlay::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.5);
-		z-index: 1;
-	}*/
 }
 
 .sidebar-layout {

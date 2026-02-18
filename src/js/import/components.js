@@ -2,6 +2,7 @@
 @@include("../../blocks/components/copy-text/copy-text.js")
 @@include("../../blocks/components/catalog-filter/catalog-filter.js")
 @@include("../../blocks/components/field-range/field-range.js")
+@@include("../../blocks/components/field-file/field-file.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     validation();
@@ -9,4 +10,5 @@ document.addEventListener('DOMContentLoaded', () => {
     filterMobile();
     filterBlockCollapse();
     fieldsRangeController();
+    fileFieldInit();
 })

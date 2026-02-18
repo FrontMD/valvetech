@@ -1,0 +1,22 @@
+-
+    const defaultDlBtnProps = {
+        classes: '',
+        name: 'Скачать шаблон расчёта',
+        size: '4,2 Мб'
+    }
+
+mixin dl-btn(props = defaultDlBtnProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultDlBtnProps.classes,
+            name: props.name ? props.name : defaultDlBtnProps.name,
+            size: props.size ? props.size : defaultDlBtnProps.size
+        }
+
+    .dl-btn(class=checkProps.classes)&attributes(attributes)
+        a.dl-btn__link(href="javascript:void(0);")
+        .dl-btn__icon
+            img(src="img/selection/xlsx_icon.svg" alt="")
+        .dl-btn__title!= checkProps.name
+        .dl-btn__sep
+        .dl-btn__size!= checkProps.size

@@ -1,0 +1,112 @@
+.field-file {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    padding: 0;
+    border: none;
+
+    &.field--invalid {
+        .field-file__fakeinput {
+            border-color: $c-error;
+        }
+
+        .field-file__error {
+            display: block;
+        }
+    }
+
+    &--full {
+        .field-file__fakeinput {
+            padding-top: 24px;
+            padding-bottom: 6px;
+
+            @include max(mobile) {
+                padding-top: 19px;
+                padding-bottom: 3px;
+            }
+        }
+
+        .field-file__placeholder {
+            font-size: 12px;
+            top: 6px;
+            transform: translateY(0);
+
+            @include max(mobile) {
+                font-size: 10px;
+                top: 3px;
+            }
+        }
+    }
+
+    &__fakeinput {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 30px;
+        font-size: 16px;
+        line-height: 1.5em;
+        font-weight: 600;
+        outline: none;
+        color: $c-text;
+        background-color: transparent;
+        border-radius: $br-5;
+        border: 1px dotted $c-border;
+        transition: all $tr;
+        min-height: 56px;
+
+        @include max(mobile) {
+            font-size: 14px;
+            padding: 11px;
+            min-height: 48px;
+        }
+    }
+
+    &__name {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0;
+        color: $c-text-grey;
+        transition: all 0.2s linear;
+
+        @include max(mobile) {
+            font-size: 14px;
+            left: 12px;
+        }
+    }
+
+    &__error {
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 0;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.18em;
+        color: $c-error;
+        display: none;
+    }
+
+    &__btn.btn {
+        flex: 0 0 auto;
+
+        @include max(xs) {
+            .btn__text {
+                display: none;
+            }
+        }
+
+    }
+
+    &__input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 1;
+    }
+}

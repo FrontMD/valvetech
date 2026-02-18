@@ -127,6 +127,7 @@
 
         input:checked+.form-privacy__fake {
             background-color: $c-accent;
+            border-color: $c-accent;
         }
 
         input:checked+.form-privacy__fake::after {
@@ -140,8 +141,8 @@
             color: $c-text;
 
             a {
-                color: $c-text;
-                text-decoration: underline;
+                color: $c-link;
+                text-decoration: none;
                 transition: all $tr;
             }
 

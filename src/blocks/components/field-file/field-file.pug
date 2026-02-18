@@ -1,0 +1,26 @@
+-
+    const defaultFieldFileProps = {
+        classes: '',
+        title: '',
+        placeholder: 'Выберите файл или перетащите его на это поле',
+        id: 'sSelection',
+        inputAttr: ''
+    }
+
+mixin field-file(props = defaultFieldFileProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultFieldFileProps.classes,
+            title: props.title ? props.title : defaultFieldFileProps.title,
+            placeholder: props.placeholder ? props.placeholder : defaultFieldFileProps.placeholder,
+            id: props.id ? props.id : defaultFieldFileProps.id,
+            inputAttr: props.inputAttr ? props.inputAttr : defaultFieldFileProps.inputAttr,
+        }
+
+    .field-file(class= checkProps.classes data-js="formField" data-placeholder= checkProps.placeholder)&attributes(attributes)
+        input.field-file__input(type='file' id=checkProps.id placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
+
+        .field-file__fakeinput
+            .field-file__name(data-js='fileName')!= checkProps.placeholder
+            .field-file__error(data-js='fieldError')
+
