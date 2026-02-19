@@ -1,0 +1,141 @@
+-
+    const defaultSelectionParamsProps = {
+        classes: ''
+    }
+
+mixin selection-params(props = defaultSelectionParamsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSelectionParamsProps.classes,
+        }
+
+    section.section.section--inner.selection-params(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .section__header
+                +title({
+                    tag: 'h2',
+                    text: 'Подбор и расчет теплообменника профессионалами',
+                    size: '85'
+                })(data-aos="fade-right")
+                .selection-params__text(data-aos="fade-in" data-aos-delay='300') Заполните указанные поля, и наши инженеры в течение 1 часа подберут подходящий теплообменник под указанные теплотехнические данные и свяжутся с вами. Мы предложим наиболее целесообразные и эффективные технические решения, быстрое производство и удобную логистику до места установки пластинчатого теплообменника.
+
+            form.form.selection-params__form(action="#" data-validate novalidate)
+                .form__content(data-js='formContent')
+                    .selection-params__flex
+                        .selection-params__block.selection-params__left(data-aos="fade-up")
+                            .selection-params__icon
+                                img(src="img/hot.svg")
+                            .selection-params__fields
+                                .selection-params__subtitle Греющая сторона
+                                .form__fields
+                                    +field({
+                                        placeholder: 'Температура среды на входе ПТО',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+                                    +field({
+                                        placeholder: 'Температура среды на выходе ПТО',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+                                    +field({
+                                        placeholder: 'Массовый расход среды (т/ч)',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+                                    +field({
+                                        placeholder: 'Тип греющей среды',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+                                    .form__subtitle Сфера применения
+                                    +field({
+                                        placeholder: 'Применение ПТО',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+                                    +field({
+                                        placeholder: 'Тепловая нагрузка',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+
+                        .selection-params__img(data-aos="fade-in" data-aos-delay='600')
+                            img(src="img/selection/selection_params.webp")
+
+                        .selection-params__block.selection-params__right(data-aos="fade-up" data-aos-delay='300')
+                            .selection-params__icon
+                                img(src="img/cold.svg")
+                            .selection-params__fields
+                                .selection-params__subtitle Нагреваемая сторона
+                                .form__fields
+                                    +field({
+                                        placeholder: 'Температура среды на выходе ПТО',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+                                    +field({
+                                        placeholder: 'Температура среды на входе ПТО',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+                                    +field({
+                                        placeholder: 'Массовый расход среды (т/ч)',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+                                    +field({
+                                        placeholder: 'Тип нагреваемой среды',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+                                    .form__subtitle Укажите единицу измерения
+                                    +field({
+                                        placeholder: 'Единица измерения',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+                                    +field({
+                                        placeholder: 'Расчетное давление',
+                                        inputAttr: {
+                                            required: ''
+                                        },
+                                        hasError: true
+                                    })
+
+                    .selection-params__btns
+                        +btn({
+                            classes: ``,
+                            type: 'button',
+                            buttonType: 'submit',
+                            name: 'Подобрать теплообменник',
+                            icon: 'filter'
+                        })(data-aos="fade-up")
+                        +btn({
+                            classes: ``,
+                            name: 'Оставить заявку на подбор',
+                            cMode: 'white',
+                            icon: 'handset'
+                        })(data-modal="#selectionModal" data-aos="fade-up" data-aos-delay='200')

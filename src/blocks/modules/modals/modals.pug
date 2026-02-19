@@ -9,7 +9,6 @@ noindex
                 title: 'Оставить заявку',
                 text: '',
                 btnText: 'Отправить заявку',
-                btnCMode: 'accent',
                 privacyText: 'Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a>',
                 })
                     +field({
@@ -44,7 +43,6 @@ noindex
                 text: '',
                 btnText: 'Отправить',
                 btnIcon: 'filter',
-                btnCMode: 'accent',
                 privacyText: 'Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a>',
                 })
                     +field({
@@ -80,4 +78,55 @@ noindex
                             'required': '',
                         },
                         hasError: true
+                    })
+
+        //- задать вопрос
+        +modal({modalId:"questionModal"})(data-js="questionModal")
+            +form({
+                classes: 'form--modal',
+                title: 'Задать вопрос',
+                text: '',
+                btnText: 'Отправить',
+                btnIcon: 'btn_chevron',
+                privacyText: 'Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a>',
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: '',
+                        placeholder: 'Имя',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                        hasError: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: 'Телефон',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                        hasError: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'email',
+                        title: '',
+                        placeholder: 'Email',
+                        inputAttr: {
+                            'data-v-name': 'email',
+                            'required': '',
+                        },
+                        hasError: true
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'textarea',
+                        title: '',
+                        placeholder: 'Ваш вопрос',
                     })

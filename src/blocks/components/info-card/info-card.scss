@@ -84,6 +84,14 @@
 
     &--small &__top {
         min-height: 140px;
+
+        @include max(laptop) {
+            min-height: 116px;
+        }
+
+        @include max(tablet) {
+            min-height: 90px;
+        }
     }
 
     &--small &__title {
@@ -91,10 +99,12 @@
         font-size: 29px;
         line-height: 110%;
 
-        @include max(laptop) {}
+        @include max(large) {
+            font-size: 24px;
+        }
 
         @include max(tablet) {
-            font-size: 26px;
+            font-size: 22px;
         }
 
         @include max(mobile) {

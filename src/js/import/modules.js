@@ -5,6 +5,8 @@
 @@include("../../blocks/modules/p-catalog/p-catalog.js")
 @@include("../../blocks/modules/catalog-item/catalog-item.js")
 @@include("../../blocks/modules/p-list/p-list.js")
+@@include("../../blocks/modules/gallery-slider/gallery-slider.js")
+@@include("../../blocks/modules/accordion/accordion.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     header();
@@ -14,4 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     pCatalogBanner();
     ciMedia();
     pListCentered();
+    gallerySlider();
+    accordion();
 })

@@ -1,13 +1,14 @@
 -
     const defaultGallerySliderProps = {
         classes: '',
+        group: 'equipment',
         slides: [
-            'img/solutions/gallery_1.webp',
-            'img/solutions/gallery_2.webp',
-            'img/solutions/gallery_3.webp',
-            'img/solutions/gallery_4.webp',
-            'img/solutions/gallery_5.webp',
-            'img/solutions/gallery_6.webp',
+            'img/selection/gallery_1.webp',
+            'img/selection/gallery_2.webp',
+            'img/selection/gallery_3.webp',
+            'img/selection/gallery_4.webp',
+            'img/selection/gallery_5.webp',
+            'img/selection/gallery_6.webp',
         ]
     }
 
@@ -15,6 +16,7 @@ mixin gallery-slider(props = defaultGallerySliderProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultGallerySliderProps.classes,
+            group: props.group ? props.group : defaultGallerySliderProps.group,
             slides: props.slides ? props.slides : defaultGallerySliderProps.slides,
         }
 
@@ -24,15 +26,15 @@ mixin gallery-slider(props = defaultGallerySliderProps)
                 +title({
                     tag: 'h2',
                     text: 'Галерея готового оборудования',
-                })
-                +slider-controls
-            .gallery-slider__slider
+                })(data-aos="fade-right")
+                +slider-controls()(data-aos="fade-left" data-aos-delay="400")
+            .gallery-slider__slider(data-js="gallerySliderSlider" data-anim-list)
                 .swiper-wrapper
                     - let counter = 0
                     - let list = checkProps.slides 
                     - while(counter < list.length)
-                        a.swiper-slide.gallery-slider__slide(data-fancybox href=list[counter] data-thumb=list[counter])
-                            img(src=list[counter])
+                        a.swiper-slide.gallery-slider__slide(data-fancybox=checkProps.group href=list[counter] data-thumb=list[counter])
+                            img(src=list[counter] data-anim-item)
 
                         - counter++
 

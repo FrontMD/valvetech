@@ -12,7 +12,7 @@ mixin s-selection(props = defaultSSelectionProps)
     section.section.section--inner.s-selection(class= checkProps.classes)&attributes(attributes)
         .vt-container
             .s-selection__container
-                .s-selection__left
+                .s-selection__left(data-aos="fade-right")
                     .s-selection__bg
                         img(src="img/selection/s_selection_bg.webp" alt="")
                     .s-selection__content
@@ -24,8 +24,9 @@ mixin s-selection(props = defaultSSelectionProps)
                         })
                         .s-selection__text Заполните файл указанными параметрами <br>для&nbsp;точного расчета нашими экспертами.
                         +dl-btn
-                .s-selection__right
+                .s-selection__right(data-aos="fade-left" data-aos-delay="400")
                     +title({
+                        classes: 's-selection__title',
                         text: '... и отправьте нам',
                         size: '85'
                     })

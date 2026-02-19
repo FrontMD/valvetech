@@ -263,7 +263,8 @@ body.no-scroll {
 			padding-bottom: 30px;
 		}
 
-		.vt-btn {
+		.vt-btn,
+		.slider-controls {
 			flex: 0 0 auto;
 		}
 	}
@@ -288,11 +289,17 @@ body.no-scroll {
 
 		@include max(tablet) {
 			flex-direction: row;
+			align-items: flex-end;
 			gap: 24px;
+
+			.vt-btn {
+				flex: 0 0 auto;
+			}
 		}
 
 		@include max(mobile) {
 			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 
@@ -800,7 +807,7 @@ body.no-scroll {
 					right: 0;
 					height: auto;
 					bottom: 0;
-					border: 2px solid $c-accent;
+					border: 2px solid $c-border;
 					border-radius: 5px;
 					animation: f-fadeIn 0.2s ease-out;
 					z-index: 10;

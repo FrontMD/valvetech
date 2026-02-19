@@ -1,0 +1,27 @@
+-
+    const defaultSFaqProps = {
+        classes: ''
+    }
+
+mixin s-faq(props = defaultSFaqProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSFaqProps.classes,
+        }
+
+    section.section.section--inner.s-faq(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .sidebar-layout
+                .sidebar-layout__sidebar
+                    +title({
+                        text: 'Основные вопросы',
+                        tag: 'h2'
+                    })(data-aos="fade-right" data-delay="300")
+                    +btn({
+                        classes: 's-faq__btn',
+                        name: 'Задать свой вопрос',
+                        icon: 'btn_chevron'
+                    })(data-modal="#questionModal" data-aos="fade-right" data-delay="500")
+                .sidebar-layout__main(data-aos="fade-up")
+                    +accordion
+

@@ -1,0 +1,27 @@
+-
+    const defaultSelectionPsProps = {
+        classes: ''
+    }
+
+mixin selection-ps(props = defaultSelectionPsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSelectionPsProps.classes,
+        }
+
+    section.section.section--inner.selection-ps(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .section__header
+                +title({
+                    tag: 'h2',
+                    text: 'Подбор насосных станций по графику',
+                    size: '85'
+                })(data-aos="fade-right")
+
+            .selection-ps__container(data-aos="fade-up" data-aos-delay="200")
+                .selection-ps__text Для любой насосной станции производитель предоставляет кривые рабочих характеристик:
+                .selection-ps__img
+                    a(href="img/selection/selection_char.webp" data-fancybox) 
+                        img(src="img/selection/selection_char.webp")
+                    span Кривая рабочих характеристик насосной станции Grundfos HYDRO MPC-F 2CR10-3 (Арт. 97520708)
+                .selection-ps__text По графику можно определить максимальный расход (Q) и напор (H), в данном случае Q = 20 м3/ч и H = 30 м.

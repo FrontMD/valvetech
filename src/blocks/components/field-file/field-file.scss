@@ -43,6 +43,16 @@
         border: 1px dotted $c-border;
         transition: all $tr;
         min-height: 170px;
+
+        @include max(tablet) {
+            padding: 20px;
+            gap: 10px;
+            min-height: 150px;
+        }
+
+        @include max(mobile) {
+            padding: 12px;
+        }
     }
 
     &__icon {
@@ -53,6 +63,11 @@
         svg {
             width: 32px;
             height: 32px;
+
+            @include max(tablet) {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 
@@ -61,7 +76,12 @@
 
         @include max(mobile) {
             font-size: 14px;
-            left: 12px;
+        }
+    }
+
+    &__conf {
+        @include max(mobile) {
+            font-size: 14px;
         }
     }
 

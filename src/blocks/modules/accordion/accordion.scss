@@ -1,0 +1,87 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.spoiler {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+
+    &__intro {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        cursor: pointer;
+        padding: 28px 30px;
+        background-color: $c-white;
+        color: $c-text;
+
+        @include max(laptop) {
+            padding: 20px;
+        }
+
+        @include max(mobile) {
+            padding: 12px;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 120%;
+
+        @include max(mobile) {
+            font-size: 20px;
+        }
+
+        @include max(xs) {
+            font-size: 16px;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        flex-grow: 0;
+        transition: all $tr;
+        color: $c-accent;
+
+        svg {
+            width: 23px;
+            height: 23px;
+            transition: all $tr;
+
+            @include max(mobile) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    &.active &__icon svg {
+        transform: rotate(-180deg);
+    }
+
+    &__content {
+        display: none;
+        overflow: hidden;
+        padding: 20px 30px;
+
+        @include max(laptop) {
+            padding: 20px;
+        }
+
+        @include max(mobile) {
+            padding: 12px;
+        }
+    }
+}

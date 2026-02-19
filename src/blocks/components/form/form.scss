@@ -68,6 +68,18 @@
         }
     }
 
+    &__subtitle {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+
+        @include max(xs) {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    }
+
     &__fields {
         display: flex;
         flex-direction: column;

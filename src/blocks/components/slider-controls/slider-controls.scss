@@ -10,6 +10,20 @@
     &.active {
         display: flex;
     }
+
+    &__sep {
+        width: 60px;
+        height: 1px;
+        background-color: $c-border;
+
+        @include max(laptop) {
+            width: 40px;
+        }
+
+        @include max(mobile) {
+            width: 32px;
+        }
+    }
 }
 
 .slider-control {
@@ -17,29 +31,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $c-white;
-    opacity: 0.7;
+    color: $c-black;
     cursor: pointer;
-    transition: all $tr;
-
-    &--next {
-        transform: rotate(-180deg);
-    }
+    transition: color $tr;
 
     &:hover {
-        opacity: 1;
+        color: $c-accent;
     }
 
     &.swiper-button-disabled {
-        opacity: 0.2;
+        color: $c-border;
         pointer-events: none;
     }
 
     svg {
-        width: 56.57px;
-        height: 56.57px;
+        width: 60px;
+        height: 60px;
 
         @include max(laptop) {
+            width: 40px;
+            height: 40px;
+        }
+
+        @include max(mobile) {
             width: 32px;
             height: 32px;
         }
@@ -49,17 +63,4 @@
             height: 24px;
         }
     }
-
-    &__arrow,
-    &__rhombus {
-        transition: all $tr;
-    }
-
-    /*&:hover path.slider-control__arrow {
-        d: path("M 40.7834 28.6676 L 16.9014 28.6676");
-    }
-
-    &:hover path.slider-control__rhombus {
-        d: path("M 57.068599 28.7843 L 28.7843 57.0686 L 0.500001 28.7843 L 28.7843 0.500029 L 57.068599 28.7843");
-    }*/
 }

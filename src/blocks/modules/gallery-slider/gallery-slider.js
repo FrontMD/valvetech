@@ -1,18 +1,41 @@
 function gallerySlider() {
-    const catalogSections = document.querySelectorAll('[data-js="pCatalog"]')
+    const galleries = document.querySelectorAll('[data-js="gallerySlider"]')
 
-    if(!catalogSections.length) return
+    if(!galleries.length) return
 
-    catalogSections.forEach(section => {
-        const banner = section.querySelector('[data-js="productBanner"]')
-        const list = section.querySelector('[data-js="pCatalogList"]')
+    galleries.forEach(gallery => {
+        const slider = gallery.querySelector('[data-js="gallerySliderSlider"]')
+        const controls = gallery.querySelector('[data-js="sliderControls"]')
+        let prev = controls ? controls.querySelector('[data-js="sliderPrev"]') : null
+        let next = controls ? controls.querySelector('[data-js="sliderNext"]') : null
+        const ww = window.innerWidth
+        let slidesPerView = 2
 
-        if(banner && list) {
-            const columns = getGridColumnCount(list)
-            const items = list.children
-            banner.style.gridColumn = `1 / ${columns + 1}`
-            list.insertBefore(banner, items[columns - 1].nextSibling)
-
+        if(slider) {
+            const swiperEx = new Swiper(slider, {
+                slidesPerView: 1.2,
+                spaceBetween: 12,
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next
+                },
+                breakpoints: {
+                    768: {
+                       slidesPerView: slidesPerView 
+                    },
+                    1024: {
+                       spaceBetween: 24, 
+                       slidesPerView: slidesPerView 
+                    }
+                },
+                on: {
+                    init: (swiper) => {
+                        if(swiper.slides.length > swiper.params.slidesPerView && controls) {
+                            controls.classList.add('active')
+                        }
+                    }
+                }
+            })
         }
     })
 }

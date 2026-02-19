@@ -4,7 +4,9 @@
         align-items: stretch;
         gap: 24px;
 
-        @include max(laptop) {}
+        @include max(tablet) {
+            flex-direction: column;
+        }
 
         @include max(mobile) {}
     }
@@ -15,6 +17,15 @@
         padding: 40px 40px 50px;
         border-radius: $br-5;
         overflow: hidden;
+
+        @include max(tablet) {
+            flex: 0 0 auto;
+            padding: 24px;
+        }
+
+        @include max(xs) {
+            padding: 12px;
+        }
     }
 
     &__bg {
@@ -52,6 +63,18 @@
 
     &__title {
         margin-bottom: auto;
+
+        @include max(large) {
+            font-size: 48px;
+        }
+
+        @include max(laptop) {
+            font-size: 36px;
+        }
+
+        @include max(xs) {
+            font-size: 28px;
+        }
     }
 
     &__text {
@@ -59,6 +82,20 @@
         font-size: 20px;
         line-height: 160%;
         color: $c-white;
+
+        @include max(tablet) {
+            font-size: 18px;
+        }
+
+        @include max(mobile) {
+            font-size: 16px;
+        }
+
+        @include max(mobile) {
+            br {
+                display: none;
+            }
+        }
     }
 
     &__right {
@@ -66,9 +103,32 @@
         padding: 40px;
         background-color: $c-white;
         border-radius: $br-5;
+
+        @include max(tablet) {
+            flex: 0 0 auto;
+            padding: 24px;
+        }
+
+        @include max(xs) {
+            padding: 12px;
+        }
     }
 
     &__form {
         margin-top: 50px;
+
+        @include max(mobile) {
+            margin-top: 32px;
+        }
+
+        @include max(xs) {
+            .vt-btn {
+                width: 100%;
+            }
+
+            .vt-btn__text {
+                margin-right: auto;
+            }
+        }
     }
 }

@@ -207,8 +207,6 @@ function toggleLoading(form, on) {
 function inputMasksInit(form) {
 
     const phones = form.querySelectorAll('input[data-type="phoneNumber"]');
-    //const dates = form.querySelectorAll('input[data-type="date"]');
-    //const numbers = form.querySelectorAll('input[data-type="number"]');
     const letters = form.querySelectorAll('input[data-type="letters"]');
 
     if(phones.length > 0) {
@@ -220,35 +218,6 @@ function inputMasksInit(form) {
         })
     }
 
-    /*if(dates.length > 0) {
-        dates.forEach(date => {
-            const dateMaskFormat =  '99.99.9999';
-            const today = new Date()
-
-            new AirDatepicker(date, {
-                dateFormat: 'dd.MM.yyyy',
-                minDate: today,
-            })
-    
-            Inputmask({
-                'mask': dateMaskFormat,
-                'showMaskOnHover': false
-            }).mask(date);
-
-            date.addEventListener('input', dateMask)
-
-        })
-    }*/
-
-    /*if(numbers.length > 0) {
-        numbers.forEach(number => {
-            number.addEventListener('input', function(e){
-                let val = e.target.value.replace(/\D/g, "");
-                this.value = val;
-            })
-        })
-    }*/
-
     if(letters.length > 0) {
         letters.forEach(letter => {
             letter.addEventListener('input', function(e){
@@ -259,36 +228,4 @@ function inputMasksInit(form) {
         })
     }
 
-    /*function dateMask(e) {
-
-        let val = e.target.value.replace(/\D/g, "");
-
- 
-
-        if(val.length == 1 && parseInt(val) > 3) {
-            val = '3'
-        }
-
-        if(val.length == 2 && parseInt(val) > 31) {
-        val = '31'
-        }
-
-        if(val.length == 3 && parseInt(val.substring(2)) > 1) {
-        val = val.slice(0, 2) + "1";
-        }
-        
-        if(val.length == 4 && parseInt(val.substring(2)) > 12) {
-        val = val.slice(0, 2) + "12";
-        }
-
-        if(val.length == 10 && parseInt(val.substring(8)) > 23) {
-            val = val.slice(0, 8) + "23";
-        }
-        
-        if(val.length == 12 && parseInt(val.substring(10)) > 59) {
-            val = val.slice(0, 10) + "59";
-        }
-        
-        this.value = val;
-    }*/
 }

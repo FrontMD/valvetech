@@ -121,6 +121,57 @@
                     </div>
                   </div>
                 </div>
+                <div class="modal hystmodal" id="questionModal" aria-hidden="true" data-js="questionModal">
+                  <div class="hystmodal__wrap">
+                    <div class="hystmodal__window" role="dialog" aria-modal="true">
+                      <div class="modal__content">
+                        <div class="modal__close" data-hystclose>
+                          <svg> 
+                            <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                        <div class="modal__inner" data-js="modalInner">
+                              <form class="form form--modal" action="#" data-validate novalidate>
+                                <div class="form__content" data-js="formContent">
+                                  <div class="form__title">Задать вопрос</div>
+                                  <div class="form__fields" data-js="formFields">
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="tel" placeholder="Телефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="email" placeholder="Email" data-v-name="email" required=""><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                        <label class="field     " data-js="formField">
+                                          <textarea class="field__textarea" rows="6" placeholder="Ваш вопрос"></textarea>
+                                        </label>
+                                  </div>
+                                  <div class="form__privacy form-privacy" data-js="formField">
+                                    <div class="form-privacy__flex">
+                                      <label>
+                                        <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                      </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
+                                    </div><span class="field__error" data-js="fieldError"></span>
+                                  </div>
+                                      <button class="vt-btn form__submit  vt-btn--accent vt-btn--i13" type="submit"><span class="vt-btn__text">Отправить</span><span class="vt-btn__separator"></span>
+                                        <svg> 
+                                          <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                        </svg>
+                                      </button>
+                                </div>
+                                <div class="form__thanks" data-js="form-thanks">
+                                  <div class="form__title">Ваша заявка отправлена!</div>
+                                  <div class="form__image-success"><img src="img/success.png"></div>
+                                  <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                                </div>
+                              </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
           </div>
         </noindex>
         <header class="site-header" data-js="siteHeader">
@@ -303,7 +354,7 @@
               <section class="section section--inner s-selection">
                 <div class="vt-container">
                   <div class="s-selection__container">
-                    <div class="s-selection__left">
+                    <div class="s-selection__left" data-aos="fade-right">
                       <div class="s-selection__bg"><img src="img/selection/s_selection_bg.webp" alt=""></div>
                       <div class="s-selection__content">
                             <div class="title s-selection__title title--85 title--light">Для расчёта теплообменника скачайте шаблон...
@@ -317,8 +368,8 @@
                             </div>
                       </div>
                     </div>
-                    <div class="s-selection__right">
-                          <div class="title  title--85">... и отправьте нам
+                    <div class="s-selection__right" data-aos="fade-left" data-aos-delay="400">
+                          <div class="title s-selection__title title--85">... и отправьте нам
                           </div>
                           <form class="form s-selection__form" action="#" data-validate novalidate>
                             <div class="form__content" data-js="formContent">
@@ -369,13 +420,27 @@
                   </div>
                 </div>
               </section>
+              <section class="section section--inner selection-ps">
+                <div class="vt-container">
+                  <div class="section__header">
+                        <div class="title  title--85" data-aos="fade-right">
+                          <h2>Подбор насосных станций по графику</h2>
+                        </div>
+                  </div>
+                  <div class="selection-ps__container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="selection-ps__text">Для любой насосной станции производитель предоставляет кривые рабочих характеристик:</div>
+                    <div class="selection-ps__img"><a href="img/selection/selection_char.webp" data-fancybox> <img src="img/selection/selection_char.webp"></a><span>Кривая рабочих характеристик насосной станции Grundfos HYDRO MPC-F 2CR10-3 (Арт. 97520708)</span></div>
+                    <div class="selection-ps__text">По графику можно определить максимальный расход (Q) и напор (H), в данном случае Q = 20 м3/ч и H = 30 м.</div>
+                  </div>
+                </div>
+              </section>
               <section class="section section--inner gallery-slider" data-js="gallerySlider">
                 <div class="vt-container">
                   <div class="section__header">
-                        <div class="title  title--85">
+                        <div class="title  title--85" data-aos="fade-right">
                           <h2>Галерея готового оборудования</h2>
                         </div>
-                        <div class="slider-controls" data-js="sliderControls">
+                        <div class="slider-controls" data-js="sliderControls" data-aos="fade-left" data-aos-delay="400">
                           <button class="slider-control slider-control--prev" type="button" data-js="sliderPrev">
                             <svg>
                               <use xlink:href="img/sprites/sprite.svg#slider_prev"></use>
@@ -389,8 +454,138 @@
                           </button>
                         </div>
                   </div>
-                  <div class="gallery-slider__slider">
-                    <div class="swiper-wrapper"><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_5.webp" data-thumb="img/solutions/gallery_5.webp"><img src="img/solutions/gallery_5.webp"></a><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_6.webp" data-thumb="img/solutions/gallery_6.webp"><img src="img/solutions/gallery_6.webp"></a><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_1.webp" data-thumb="img/solutions/gallery_1.webp"><img src="img/solutions/gallery_1.webp"></a><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_2.webp" data-thumb="img/solutions/gallery_2.webp"><img src="img/solutions/gallery_2.webp"></a><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_3.webp" data-thumb="img/solutions/gallery_3.webp"><img src="img/solutions/gallery_3.webp"></a><a class="swiper-slide gallery-slider__slide" data-fancybox href="img/solutions/gallery_4.webp" data-thumb="img/solutions/gallery_4.webp"><img src="img/solutions/gallery_4.webp"></a>
+                  <div class="gallery-slider__slider" data-js="gallerySliderSlider" data-anim-list>
+                    <div class="swiper-wrapper"><a class="swiper-slide gallery-slider__slide" data-fancybox="equipment" href="img/selection/gallery_5.webp" data-thumb="img/selection/gallery_5.webp"><img src="img/selection/gallery_5.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="equipment" href="img/selection/gallery_6.webp" data-thumb="img/selection/gallery_6.webp"><img src="img/selection/gallery_6.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="equipment" href="img/selection/gallery_1.webp" data-thumb="img/selection/gallery_1.webp"><img src="img/selection/gallery_1.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="equipment" href="img/selection/gallery_2.webp" data-thumb="img/selection/gallery_2.webp"><img src="img/selection/gallery_2.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="equipment" href="img/selection/gallery_3.webp" data-thumb="img/selection/gallery_3.webp"><img src="img/selection/gallery_3.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="equipment" href="img/selection/gallery_4.webp" data-thumb="img/selection/gallery_4.webp"><img src="img/selection/gallery_4.webp" data-anim-item></a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="section section--inner s-partners">
+                <div class="vt-container">
+                  <div class="section__header">
+                        <div class="title  title--85" data-aos="fade-right">
+                          <h2>Наши партнёры</h2>
+                        </div>
+                  </div>
+                  <div class="s-partners__items" data-anim-list>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_1.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_2.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_3.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_4.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_5.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_6.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_7.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_4.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_2.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_8.svg" alt=""></div>
+                  </div>
+                </div>
+              </section>
+              <section class="section section--inner s-faq">
+                <div class="vt-container">
+                  <div class="sidebar-layout">
+                    <div class="sidebar-layout__sidebar">
+                          <div class="title  title--85" data-aos="fade-right" data-delay="300">
+                            <h2>Основные вопросы</h2>
+                          </div><a class="vt-btn s-faq__btn vt-btn--i13" href="javascript:void(0);" data-modal="#questionModal" data-aos="fade-right" data-delay="500"><span class="vt-btn__text">Задать свой вопрос</span><span class="vt-btn__separator"></span>
+                            <svg> 
+                              <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                            </svg></a>
+                    </div>
+                    <div class="sidebar-layout__main" data-aos="fade-up">
+                          <div class="accordion" data-js="accordion">
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">Как происходит подбор и расчёт теплообменного оборудования?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#select_chevron"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor">Подбор начинается с анализа исходных данных объекта: тепловых нагрузок, температурных графиков, параметров теплоносителей и условий эксплуатации. На основе этих данных инженеры выполняют теплотехнический расчёт, подбирают оптимальную модель теплообменника и конфигурацию оборудования с учётом требований проекта, нормативов и бюджета. В результате заказчик получает техническое решение, готовое к интеграции в систему, с обоснованными характеристиками и расчётом стоимости.</div>
+                              </div>
+                            </div>
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">Какие исходные данные необходимы для расчёта теплообменника?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#select_chevron"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor">Подбор начинается с анализа исходных данных объекта: тепловых нагрузок, температурных графиков, параметров теплоносителей и условий эксплуатации. На основе этих данных инженеры выполняют теплотехнический расчёт, подбирают оптимальную модель теплообменника и конфигурацию оборудования с учётом требований проекта, нормативов и бюджета. В результате заказчик получает техническое решение, готовое к интеграции в систему, с обоснованными характеристиками и расчётом стоимости.</div>
+                              </div>
+                            </div>
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">С какими типами теплообменников вы работаете?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#select_chevron"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor">Подбор начинается с анализа исходных данных объекта: тепловых нагрузок, температурных графиков, параметров теплоносителей и условий эксплуатации. На основе этих данных инженеры выполняют теплотехнический расчёт, подбирают оптимальную модель теплообменника и конфигурацию оборудования с учётом требований проекта, нормативов и бюджета. В результате заказчик получает техническое решение, готовое к интеграции в систему, с обоснованными характеристиками и расчётом стоимости.</div>
+                              </div>
+                            </div>
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">Выполняете ли вы подбор оборудования под нестандартные условия?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#select_chevron"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor">Подбор начинается с анализа исходных данных объекта: тепловых нагрузок, температурных графиков, параметров теплоносителей и условий эксплуатации. На основе этих данных инженеры выполняют теплотехнический расчёт, подбирают оптимальную модель теплообменника и конфигурацию оборудования с учётом требований проекта, нормативов и бюджета. В результате заказчик получает техническое решение, готовое к интеграции в систему, с обоснованными характеристиками и расчётом стоимости.</div>
+                              </div>
+                            </div>
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">Можно ли интегрировать оборудование в существующую инженерную систему?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#select_chevron"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor">Подбор начинается с анализа исходных данных объекта: тепловых нагрузок, температурных графиков, параметров теплоносителей и условий эксплуатации. На основе этих данных инженеры выполняют теплотехнический расчёт, подбирают оптимальную модель теплообменника и конфигурацию оборудования с учётом требований проекта, нормативов и бюджета. В результате заказчик получает техническое решение, готовое к интеграции в систему, с обоснованными характеристиками и расчётом стоимости.</div>
+                              </div>
+                            </div>
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">Какие сроки поставки оборудования?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#select_chevron"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor">Подбор начинается с анализа исходных данных объекта: тепловых нагрузок, температурных графиков, параметров теплоносителей и условий эксплуатации. На основе этих данных инженеры выполняют теплотехнический расчёт, подбирают оптимальную модель теплообменника и конфигурацию оборудования с учётом требований проекта, нормативов и бюджета. В результате заказчик получает техническое решение, готовое к интеграции в систему, с обоснованными характеристиками и расчётом стоимости.</div>
+                              </div>
+                            </div>
+                            <div class="spoiler" data-js="spoiler">
+                              <div class="spoiler__intro">
+                                <div class="spoiler__title">Оказываете ли вы услуги пусконаладки и ввода в эксплуатацию?</div>
+                                <div class="spoiler__icon">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#select_chevron"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="spoiler__content" data-js="spoilerContent">
+                                <div class="text-editor">Подбор начинается с анализа исходных данных объекта: тепловых нагрузок, температурных графиков, параметров теплоносителей и условий эксплуатации. На основе этих данных инженеры выполняют теплотехнический расчёт, подбирают оптимальную модель теплообменника и конфигурацию оборудования с учётом требований проекта, нормативов и бюджета. В результате заказчик получает техническое решение, готовое к интеграции в систему, с обоснованными характеристиками и расчётом стоимости.</div>
+                              </div>
+                            </div>
+                          </div>
                     </div>
                   </div>
                 </div>
@@ -649,6 +844,57 @@
                                   <button class="vt-btn form__submit  vt-btn--accent" type="submit"><span class="vt-btn__text">Отправить</span><span class="vt-btn__separator"></span>
                                     <svg> 
                                       <use xlink:href="img/sprites/sprite.svg#filter"></use>
+                                    </svg>
+                                  </button>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__title">Ваша заявка отправлена!</div>
+                              <div class="form__image-success"><img src="img/success.png"></div>
+                              <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal" id="questionModal" aria-hidden="true" data-js="questionModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form form--modal" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="formContent">
+                              <div class="form__title">Задать вопрос</div>
+                              <div class="form__fields" data-js="formFields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="Телефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="email" placeholder="Email" data-v-name="email" required=""><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <textarea class="field__textarea" rows="6" placeholder="Ваш вопрос"></textarea>
+                                    </label>
+                              </div>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <div class="form-privacy__flex">
+                                  <label>
+                                    <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                  </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
+                                </div><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                                  <button class="vt-btn form__submit  vt-btn--accent vt-btn--i13" type="submit"><span class="vt-btn__text">Отправить</span><span class="vt-btn__separator"></span>
+                                    <svg> 
+                                      <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
                                     </svg>
                                   </button>
                             </div>

@@ -65,8 +65,8 @@ function fancyboxInit() {
         Carousel: {
             transition: "crossfade",
             Navigation: {
-                prevTpl: '<svg><use xlink:href="'+jsTemplatePath+'img/sprites/sprite.svg#chevron_slider_prev"></use></svg>',
-                nextTpl: '<svg><use xlink:href="'+jsTemplatePath+'img/sprites/sprite.svg#chevron_slider_next"></use></svg>',
+                prevTpl: '<svg><use xlink:href="'+jsTemplatePath+'img/sprites/sprite.svg#slider_prev"></use></svg>',
+                nextTpl: '<svg><use xlink:href="'+jsTemplatePath+'img/sprites/sprite.svg#slider_next"></use></svg>',
               },
         },
         Thumbs: {
