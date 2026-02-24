@@ -68,6 +68,16 @@
         }
     }
 
+    &--48 {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 120%;
+
+        @include max(mobile) {
+            font-size: 22px;
+        }
+    }
+
     &--30 {
         font-size: 30px;
         font-weight: 700;

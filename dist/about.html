@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Страницы</title>
+    <title>О компании</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -279,145 +279,266 @@
           </div>
         </header>
     <main class="site-main">
-      <style type="text/css">
-        .pages-list {
-            padding-top: 200px;
-        }
-        
-        .pages-list__links {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            grid-gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .pages-list__subtitle {
-            margin-top: 60px;
-        
-        }
-        
-        .pages-list__link {
-            position: relative;
-            font-size: 26px;
-            text-decoration: none;
-            color: black;
-            transition: color 0.3s linear;
-            line-height: 1.02em;
-            min-height: 3.06em;
-            padding-right: 160px;
-        
-            span {
-                font-size: 0.7em;
-                opacity: 0.7;
-            }
-        }
-        
-        .pages-list__link:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            font-size: 14px;
-            line-height: 1.02em;
-            padding: 5px 10px;
-            border-radius: 3px;
-            width: fit-content;
-        }
-        
-        .pages-list__link--check {
-            padding-right: 155px;
-        }
-        
-        .pages-list__link--check:after {
-            content: "проверка / правки";
-            background-color: #ffffcc;
-            color: #ff6a00;
-        }
-        
-        
-        .pages-list__link--postponed:after {
-            content: "отложено / очередь";
-            background-color: #dedede;
-            color: #212121;
-        }
-        
-        .pages-list__link--work {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--work:after {
-            content: "в работе";
-            background-color: #9FC5F8;
-            color: #000044;
-        }
-        
-        .pages-list__link--ready {
-            padding-right: 85px;
-        }
-        
-        .pages-list__link--ready:after {
-            content: "натяжка";
-            background-color: #93C47D;
-            color: var(--c-accent)
-        }
-        
-        .pages-list__link:hover {
-            opacity: 0.7;
-        }
-        
-        @media (max-width: 1800px) {
-            .pages-list__link {
-                padding-right: 0;
-                padding-top: 30px;
-            }
-        
-            .pages-list__link:after {
-                left: 0;
-                right: auto;
-            }
-        }
-        
-        @media (max-width: 1340px) {
-            .pages-list {
-                padding-top: 140px;
-            }
-        
-            .pages-list__links {
-                grid-gap: 15px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                font-size: 20px;
-            }
-        }
-        
-        @media (max-width: 1023px) {
-            .pages-list {
-                padding-top: 85px;
-            }
-        
-            .pages-list__links {
-                grid-template-columns: 1fr;
-                grid-gap: 20px;
-                margin-top: 40px;
-            }
-        
-            .pages-list__link {
-                min-height: auto;
-            }
-        }
-        
-      </style>
-      <div class="page">
-        <section class="section pages-list">
-          <div class="vt-container">
-                <div class="title pages-list__title title--85">
-                  <h1>Страницы</h1>
+      <div class="page" data-js="page">
+        <div class="page-layout">
+              <section class="section section--intro img-intro" data-anim-id="homeIntro">
+                <div class="section__bg" data-aos="fade-in" data-aos-duration="1000" data-aos-anchor="[data-anim-id='homeIntro']"><img src="img/about/about_intro.webp"></div>
+                <div class="vt-container img-intro__content">
+                      <div class="title img-intro__title title--70 title--upper" data-aos="fade-right" data-aos-anchor="[data-anim-id='homeIntro']">
+                        <h1>Вальв Тек Груп</h1>
+                      </div>
+                  <div class="img-intro__bottom" data-aos="fade-right" data-aos-delay="400" data-aos-anchor="[data-anim-id='homeIntro']"><a class="vt-btn" href="javascript:void(0);"><span class="vt-btn__text">История компании</span><span class="vt-btn__separator"></span>
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#clock"></use>
+                          </svg></a>
+                  </div>
                 </div>
-            <div class="pages-list__links"><a class="pages-list__link pages-list__link--check" href="home.html" target="_blank">Главная</a><a class="pages-list__link pages-list__link--check" href="catalog.html" target="_blank">Каталог</a><a class="pages-list__link pages-list__link--check" href="catalog-item.html" target="_blank">Карточка товара</a><a class="pages-list__link pages-list__link--check" href="selection-he.html" target="_blank">Подбор теплообменника</a><a class="pages-list__link pages-list__link--check" href="selection-bhs.html" target="_blank">Подбор БТП</a><a class="pages-list__link pages-list__link--check" href="selection-ps.html" target="_blank">Подбор насосной станции</a><a class="pages-list__link pages-list__link--work" href="about.html" target="_blank">О компании</a></div>
-          </div>
-        </section>
+              </section>
+              <section class="section section--inner s-mission">
+                <div class="vt-container">
+                  <div class="sidebar-layout">
+                    <div class="sidebar-layout__sidebar" data-aos="fade-right" data-delay="500">
+                          <div class="title  title--85">
+                            <h2>Миссия <br>и ценности</h2>
+                          </div>
+                    </div>
+                    <div class="sidebar-layout__main" data-aos="fade-left">
+                      <div class="s-mission__content">
+                        <div class="s-mission__info">
+                          <div class="s-mission__title">Суммарный опыт сотрудников в отрасли 60 лет. Направление было организовано в отдельное в начале 2022 года из группы специалистов, которые работали в крупнейших компаниях отрасли (Schlumberger, ИстЭнергоГруп, ЭнергоЭксперт, Теле2)</div>
+                          <div class="s-mission__text text-editor">
+                            <p>Огромный опыт в решении логистических задач (любая точка РФ и Мира) <br>Доставка всеми видами транспорта от автомобиля до самолётов и морской доставки.</p>
+                            <p>Обширный опыт решения задач импортозамещения <br>Полное техническое соответствие изначальному оборудованию и функциональным требованиям заказчика, возможен промышленный реинжиниринг, параллельный импорт.</p>
+                            <p>Переподбор оборудования и сопроводительные действия с проектом <br>Подберём 100% по характеристикам аналог и поможем согласовать изменения в проекте. Грамотный переподбор оборудования поможет сократить стоимость проекта, сроки поставки оборудования и ввода объекта в эксплуатацию.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="section section--inner s-numbers">
+                <div class="vt-container">
+                  <div class="s-numbers__items" data-anim-list>
+                        <div class="info-card" data-anim-item>
+                          <div class="info-card__top">
+                            <div class="info-card__title">12 973</div>
+                            <div class="info-card__num">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="info-card__text text-editor">Клиентов из России</div>
+                        </div>
+                        <div class="info-card" data-anim-item>
+                          <div class="info-card__top">
+                            <div class="info-card__title">14</div>
+                            <div class="info-card__num">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="info-card__text text-editor">Лет опыта</div>
+                        </div>
+                        <div class="info-card" data-anim-item>
+                          <div class="info-card__top">
+                            <div class="info-card__title">200 202</div>
+                            <div class="info-card__num">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="info-card__text text-editor">Единиц проданной продукции</div>
+                        </div>
+                        <div class="info-card" data-anim-item>
+                          <div class="info-card__top">
+                            <div class="info-card__title">1072</div>
+                            <div class="info-card__num">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="info-card__text text-editor">Клиента повторно обратились к нам</div>
+                        </div>
+                  </div>
+                </div>
+              </section>
+              <section class="section section--inner gallery-slider" data-js="gallerySlider">
+                <div class="vt-container">
+                  <div class="section__header">
+                        <div class="title  title--85" data-aos="fade-right">
+                          <h2>Производство</h2>
+                        </div>
+                        <div class="slider-controls" data-js="sliderControls" data-aos="fade-left" data-aos-delay="400">
+                          <button class="slider-control slider-control--prev" type="button" data-js="sliderPrev">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#slider_prev"></use>
+                            </svg>
+                          </button>
+                          <div class="slider-controls__sep"></div>
+                          <button class="slider-control slider-control--next" type="button" data-js="sliderNext">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#slider_next"></use>
+                            </svg>
+                          </button>
+                        </div>
+                  </div>
+                  <div class="gallery-slider__slider" data-js="gallerySliderSlider" data-anim-list>
+                    <div class="swiper-wrapper"><a class="swiper-slide gallery-slider__slide" data-fancybox="production" href="img/selection/gallery_5.webp" data-thumb="img/selection/gallery_5.webp"><img src="img/selection/gallery_5.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="production" href="img/selection/gallery_6.webp" data-thumb="img/selection/gallery_6.webp"><img src="img/selection/gallery_6.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="production" href="img/selection/gallery_1.webp" data-thumb="img/selection/gallery_1.webp"><img src="img/selection/gallery_1.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="production" href="img/selection/gallery_2.webp" data-thumb="img/selection/gallery_2.webp"><img src="img/selection/gallery_2.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="production" href="img/selection/gallery_3.webp" data-thumb="img/selection/gallery_3.webp"><img src="img/selection/gallery_3.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="production" href="img/selection/gallery_4.webp" data-thumb="img/selection/gallery_4.webp"><img src="img/selection/gallery_4.webp" data-anim-item></a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="section section--inner s-partners">
+                <div class="vt-container">
+                  <div class="section__header">
+                        <div class="title  title--85" data-aos="fade-right">
+                          <h2>Наши партнёры</h2>
+                        </div>
+                  </div>
+                  <div class="s-partners__items" data-anim-list>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_1.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_2.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_3.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_4.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_5.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_6.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_7.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_4.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_2.svg" alt=""></div>
+                    <div class="s-partners__item" data-anim-item><img src="img/partners/partner_8.svg" alt=""></div>
+                  </div>
+                </div>
+              </section>
+              <section class="section section--inner gallery-slider gallery-slider--ha" data-js="gallerySlider" data-slides="4">
+                <div class="vt-container">
+                  <div class="section__header">
+                        <div class="title  title--85" data-aos="fade-right">
+                          <h2>Сертификаты</h2>
+                        </div>
+                        <div class="slider-controls" data-js="sliderControls" data-aos="fade-left" data-aos-delay="400">
+                          <button class="slider-control slider-control--prev" type="button" data-js="sliderPrev">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#slider_prev"></use>
+                            </svg>
+                          </button>
+                          <div class="slider-controls__sep"></div>
+                          <button class="slider-control slider-control--next" type="button" data-js="sliderNext">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#slider_next"></use>
+                            </svg>
+                          </button>
+                        </div>
+                  </div>
+                  <div class="gallery-slider__slider" data-js="gallerySliderSlider" data-anim-list>
+                    <div class="swiper-wrapper"><a class="swiper-slide gallery-slider__slide" data-fancybox="sert" href="img/about/sert_1.webp" data-thumb="img/about/sert_1.webp"><img src="img/about/sert_1.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="sert" href="img/about/sert_2.webp" data-thumb="img/about/sert_2.webp"><img src="img/about/sert_2.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="sert" href="img/about/sert_3.webp" data-thumb="img/about/sert_3.webp"><img src="img/about/sert_3.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="sert" href="img/about/sert_4.webp" data-thumb="img/about/sert_4.webp"><img src="img/about/sert_4.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="sert" href="img/about/sert_1.webp" data-thumb="img/about/sert_1.webp"><img src="img/about/sert_1.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="sert" href="img/about/sert_2.webp" data-thumb="img/about/sert_2.webp"><img src="img/about/sert_2.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="sert" href="img/about/sert_3.webp" data-thumb="img/about/sert_3.webp"><img src="img/about/sert_3.webp" data-anim-item></a><a class="swiper-slide gallery-slider__slide" data-fancybox="sert" href="img/about/sert_4.webp" data-thumb="img/about/sert_4.webp"><img src="img/about/sert_4.webp" data-anim-item></a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="section section--inner s-review" data-js="sReview">
+                <div class="vt-container">
+                  <div class="section__header">
+                        <div class="title  title--85" data-aos="fade-right">
+                          <h2>Отзывы</h2>
+                        </div>
+                        <div class="slider-controls" data-js="sliderControls" data-aos="fade-left" data-aos-delay="400">
+                          <button class="slider-control slider-control--prev" type="button" data-js="sliderPrev">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#slider_prev"></use>
+                            </svg>
+                          </button>
+                          <div class="slider-controls__sep"></div>
+                          <button class="slider-control slider-control--next" type="button" data-js="sliderNext">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#slider_next"></use>
+                            </svg>
+                          </button>
+                        </div>
+                  </div>
+                  <div class="s-review__items" data-anim-list data-js="sReviewItems">
+                    <div class="swiper-wrapper">
+                          <div class="review-card swiper-slide" data-anim-item>
+                            <div class="review-card__top">
+                              <div class="review-card__date">10.12.2025</div>
+                              <div class="review-card__title">ООО «Елки фуд»</div>
+                            </div>
+                            <div class="review-card__body">
+                              <div class="review-card__text text-editor">Работа с вашей компанией ведётся с 2022 года, обращаемся к вам в основном за комплектующими частями к теплообменным аппаратам и запорно-регулирующей арматурой. За небольшой срок мы смогли убедиться в надёжности вашей компании и в профессионализме ваших сотрудников.</div><a class="review-card__link" href="javascript:void(0);" data-modal="#reviewModal">Подробнее
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                          <div class="review-card swiper-slide" data-anim-item>
+                            <div class="review-card__top">
+                              <div class="review-card__date">10.12.2025</div>
+                              <div class="review-card__title">АО «СтройИнвест»</div>
+                            </div>
+                            <div class="review-card__body">
+                              <div class="review-card__text text-editor">Привлекали компанию как поставщика блочных тепловых пунктов для жилого и коммерческого строительства. Оборудование полностью соответствовало проектным требованиям, документация была подготовлена корректно и без задержек. Удобно, что все решения подбираются комплексно, без необходимости обращаться к нескольким подрядчикам.</div><a class="review-card__link" href="javascript:void(0);" data-modal="#reviewModal">Подробнее
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                          <div class="review-card swiper-slide" data-anim-item>
+                            <div class="review-card__top">
+                              <div class="review-card__date">10.12.2025</div>
+                              <div class="review-card__title">ООО «Регион ЭнергоСервис»</div>
+                            </div>
+                            <div class="review-card__body">
+                              <div class="review-card__text text-editor">Надёжный партнёр в части поставок теплообменного оборудования и насосных станций. Специалисты компании хорошо разбираются в инженерных системах, предлагают оптимальные решения, а не просто продают оборудование. Рекомендуем для реализации промышленных и инфраструктурных проектов.</div><a class="review-card__link" href="javascript:void(0);" data-modal="#reviewModal">Подробнее
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                          <div class="review-card swiper-slide" data-anim-item>
+                            <div class="review-card__top">
+                              <div class="review-card__date">10.12.2025</div>
+                              <div class="review-card__title">ООО «Елки фуд»</div>
+                            </div>
+                            <div class="review-card__body">
+                              <div class="review-card__text text-editor">Работа с вашей компанией ведётся с 2022 года, обращаемся к вам в основном за комплектующими частями к теплообменным аппаратам и запорно-регулирующей арматурой. За небольшой срок мы смогли убедиться в надёжности вашей компании и в профессионализме ваших сотрудников.</div><a class="review-card__link" href="javascript:void(0);" data-modal="#reviewModal">Подробнее
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                          <div class="review-card swiper-slide" data-anim-item>
+                            <div class="review-card__top">
+                              <div class="review-card__date">10.12.2025</div>
+                              <div class="review-card__title">АО «СтройИнвест»</div>
+                            </div>
+                            <div class="review-card__body">
+                              <div class="review-card__text text-editor">Привлекали компанию как поставщика блочных тепловых пунктов для жилого и коммерческого строительства. Оборудование полностью соответствовало проектным требованиям, документация была подготовлена корректно и без задержек. Удобно, что все решения подбираются комплексно, без необходимости обращаться к нескольким подрядчикам.</div><a class="review-card__link" href="javascript:void(0);" data-modal="#reviewModal">Подробнее
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                          <div class="review-card swiper-slide" data-anim-item>
+                            <div class="review-card__top">
+                              <div class="review-card__date">10.12.2025</div>
+                              <div class="review-card__title">ООО «Регион ЭнергоСервис»</div>
+                            </div>
+                            <div class="review-card__body">
+                              <div class="review-card__text text-editor">Надёжный партнёр в части поставок теплообменного оборудования и насосных станций. Специалисты компании хорошо разбираются в инженерных системах, предлагают оптимальные решения, а не просто продают оборудование. Рекомендуем для реализации промышленных и инфраструктурных проектов.</div><a class="review-card__link" href="javascript:void(0);" data-modal="#reviewModal">Подробнее
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                </svg></a>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        </div>
       </div>
     </main>
         <footer class="site-footer section">

@@ -1,0 +1,123 @@
+.review-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    background-color: $c-white;
+    border-radius: $br-5;
+
+    &__top {
+        flex: 0 0 auto;
+        padding: 30px;
+        border-bottom: 1px solid $c-border;
+
+        @include max(tablet) {
+            padding: 20px;
+        }
+
+        @include max(mobile) {
+            padding: 15px;
+        }
+    }
+
+    &__date {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+        color: $c-text-grey;
+        margin-bottom: 5px;
+
+        @include max(tablet) {
+            font-size: 16px;
+        }
+
+        @include max(xs) {
+            font-size: 14px;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 29px;
+        line-height: 110%;
+
+        @include max(laptop) {
+            font-size: 24px;
+        }
+
+        @include max(tablet) {
+            font-size: 20px;
+        }
+
+        @include max(xs) {
+            font-size: 18px;
+        }
+    }
+
+    &__body {
+        flex: 1 1 auto;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include max(tablet) {
+            padding: 20px;
+        }
+
+        @include max(mobile) {
+            padding: 10px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include max(tablet) {
+            margin-bottom: 20px;
+        }
+
+        @include max(xs) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: auto;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+        color: $c-accent;
+        transition: color $tr;
+
+        @include max(tablet) {
+            font-size: 16px;
+        }
+
+        @include max(xs) {
+            font-size: 14px;
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+
+            @include max(xs) {
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        &:hover {
+            color: $c-accent-hover;
+        }
+    }
+}

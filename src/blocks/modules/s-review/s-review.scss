@@ -1,0 +1,20 @@
+.s-review {
+    &__items {
+        overflow: hidden;
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    @include max(laptop) {
+        .slider-controls {
+            align-self: flex-end;
+            margin-top: 16px;
+        }
+    }
+}

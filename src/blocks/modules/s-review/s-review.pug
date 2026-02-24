@@ -1,0 +1,54 @@
+-
+    const defaultSReviewProps = {
+        classes: ''
+    }
+
+mixin s-review(props = defaultSReviewProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSReviewProps.classes,
+        }
+
+    section.section.section--inner.s-review(class= checkProps.classes data-js="sReview")&attributes(attributes)
+        .vt-container
+            .section__header
+                +title({
+                    tag: 'h2',
+                    text: 'Отзывы',
+                })(data-aos="fade-right")
+                +slider-controls()(data-aos="fade-left" data-aos-delay="400")
+            .s-review__items(data-anim-list data-js="sReviewItems")
+                .swiper-wrapper
+                    +review-card({
+                        classes: 'swiper-slide'
+                    }
+                    )(data-anim-item)
+                    +review-card({
+                        classes: 'swiper-slide',
+                        title: 'АО «СтройИнвест»',
+                        date: '10.12.2025',
+                        text: 'Привлекали компанию как поставщика блочных тепловых пунктов для жилого и коммерческого строительства. Оборудование полностью соответствовало проектным требованиям, документация была подготовлена корректно и без задержек. Удобно, что все решения подбираются комплексно, без необходимости обращаться к нескольким подрядчикам.'
+                    })(data-anim-item)
+                    +review-card({
+                        classes: 'swiper-slide',
+                        title: 'ООО «Регион ЭнергоСервис»',
+                        date: '10.12.2025',
+                        text: 'Надёжный партнёр в части поставок теплообменного оборудования и насосных станций. Специалисты компании хорошо разбираются в инженерных системах, предлагают оптимальные решения, а не просто продают оборудование. Рекомендуем для реализации промышленных и инфраструктурных проектов.'
+                    })(data-anim-item)
+                    +review-card({
+                        classes: 'swiper-slide'
+                    }
+                    )(data-anim-item)
+                    +review-card({
+                        classes: 'swiper-slide',
+                        title: 'АО «СтройИнвест»',
+                        date: '10.12.2025',
+                        text: 'Привлекали компанию как поставщика блочных тепловых пунктов для жилого и коммерческого строительства. Оборудование полностью соответствовало проектным требованиям, документация была подготовлена корректно и без задержек. Удобно, что все решения подбираются комплексно, без необходимости обращаться к нескольким подрядчикам.'
+                    })(data-anim-item)
+                    +review-card({
+                        classes: 'swiper-slide',
+                        title: 'ООО «Регион ЭнергоСервис»',
+                        date: '10.12.2025',
+                        text: 'Надёжный партнёр в части поставок теплообменного оборудования и насосных станций. Специалисты компании хорошо разбираются в инженерных системах, предлагают оптимальные решения, а не просто продают оборудование. Рекомендуем для реализации промышленных и инфраструктурных проектов.'
+                    })(data-anim-item)
+

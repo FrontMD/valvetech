@@ -1,0 +1,28 @@
+-
+    const defaultReviewCardProps = {
+        classes: '',
+        date: '10.12.2025',
+        title: 'ООО «Елки фуд»',
+        text: 'Работа с вашей компанией ведётся с 2022 года, обращаемся к вам в основном за комплектующими частями к теплообменным аппаратам и запорно-регулирующей арматурой. За небольшой срок мы смогли убедиться в надёжности вашей компании и в профессионализме ваших сотрудников.'
+    }
+
+mixin review-card(props = defaultReviewCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultReviewCardProps.classes,
+            date: props.date ? props.date : defaultReviewCardProps.date,
+            title: props.title ? props.title : defaultReviewCardProps.title,
+            text: props.text ? props.text : defaultReviewCardProps.text,
+        }
+
+    .review-card(class=checkProps.classes)&attributes(attributes)
+        .review-card__top
+            .review-card__date!= checkProps.date
+            .review-card__title!= checkProps.title
+        .review-card__body
+            .review-card__text.text-editor!= checkProps.text
+            a.review-card__link(href="javascript:void(0);" data-modal="#reviewModal")
+                | Подробнее
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#btn_chevron`)
+

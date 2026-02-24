@@ -1,0 +1,35 @@
+-
+    const defaultSNumbersProps = {
+        classes: ''
+    }
+
+mixin s-numbers(props = defaultSNumbersProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSNumbersProps.classes,
+        }
+
+    section.section.section--inner.s-numbers(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .s-numbers__items(data-anim-list)
+                +info-card({
+                    title: '12 973',
+                    num: '02',
+                    text: 'Клиентов из России'
+                })(data-anim-item)
+                +info-card({
+                    title: '14',
+                    num: '03',
+                    text: 'Лет опыта'
+                })(data-anim-item)
+                +info-card({
+                    title: '200 202',
+                    num: '04',
+                    text: 'Единиц проданной продукции'
+                })(data-anim-item)
+                +info-card({
+                    title: '1072',
+                    num: '04',
+                    text: 'Клиента повторно обратились к нам'
+                })(data-anim-item)
+

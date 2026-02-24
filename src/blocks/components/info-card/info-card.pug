@@ -3,6 +3,7 @@
         classes: '',
         title: 'Точность',
         num: '01',
+        icon: 'plus',
         text: 'Подобранное оборудование точно подойдёт <br>для решения ваших задач'
     }
 
@@ -12,11 +13,17 @@ mixin info-card(props = defaultInfoCardProps)
             classes: props.classes ? props.classes : defaultInfoCardProps.classes,
             title: props.title ? props.title : defaultInfoCardProps.title,
             num: props.num ? props.num : defaultInfoCardProps.num,
+            icon: props.icon ? props.icon : defaultInfoCardProps.icon,
             text: props.text ? props.text : defaultInfoCardProps.text,
         }
 
     .info-card(class=checkProps.classes)&attributes(attributes)
         .info-card__top
             .info-card__title!= checkProps.title
-            .info-card__num!= checkProps.num
+            .info-card__num
+                - if(checkProps.icon)
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#plus`)
+                - else
+                    != checkProps.num
         .info-card__text.text-editor!= checkProps.text

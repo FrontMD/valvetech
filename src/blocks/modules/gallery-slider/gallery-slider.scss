@@ -23,3 +23,9 @@
         }
     }
 }
+
+.gallery-slider {
+    &--ha &__slide img {
+        aspect-ratio: auto;
+    }
+}

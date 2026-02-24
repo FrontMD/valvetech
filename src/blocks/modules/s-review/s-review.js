@@ -1,15 +1,13 @@
-function gallerySlider() {
-    const galleries = document.querySelectorAll('[data-js="gallerySlider"]')
+function sReviewSlider() {
+    const reviewsSections = document.querySelectorAll('[data-js="sReview"]')
 
-    if(!galleries.length) return
+    if(!reviewsSections.length) return
 
-    galleries.forEach(gallery => {
-        const slider = gallery.querySelector('[data-js="gallerySliderSlider"]')
+    reviewsSections.forEach(gallery => {
+        const slider = gallery.querySelector('[data-js="sReviewItems"]')
         const controls = gallery.querySelector('[data-js="sliderControls"]')
         let prev = controls ? controls.querySelector('[data-js="sliderPrev"]') : null
         let next = controls ? controls.querySelector('[data-js="sliderNext"]') : null
-        const ww = window.innerWidth
-        let slidesPerView = gallery.dataset.slides ? parseInt(gallery.dataset.slides) : 2
 
         if(slider) {
             const swiperEx = new Swiper(slider, {
@@ -21,11 +19,15 @@ function gallerySlider() {
                 },
                 breakpoints: {
                     768: {
-                       slidesPerView: slidesPerView 
+                       slidesPerView: 2
                     },
                     1024: {
+                        slidesPerView: 2,
                        spaceBetween: 24, 
-                       slidesPerView: slidesPerView 
+                    },
+                    1261: {
+                       slidesPerView: 3,
+                       spaceBetween: 24,
                     }
                 },
                 on: {

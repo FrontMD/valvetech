@@ -1,0 +1,53 @@
+extends ../layouts/default
+
+block variables
+    - const title = "О компании" 
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +img-intro({
+                img: 'img/about/about_intro.webp',
+                title: 'Вальв Тек Груп',
+                hasBottom: true
+            })
+                +btn({
+                    name: 'История компании',
+                    icon: 'clock',
+                })
+
+            +s-mission
+            +s-numbers
+
+            +gallery-slider({
+                title: 'Производство',
+                group: 'production',
+                slides: [
+                    'img/selection/gallery_5.webp',
+                    'img/selection/gallery_6.webp',
+                    'img/selection/gallery_1.webp',
+                    'img/selection/gallery_2.webp',
+                    'img/selection/gallery_3.webp',
+                    'img/selection/gallery_4.webp',
+                ]
+            })
+
+            +s-partners
+
+            +gallery-slider({
+                classes: 'gallery-slider--ha',
+                title: 'Сертификаты',
+                group: 'sert',
+                slides: [
+                    'img/about/sert_1.webp',
+                    'img/about/sert_2.webp',
+                    'img/about/sert_3.webp',
+                    'img/about/sert_4.webp',
+                    'img/about/sert_1.webp',
+                    'img/about/sert_2.webp',
+                    'img/about/sert_3.webp',
+                    'img/about/sert_4.webp',
+                ]
+            })(data-slides='4')
+
+            +s-review

@@ -1,0 +1,28 @@
+-
+    const defaultSMissionProps = {
+        classes: ''
+    }
+
+mixin s-mission(props = defaultSMissionProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSMissionProps.classes,
+        }
+
+    section.section.section--inner.s-mission(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .sidebar-layout
+                .sidebar-layout__sidebar(data-aos="fade-right" data-delay="500")
+                    +title({
+                        text: 'Миссия <br>и ценности',
+                        tag: 'h2'
+                    })
+                .sidebar-layout__main(data-aos="fade-left")
+                    .s-mission__content
+                        .s-mission__info
+                            .s-mission__title Суммарный опыт сотрудников в отрасли 60 лет. Направление было организовано в отдельное в начале 2022 года из группы специалистов, которые работали в крупнейших компаниях отрасли (Schlumberger, ИстЭнергоГруп, ЭнергоЭксперт, Теле2)
+                            .s-mission__text.text-editor
+                                p Огромный опыт в решении логистических задач (любая точка РФ и Мира) <br>Доставка всеми видами транспорта от автомобиля до самолётов и морской доставки.
+                                p Обширный опыт решения задач импортозамещения <br>Полное техническое соответствие изначальному оборудованию и функциональным требованиям заказчика, возможен промышленный реинжиниринг, параллельный импорт.
+                                p Переподбор оборудования и сопроводительные действия с проектом <br>Подберём 100% по характеристикам аналог и поможем согласовать изменения в проекте. Грамотный переподбор оборудования поможет сократить стоимость проекта, сроки поставки оборудования и ввода объекта в эксплуатацию.
+

@@ -2,6 +2,7 @@
     const defaultGallerySliderProps = {
         classes: '',
         group: 'equipment',
+        title: 'Галерея готового оборудования',
         slides: [
             'img/selection/gallery_1.webp',
             'img/selection/gallery_2.webp',
@@ -17,6 +18,7 @@ mixin gallery-slider(props = defaultGallerySliderProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultGallerySliderProps.classes,
             group: props.group ? props.group : defaultGallerySliderProps.group,
+            title: props.title ? props.title : defaultGallerySliderProps.title,
             slides: props.slides ? props.slides : defaultGallerySliderProps.slides,
         }
 
@@ -25,7 +27,7 @@ mixin gallery-slider(props = defaultGallerySliderProps)
             .section__header
                 +title({
                     tag: 'h2',
-                    text: 'Галерея готового оборудования',
+                    text: checkProps.title,
                 })(data-aos="fade-right")
                 +slider-controls()(data-aos="fade-left" data-aos-delay="400")
             .gallery-slider__slider(data-js="gallerySliderSlider" data-anim-list)

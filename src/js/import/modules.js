@@ -7,6 +7,7 @@
 @@include("../../blocks/modules/p-list/p-list.js")
 @@include("../../blocks/modules/gallery-slider/gallery-slider.js")
 @@include("../../blocks/modules/accordion/accordion.js")
+@@include("../../blocks/modules/s-review/s-review.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     header();
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
     pListCentered();
     gallerySlider();
     accordion();
+    sReviewSlider();
 })
