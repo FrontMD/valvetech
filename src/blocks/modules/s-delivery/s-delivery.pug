@@ -1,0 +1,59 @@
+-
+    const defaultSDeliveryProps = {
+        classes: ''
+    }
+
+mixin s-delivery(props = defaultSDeliveryProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSDeliveryProps.classes,
+        }
+
+    section.section.section--inner.s-delivery(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .section__header
+                .section__side
+                    +title({
+                        text: 'Доставка',
+                        tag: 'h2',
+                        size: '48'
+                    })(data-aos="fade-right")
+                    .s-delivery__text.text-editor(data-aos="fade-right" data-aos-delay="200") Процесс транспортировки проходит под контролем специалистов «ВАЛЬВ ТЕК ГРУП». <br>Вам необходимо просто получить товар.
+            .s-delivery__items(data-anim-list)
+                +info-card({
+                    classes: 's-delivery__card',
+                    title: 'Бесплатная доставка',
+                    num: '01',
+                    text: 'Осуществляется бесплатно по РФ и странам Таможенного Союза ЕАЭС при сумме заказа свыше 10 000 рублей.'
+                })(data-anim-item)
+                +info-card({
+                    classes: 's-delivery__card',
+                    title: 'Точно в срок',
+                    num: '02',
+                    text: 'Доставляем груз точно в срок, а в исключительных случаях заранее предупреждаем о возможных задержках и причинах их возникновения.'
+                })(data-anim-item)
+                +info-card({
+                    classes: 's-delivery__card',
+                    title: 'Прозрачная доставка',
+                    num: '03',
+                    text: 'После отправки товара предоставляем грузополучателю трэк-номер для дополнительного отслеживания перемещения груза'
+                })(data-anim-item)
+                +info-card({
+                    classes: 's-delivery__card',
+                    title: 'Бережная транспортировка',
+                    num: '04',
+                    text: 'Все грузы перед отправкой проходят предварительную подготовку. По необходимости ставится дополнительная усиленная обрешётка, чтобы товар не повредился в пути.'
+                })(data-anim-item)
+                +info-card({
+                    classes: 's-delivery__card',
+                    title: 'Безопасность',
+                    num: '05',
+                    text: 'Грузы обязательно страхуются, поэтому вы можете быть уверены в том, что не понесёте убытков при доставке.'
+                })(data-anim-item)
+                +info-card({
+                    classes: 's-delivery__card',
+                    title: 'Быстрая доставка',
+                    num: '06',
+                    text: 'Доставляем оборудование в минимальные сроки: западная и центральная часть РФ — 2-4 рабочих дня; восточная часть РФ и удалённые районы (Иркутск, Хабаровск, Н. Уренгой и т.д.) - от 4-х до 8-ми рабочих дней'
+                })(data-anim-item)
+

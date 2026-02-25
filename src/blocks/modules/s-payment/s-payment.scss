@@ -1,0 +1,39 @@
+.s-payment {
+    &__text {
+        margin-top: 10px;
+        max-width: 1052px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+
+        @include max(xs) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+}
+
+.payment-card {
+    background-color: $c-white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+
+    &__img {
+        height: 193px;
+        max-width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__text {
+        margin-top: auto;
+    }
+}

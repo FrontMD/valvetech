@@ -1,0 +1,43 @@
+-
+    const defaultSPaymentProps = {
+        classes: ''
+    }
+
+mixin s-payment(props = defaultSPaymentProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSPaymentProps.classes,
+        }
+
+    section.section.section--inner.s-payment(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .section__header
+                .section__side
+                    +title({
+                        text: 'Оплата',
+                        tag: 'h2',
+                        size: '48'
+                    })(data-aos="fade-right")
+                    .s-payment__text.text-editor(data-aos="fade-right" data-aos-delay="200") Мы готовы предоставить все варианты оплаты: от отсрочки платежа в 90 календарных дней (к.д.) до 100% предварительной оплаты. Оплату принимаем через расчётный счёт.
+                +btn({
+                    name: 'Реквизиты',
+                    icon: 'wallet'
+                })(data-aos="fade-up" data-aos-delay="200")
+            .s-payment__items(data-anim-list)
+                .payment-card(data-anim-item)
+                    .payment-card__img
+                        img(src="img/payment/payment_1.svg" alt="")
+                    .payment-card__text.text-editor 100% предварительная оплата
+                .payment-card(data-anim-item)
+                    .payment-card__img
+                        img(src="img/payment/payment_2.svg" alt="")
+                    .payment-card__text.text-editor 50% предварительной оплаты + 50% в течение 5 дней после поставки продукции
+                .payment-card(data-anim-item)
+                    .payment-card__img
+                        img(src="img/payment/payment_3.svg" alt="")
+                    .payment-card__text.text-editor 50% предварительной оплаты + 50% оплаты по уведомлению о готовности оборудования к отгрузке
+                .payment-card(data-anim-item)
+                    .payment-card__img
+                        img(src="img/payment/payment_4.svg" alt="")
+                    .payment-card__text.text-editor Отсрочка платежа в размере 100% в течение 30 дней после поставки продукции
+

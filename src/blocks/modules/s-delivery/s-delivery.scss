@@ -1,0 +1,36 @@
+.s-delivery {
+    &__text {
+        margin-top: 10px;
+        max-width: 1052px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+
+        @include max(xs) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+
+    &__card {
+        .info-card__title {
+            font-weight: 600;
+            font-size: 29px;
+            line-height: 110%;
+
+            @include max(large) {
+                font-size: 24px;
+            }
+
+            @include max(tablet) {
+                font-size: 22px;
+            }
+
+            @include max(mobile) {
+                font-size: 20px;
+            }
+        }
+    }
+}
