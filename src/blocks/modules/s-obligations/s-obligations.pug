@@ -1,0 +1,38 @@
+-
+    const defaultSObligationsProps = {
+        classes: ''
+    }
+
+mixin s-obligations(props = defaultSObligationsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSObligationsProps.classes,
+        }
+
+    section.section.section--inner.s-obligations(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .section__header
+                +title({
+                    tag: 'h2',
+                    text: 'Гарантийные обязательства ООО «ВАЛЬВ ТЕК ГРУП»',
+                    size: '48'
+                })(data-aos="fade-right")
+            .s-obligations__items(data-anim-list)
+                .obligations-card(data-anim-item)
+                    .obligations-card__icon
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#plus`)
+                    .obligations-card__text.text-editor Гарантийные обязательства распространяются на всё новое оборудование, поставляемое ООО «ВАЛЬВ ТЁК ГРУП» и его дистрибьюторами.
+
+                .obligations-card(data-anim-item)
+                    .obligations-card__icon
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#plus`)
+                    .obligations-card__text.text-editor Стандартный гарантийный срок составляет 12 месяцев с даты продажи, указанной в транспортных документах, или 18 месяцев с даты производства, указанной на Изделии. Гарантийный ремонт или замена оборудования будет производиться при условии соблюдения потребителем правил хранения, транспортирования, монтажа и эксплуатации, указанных в «Руководстве по эксплуатации» на изделие.
+
+                .obligations-card(data-anim-item)
+                    .obligations-card__icon
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#plus`)
+                    .obligations-card__text.text-editor ООО «ВАЛЬВ ТЁК ГРУП» обеспечивает сервисное обслуживание оборудования силами своих сервисных партнёров только на территории РФ.
+

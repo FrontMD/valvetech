@@ -1,0 +1,48 @@
+.history-modal(data-js='historyModal')
+    .history-modal__list
+        .history-modal__progress(data-js='historyModalProgress')
+            .line-color(data-js='historyModalProgressLine')
+            .line-dashed
+        .history-modal__row.history-modal__row--first(data-js='historyModalRow')
+            .history-modal__year 2012
+            .history-modal__point.active(data-js='historyModalPoint')
+            .history-modal__info.text-editor
+                img(src="img/about/history_1.webp")
+                p Основание компании. Начало поставок теплообменного оборудования для промышленных и строительных объектов, формирование команды инженеров и первых партнерских связей с заводами-производителями.
+
+        .history-modal__row(data-js='historyModalRow')
+            .history-modal__year 2014
+            .history-modal__point(data-js='historyModalPoint')
+            .history-modal__info.text-editor
+                p Расширение продуктовой линейки. В ассортимент добавлены насосные станции, начата комплексная поставка оборудования под задачи заказчиков «под ключ».
+                +btn({
+                    name: 'Смотреть видео',
+                    icon: 'play_btn',
+                    link: 'public/video/history_video.mp4',
+                    cMode: 'bordered',
+                    sMode: ''
+                })(data-fancybox)
+
+        .history-modal__row(data-js='historyModalRow')
+            .history-modal__year 2017
+            .history-modal__point(data-js='historyModalPoint')
+            .history-modal__info.text-editor
+                p Запуск направления блочных тепловых пунктов. Компания переходит от поставок отдельных единиц оборудования к реализации инженерных решений и типовых БТП для жилых и коммерческих объектов.
+
+        .history-modal__row(data-js='historyModalRow')
+            .history-modal__year 2020
+            .history-modal__point(data-js='historyModalPoint')
+            .history-modal__info.text-editor
+                img(src="img/about/history_2.webp")
+                p Усиление инженерной экспертизы. Внедрены услуги подбора и расчета оборудования, сопровождение проектов на стадии проектирования и строительства, рост числа крупных объектов.
+                ul
+                    li Точный технический расчет без погрешностей.
+                    li Не удешевляем, манипулируя техническими параметрами.
+                    li Для самых сложных задач подключаем инженеров завода-производителя.
+                    li Учитываем технические нюансы, поможем собрать необходимые данные для расчета.
+
+        .history-modal__row(data-js='historyModalRow')
+            .history-modal__year 2020
+            .history-modal__point(data-js='historyModalPoint')
+            .history-modal__info.text-editor
+                p Масштабирование и развитие сервиса. Укрепление складской программы, сокращение сроков поставки, развитие сервисного обслуживания и долгосрочных контрактов с промышленными и девелоперскими компаниями.

@@ -132,8 +132,11 @@ noindex
                     })
 
         //- Отзыв
-        +modal({modalId:"reviewModal", classes: "modal-review"})(data-js="reviewModal")
-            .modal-review__content
+        +modal({
+            modalId: "reviewModal",
+            classes: "modal--wide"
+            })(data-js="reviewModal")
+            .modal-review
                 .modal-review__header
                     +title({
                         text: 'ООО «Елки фуд»',
@@ -149,9 +152,16 @@ noindex
                         p Также ценим открытость в коммуникации и готовность оперативно реагировать на запросы — от коммерческих предложений до срочных технических консультаций. Компания берет на себя ответственность за результат, что сегодня встречается не так часто.
                         p Можем уверенно рекомендовать данную компанию как профессионального поставщика и надёжного партнёра для строительных и производственных проектов.
 
-                    .modal-review__img
+                    a.modal-review__img(href="img/about/review_modal.webp" data-fancybox)
                         img(src="img/about/review_modal.webp" alt="")
 
                 .modal-review__author
                     .modal-review__position Директор:
                     .modal-review__name Савчук И.А.
+
+        //- История
+        +modal({
+            modalId: "historyModal",
+            classes: "modal--wide"
+            })(data-js="historyModal")
+            include ../../components/history-modal/history-modal.pug

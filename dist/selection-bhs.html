@@ -172,7 +172,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="modal hystmodal modal-review" id="reviewModal" aria-hidden="true" data-js="reviewModal">
+                <div class="modal hystmodal modal--wide" id="reviewModal" aria-hidden="true" data-js="reviewModal">
                   <div class="hystmodal__wrap">
                     <div class="hystmodal__window" role="dialog" aria-modal="true">
                       <div class="modal__content">
@@ -182,7 +182,7 @@
                           </svg>
                         </div>
                         <div class="modal__inner" data-js="modalInner">
-                          <div class="modal-review__content">
+                          <div class="modal-review">
                             <div class="modal-review__header">
                                   <div class="title  title--48">ООО «Елки фуд»
                                   </div>
@@ -195,12 +195,78 @@
                                 <p>Поставки всегда осуществляются в согласованные сроки, оборудование приходит в полной комплектации, с необходимой документацией и паспортами. Качество продукции стабильно высокое, за время эксплуатации серьёзных замечаний не возникало.</p>
                                 <p>Также ценим открытость в коммуникации и готовность оперативно реагировать на запросы — от коммерческих предложений до срочных технических консультаций. Компания берет на себя ответственность за результат, что сегодня встречается не так часто.</p>
                                 <p>Можем уверенно рекомендовать данную компанию как профессионального поставщика и надёжного партнёра для строительных и производственных проектов.</p>
-                              </div>
-                              <div class="modal-review__img"><img src="img/about/review_modal.webp" alt=""></div>
+                              </div><a class="modal-review__img" href="img/about/review_modal.webp" data-fancybox><img src="img/about/review_modal.webp" alt=""></a>
                             </div>
                             <div class="modal-review__author">
                               <div class="modal-review__position">Директор:</div>
                               <div class="modal-review__name">Савчук И.А.</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal hystmodal modal--wide" id="historyModal" aria-hidden="true" data-js="historyModal">
+                  <div class="hystmodal__wrap">
+                    <div class="hystmodal__window" role="dialog" aria-modal="true">
+                      <div class="modal__content">
+                        <div class="modal__close" data-hystclose>
+                          <svg> 
+                            <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                        <div class="modal__inner" data-js="modalInner">
+                          <div class="history-modal" data-js="historyModal">
+                            <div class="history-modal__list">
+                              <div class="history-modal__progress" data-js="historyModalProgress">
+                                <div class="line-color" data-js="historyModalProgressLine"></div>
+                                <div class="line-dashed"></div>
+                              </div>
+                              <div class="history-modal__row history-modal__row--first" data-js="historyModalRow">
+                                <div class="history-modal__year">2012</div>
+                                <div class="history-modal__point active" data-js="historyModalPoint"></div>
+                                <div class="history-modal__info text-editor"><img src="img/about/history_1.webp">
+                                  <p>Основание компании. Начало поставок теплообменного оборудования для промышленных и строительных объектов, формирование команды инженеров и первых партнерских связей с заводами-производителями.</p>
+                                </div>
+                              </div>
+                              <div class="history-modal__row" data-js="historyModalRow">
+                                <div class="history-modal__year">2014</div>
+                                <div class="history-modal__point" data-js="historyModalPoint"></div>
+                                <div class="history-modal__info text-editor">
+                                  <p>Расширение продуктовой линейки. В ассортимент добавлены насосные станции, начата комплексная поставка оборудования под задачи заказчиков «под ключ».</p><a class="vt-btn  vt-btn--bordered" href="public/video/history_video.mp4" data-fancybox><span class="vt-btn__text">Смотреть видео</span><span class="vt-btn__separator"></span>
+                                        <svg> 
+                                          <use xlink:href="img/sprites/sprite.svg#play_btn"></use>
+                                        </svg></a>
+                                </div>
+                              </div>
+                              <div class="history-modal__row" data-js="historyModalRow">
+                                <div class="history-modal__year">2017</div>
+                                <div class="history-modal__point" data-js="historyModalPoint"></div>
+                                <div class="history-modal__info text-editor">
+                                  <p>Запуск направления блочных тепловых пунктов. Компания переходит от поставок отдельных единиц оборудования к реализации инженерных решений и типовых БТП для жилых и коммерческих объектов.</p>
+                                </div>
+                              </div>
+                              <div class="history-modal__row" data-js="historyModalRow">
+                                <div class="history-modal__year">2020</div>
+                                <div class="history-modal__point" data-js="historyModalPoint"></div>
+                                <div class="history-modal__info text-editor"><img src="img/about/history_2.webp">
+                                  <p>Усиление инженерной экспертизы. Внедрены услуги подбора и расчета оборудования, сопровождение проектов на стадии проектирования и строительства, рост числа крупных объектов.</p>
+                                  <ul>
+                                    <li>Точный технический расчет без погрешностей.</li>
+                                    <li>Не удешевляем, манипулируя техническими параметрами.</li>
+                                    <li>Для самых сложных задач подключаем инженеров завода-производителя.</li>
+                                    <li>Учитываем технические нюансы, поможем собрать необходимые данные для расчета.</li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="history-modal__row" data-js="historyModalRow">
+                                <div class="history-modal__year">2020</div>
+                                <div class="history-modal__point" data-js="historyModalPoint"></div>
+                                <div class="history-modal__info text-editor">
+                                  <p>Масштабирование и развитие сервиса. Укрепление складской программы, сокращение сроков поставки, развитие сервисного обслуживания и долгосрочных контрактов с промышленными и девелоперскими компаниями.</p>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -651,7 +717,7 @@
         </div>
       </div>
     </main>
-        <footer class="site-footer section">
+        <footer class="site-footer section" id="footer">
           <div class="section__bg"><img src="img/footer_bg.webp" alt=""></div>
           <div class="vt-container">
             <div class="site-footer__container">
@@ -967,7 +1033,7 @@
                 </div>
               </div>
             </div>
-            <div class="modal hystmodal modal-review" id="reviewModal" aria-hidden="true" data-js="reviewModal">
+            <div class="modal hystmodal modal--wide" id="reviewModal" aria-hidden="true" data-js="reviewModal">
               <div class="hystmodal__wrap">
                 <div class="hystmodal__window" role="dialog" aria-modal="true">
                   <div class="modal__content">
@@ -977,7 +1043,7 @@
                       </svg>
                     </div>
                     <div class="modal__inner" data-js="modalInner">
-                      <div class="modal-review__content">
+                      <div class="modal-review">
                         <div class="modal-review__header">
                               <div class="title  title--48">ООО «Елки фуд»
                               </div>
@@ -990,12 +1056,78 @@
                             <p>Поставки всегда осуществляются в согласованные сроки, оборудование приходит в полной комплектации, с необходимой документацией и паспортами. Качество продукции стабильно высокое, за время эксплуатации серьёзных замечаний не возникало.</p>
                             <p>Также ценим открытость в коммуникации и готовность оперативно реагировать на запросы — от коммерческих предложений до срочных технических консультаций. Компания берет на себя ответственность за результат, что сегодня встречается не так часто.</p>
                             <p>Можем уверенно рекомендовать данную компанию как профессионального поставщика и надёжного партнёра для строительных и производственных проектов.</p>
-                          </div>
-                          <div class="modal-review__img"><img src="img/about/review_modal.webp" alt=""></div>
+                          </div><a class="modal-review__img" href="img/about/review_modal.webp" data-fancybox><img src="img/about/review_modal.webp" alt=""></a>
                         </div>
                         <div class="modal-review__author">
                           <div class="modal-review__position">Директор:</div>
                           <div class="modal-review__name">Савчук И.А.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal modal--wide" id="historyModal" aria-hidden="true" data-js="historyModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                      <div class="history-modal" data-js="historyModal">
+                        <div class="history-modal__list">
+                          <div class="history-modal__progress" data-js="historyModalProgress">
+                            <div class="line-color" data-js="historyModalProgressLine"></div>
+                            <div class="line-dashed"></div>
+                          </div>
+                          <div class="history-modal__row history-modal__row--first" data-js="historyModalRow">
+                            <div class="history-modal__year">2012</div>
+                            <div class="history-modal__point active" data-js="historyModalPoint"></div>
+                            <div class="history-modal__info text-editor"><img src="img/about/history_1.webp">
+                              <p>Основание компании. Начало поставок теплообменного оборудования для промышленных и строительных объектов, формирование команды инженеров и первых партнерских связей с заводами-производителями.</p>
+                            </div>
+                          </div>
+                          <div class="history-modal__row" data-js="historyModalRow">
+                            <div class="history-modal__year">2014</div>
+                            <div class="history-modal__point" data-js="historyModalPoint"></div>
+                            <div class="history-modal__info text-editor">
+                              <p>Расширение продуктовой линейки. В ассортимент добавлены насосные станции, начата комплексная поставка оборудования под задачи заказчиков «под ключ».</p><a class="vt-btn  vt-btn--bordered" href="public/video/history_video.mp4" data-fancybox><span class="vt-btn__text">Смотреть видео</span><span class="vt-btn__separator"></span>
+                                    <svg> 
+                                      <use xlink:href="img/sprites/sprite.svg#play_btn"></use>
+                                    </svg></a>
+                            </div>
+                          </div>
+                          <div class="history-modal__row" data-js="historyModalRow">
+                            <div class="history-modal__year">2017</div>
+                            <div class="history-modal__point" data-js="historyModalPoint"></div>
+                            <div class="history-modal__info text-editor">
+                              <p>Запуск направления блочных тепловых пунктов. Компания переходит от поставок отдельных единиц оборудования к реализации инженерных решений и типовых БТП для жилых и коммерческих объектов.</p>
+                            </div>
+                          </div>
+                          <div class="history-modal__row" data-js="historyModalRow">
+                            <div class="history-modal__year">2020</div>
+                            <div class="history-modal__point" data-js="historyModalPoint"></div>
+                            <div class="history-modal__info text-editor"><img src="img/about/history_2.webp">
+                              <p>Усиление инженерной экспертизы. Внедрены услуги подбора и расчета оборудования, сопровождение проектов на стадии проектирования и строительства, рост числа крупных объектов.</p>
+                              <ul>
+                                <li>Точный технический расчет без погрешностей.</li>
+                                <li>Не удешевляем, манипулируя техническими параметрами.</li>
+                                <li>Для самых сложных задач подключаем инженеров завода-производителя.</li>
+                                <li>Учитываем технические нюансы, поможем собрать необходимые данные для расчета.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="history-modal__row" data-js="historyModalRow">
+                            <div class="history-modal__year">2020</div>
+                            <div class="history-modal__point" data-js="historyModalPoint"></div>
+                            <div class="history-modal__info text-editor">
+                              <p>Масштабирование и развитие сервиса. Укрепление складской программы, сокращение сроков поставки, развитие сервисного обслуживания и долгосрочных контрактов с промышленными и девелоперскими компаниями.</p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

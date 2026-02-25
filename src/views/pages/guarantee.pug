@@ -1,0 +1,33 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Гарантия" 
+
+block content
+    .page(data-js="page")
+        .page-layout
+            +breadcrumbs({
+                items: [
+                    {
+                        name: 'Вальв Тек',
+                        link: 'javascript:void(0);'
+                    },
+                    {
+                        name: 'Услуги',
+                        link: 'javascript:void(0);'
+                    },
+                    {
+                        name: 'Инжиниринг и проектирование',
+                        link: 'javascript:void(0);'
+                    },
+                ],
+            })
+            +s-title({
+                title: 'Гарантия',
+                text: 'Сервисный отдел тепловой автоматики обеспечивает гарантийное и пост гарантийное обслуживание клиентов и сервисных партнеров по оборудованию, продаваемому  ООО ”ВАЛЬВ ТЕК ГРУП”'
+            })
+
+            +s-obligations
+            +service-request
+
+

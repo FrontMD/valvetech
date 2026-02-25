@@ -73,7 +73,15 @@
         font-weight: 600;
         line-height: 120%;
 
+        @include max(tablet) {
+            font-size: 40px;
+        }
+
         @include max(mobile) {
+            font-size: 26px;
+        }
+
+        @include max(xs) {
             font-size: 22px;
         }
     }

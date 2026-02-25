@@ -3,6 +3,7 @@
 @@include("../../blocks/components/catalog-filter/catalog-filter.js")
 @@include("../../blocks/components/field-range/field-range.js")
 @@include("../../blocks/components/field-file/field-file.js")
+@@include("../../blocks/components/history-modal/history-modal.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     validation();
@@ -11,4 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
     filterBlockCollapse();
     fieldsRangeController();
     fileFieldInit();
+    historyModalProgress();
 })

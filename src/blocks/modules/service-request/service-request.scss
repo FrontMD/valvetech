@@ -1,0 +1,105 @@
+.service-request {
+    &__subtitle {
+        a {
+            color: $c-link;
+            transition: color $tr;
+
+            &:hover {
+                color: $c-accent;
+            }
+
+
+        }
+
+        @include max(tablet) {
+            flex: 0 0 200px;
+
+            br {
+                display: none;
+            }
+        }
+
+        @include max(mobile) {
+            flex: 0 0 auto;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 29px;
+        line-height: 110%;
+
+        @include max(mobile) {
+            font-size: 22px;
+        }
+
+        @include max(xs) {
+            font-size: 20px;
+        }
+    }
+
+    &__title+&__subtile {
+        margin-top: 100px;
+
+        @include max(laptop) {
+            margin-top: 70px;
+        }
+
+        @include max(tablet) {
+            margin-top: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @include max(mobile) {
+            gap: 30px;
+        }
+    }
+
+    &__text {
+        @include max(mobile) {
+            font-size: 14px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 59px;
+        counter-increment: item;
+
+        @include max(tablet) {
+            padding-left: 50px;
+        }
+
+        @include max(mobile) {
+            padding-left: 30px;
+        }
+
+        &::before {
+            content: counter(item, decimal-leading-zero) "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: $ff-numbers;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 100%;
+            color: $c-border;
+
+            @include max(tablet) {
+                font-size: 20px;
+            }
+
+            @include max(mobile) {
+                font-size: 16px;
+            }
+        }
+    }
+}

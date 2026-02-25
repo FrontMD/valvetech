@@ -1,0 +1,40 @@
+-
+    const defaultServiceRequestProps = {
+        classes: ''
+    }
+
+mixin service-request(props = defaultServiceRequestProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultServiceRequestProps.classes,
+        }
+
+    section.section.section--inner.service-request(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .sidebar-layout
+                .sidebar-layout__sidebar(data-aos="fade-right" data-delay="500")
+                    +title({
+                        text: 'Создание сервисного обращения',
+                        tag: 'h2',
+                        size: '48'
+                    })
+                    .service-request__subtitle Сервисные обращения принимаем <br>на&nbsp;почту или <a href="#footer">заполните форму</a> ниже.
+
+                .sidebar-layout__main(data-aos="fade-left")
+                    ol.service-request__list
+                        li.service-request__item
+                            .service-request__title Неисправное оборудование
+                            .service-request__text Укажите КОД ПРОДУКТА с шильдика, тип техники (БТП, ПТО, шаровой кран, привод 435 и прочее...).
+
+                        li.service-request__item
+                            .service-request__title Конечный пользователь
+                            .service-request__text Кому необходимо сделать — название контрагента и адрес нахождения оборудования.
+
+                        li.service-request__item
+                            .service-request__title Опишите неисправность
+                            .service-request__text Описание неисправности с фотографиями шильдика оборудования, поломки оборудования, места монтажа.
+
+                        li.service-request__item
+                            .service-request__title Как связаться
+                            .service-request__text Указать ФИО, телефон и электронную почту владеющего информацией представителя.
+

@@ -11,6 +11,10 @@ function gallerySlider() {
         const ww = window.innerWidth
         let slidesPerView = gallery.dataset.slides ? parseInt(gallery.dataset.slides) : 2
 
+        if(ww < 1024 && gallery.dataset.slides) {
+            slidesPerView = 2.5
+        }
+        
         if(slider) {
             const swiperEx = new Swiper(slider, {
                 slidesPerView: 1.2,
@@ -20,7 +24,7 @@ function gallerySlider() {
                     nextEl: next
                 },
                 breakpoints: {
-                    768: {
+                    501: {
                        slidesPerView: slidesPerView 
                     },
                     1024: {

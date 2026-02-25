@@ -1,0 +1,27 @@
+-
+    const defaultSTitleProps = {
+        classes: '',
+        title: '',
+        text: ''
+    }
+
+mixin s-title(props = defaultSTitleProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSTitleProps.classes,
+            title: props.title ? props.title : defaultSTitleProps.title,
+            text: props.text ? props.text : defaultSTitleProps.text,
+        }
+
+    section.section.section--inner.s-title(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .s-title__content
+                - if(checkProps.title.length > 0)
+                    +title({
+                        text: checkProps.title,
+                        tag: 'h1',
+                        size: '70',
+                        upper: true
+                    })(data-aos="fade-right")
+                - if(checkProps.text.length > 0)
+                    .s-title__text.text-editor(data-aos="fade-right" data-aos-delay='200')!= checkProps.text

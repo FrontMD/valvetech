@@ -1,0 +1,67 @@
+.s-obligations {
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+
+        @include max(large) {
+            gap: 20px;
+        }
+
+        @include max(mobile) {
+            gap: 12px;
+        }
+
+        @include max(laptop) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include max(tablet) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+}
+
+.obligations-card {
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: $c-white;
+    border-radius: $br-5;
+
+    @include max(large) {
+        padding: 24px;
+        gap: 20px;
+    }
+
+    @include max(mobile) {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    &__icon {
+        color: $c-border;
+
+        svg {
+            width: 32px;
+            height: 32px;
+
+            @include max(large) {
+                width: 24px;
+                height: 24px;
+            }
+
+            @include max(mobile) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__text {
+        @include max(large) {
+            font-size: 16px;
+        }
+    }
+}
