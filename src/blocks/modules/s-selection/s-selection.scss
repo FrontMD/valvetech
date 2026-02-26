@@ -7,8 +7,6 @@
         @include max(tablet) {
             flex-direction: column;
         }
-
-        @include max(mobile) {}
     }
 
     &__left {
@@ -18,13 +16,18 @@
         border-radius: $br-5;
         overflow: hidden;
 
+        @include max(laptop) {
+            padding: 30px 30px 40px;
+        }
+
         @include max(tablet) {
             flex: 0 0 auto;
             padding: 24px;
+            min-height: 300px;
         }
 
         @include max(xs) {
-            padding: 12px;
+            min-height: 200px;
         }
     }
 
@@ -104,6 +107,10 @@
         background-color: $c-white;
         border-radius: $br-5;
 
+        @include max(laptop) {
+            padding: 30px;
+        }
+
         @include max(tablet) {
             flex: 0 0 auto;
             padding: 24px;
@@ -115,12 +122,6 @@
     }
 
     &__form {
-        margin-top: 50px;
-
-        @include max(mobile) {
-            margin-top: 32px;
-        }
-
         @include max(xs) {
             .vt-btn {
                 width: 100%;
@@ -129,6 +130,14 @@
             .vt-btn__text {
                 margin-right: auto;
             }
+        }
+    }
+
+    &__title+&__form {
+        margin-top: 50px;
+
+        @include max(mobile) {
+            margin-top: 32px;
         }
     }
 }

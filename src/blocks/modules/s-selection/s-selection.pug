@@ -1,73 +1,133 @@
 -
     const defaultSSelectionProps = {
-        classes: ''
+        classes: '',
+        isCallback: false
     }
 
 mixin s-selection(props = defaultSSelectionProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultSSelectionProps.classes,
+            isCallback: props.isCallback ? props.isCallback : defaultSSelectionProps.isCallback,
         }
 
     section.section.section--inner.s-selection(class= checkProps.classes)&attributes(attributes)
         .vt-container
             .s-selection__container
-                .s-selection__left(data-aos="fade-right")
-                    .s-selection__bg
-                        img(src="img/selection/s_selection_bg.webp" alt="")
-                    .s-selection__content
+                - if(checkProps.isCallback === true)
+                    .s-selection__left(data-aos="fade-right")
+                        .s-selection__bg
+                            img(src="img/selection/callback_bg.webp" alt="")
+                        .s-selection__content
+                            +title({
+                                classes: 's-selection__title',
+                                text: 'Обратная связь',
+                                size: '85',
+                                cMode: 'light'
+                            })
+                    .s-selection__right(data-aos="fade-left" data-aos-delay="400")
+                        +form({
+                            classes: 's-selection__form',
+                            btnText: 'Отправить',
+                            btnIcon: 'filter',
+                            title: ''
+                        })
+                            +field({
+                                placeholder: 'Ваше имя',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-type': 'letters'
+                                },
+                                hasError: true
+                            })
+                            +field({
+                                placeholder: 'Tелефон',
+                                type: 'tel',
+                                inputAttr: {
+                                    'data-type': 'phoneNumber',
+                                    'required': '',
+                                    'data-v-name': 'phone'
+                                },
+                                hasError: true
+                            })
+                            +field({
+                                placeholder: 'Организация',
+                                inputAttr: {
+                                    'required': '',
+                                },
+                                hasError: true
+                            })
+                            +field({
+                                placeholder: 'Email',
+                                type: 'email',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-v-name': 'email'
+                                },
+                                hasError: true
+                            })
+                            +field({
+                                placeholder: 'Ваш вопрос',
+                                tag: 'textarea',
+                            })
+
+                - else
+                    .s-selection__left(data-aos="fade-right")
+                        .s-selection__bg
+                            img(src="img/selection/s_selection_bg.webp" alt="")
+                        .s-selection__content
+                            +title({
+                                classes: 's-selection__title',
+                                text: 'Для расчёта теплообменника скачайте шаблон...',
+                                size: '85',
+                                cMode: 'light'
+                            })
+                            .s-selection__text Заполните файл указанными параметрами <br>для&nbsp;точного расчета нашими экспертами.
+                            +dl-btn
+                    .s-selection__right(data-aos="fade-left" data-aos-delay="400")
                         +title({
                             classes: 's-selection__title',
-                            text: 'Для расчёта теплообменника скачайте шаблон...',
-                            size: '85',
-                            cMode: 'light'
+                            text: '... и отправьте нам',
+                            size: '85'
                         })
-                        .s-selection__text Заполните файл указанными параметрами <br>для&nbsp;точного расчета нашими экспертами.
-                        +dl-btn
-                .s-selection__right(data-aos="fade-left" data-aos-delay="400")
-                    +title({
-                        classes: 's-selection__title',
-                        text: '... и отправьте нам',
-                        size: '85'
-                    })
-                    +form({
-                        classes: 's-selection__form',
-                        btnText: 'Отправить',
-                        btnIcon: 'filter',
-                        title: ''
-                    })
-                        +field({
-                            placeholder: 'Ваше имя',
-                            inputAttr: {
-                                'required': '',
-                                'data-type': 'letters'
-                            },
-                            hasError: true
+                        +form({
+                            classes: 's-selection__form',
+                            btnText: 'Отправить',
+                            btnIcon: 'filter',
+                            title: ''
                         })
-                        +field({
-                            placeholder: 'Tелефон',
-                            type: 'tel',
-                            inputAttr: {
-                                'data-type': 'phoneNumber',
-                                'required': '',
-                                'data-v-name': 'phone'
-                            },
-                            hasError: true
-                        })
-                        +field({
-                            placeholder: 'Email',
-                            type: 'email',
-                            inputAttr: {
-                                'required': '',
-                                'data-v-name': 'email'
-                            },
-                            hasError: true
-                        })
-                        +field-file({
-                            inputAttr: {
-                                required: '',
-                                'data-v-name': 'file',
-                                'data-size': '5242880',
-                                'accept': '.xlsx'
-                            }
-                        })
+                            +field({
+                                placeholder: 'Ваше имя',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-type': 'letters'
+                                },
+                                hasError: true
+                            })
+                            +field({
+                                placeholder: 'Tелефон',
+                                type: 'tel',
+                                inputAttr: {
+                                    'data-type': 'phoneNumber',
+                                    'required': '',
+                                    'data-v-name': 'phone'
+                                },
+                                hasError: true
+                            })
+                            +field({
+                                placeholder: 'Email',
+                                type: 'email',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-v-name': 'email'
+                                },
+                                hasError: true
+                            })
+                            +field-file({
+                                inputAttr: {
+                                    required: '',
+                                    'data-v-name': 'file',
+                                    'data-size': '5242880',
+                                    'accept': '.xlsx'
+                                }
+                            })

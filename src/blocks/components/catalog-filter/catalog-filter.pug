@@ -9,7 +9,7 @@ mixin catalog-filter(props = defaultCatalogFilterProps)
             classes: props.classes ? props.classes : defaultCatalogFilterProps.classes,
         }
 
-    .catalog-filter__open(data-js="catalogFilterOpen")
+    .catalog-filter__open(data-js="catalogFilterOpen" data-aos="fade-right")
         svg
             use(xlink:href=`img/sprites/sprite.svg#filter`)
     .catalog-filter__overlay(data-js="catalogFilterClose")
