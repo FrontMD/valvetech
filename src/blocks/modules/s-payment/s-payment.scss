@@ -9,7 +9,11 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 10px;
 
-        @include max(xs) {
+        @include max(laptop) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include max(mobile) {
             grid-template-columns: minmax(0, 1fr);
         }
     }
@@ -23,9 +27,23 @@
     align-items: flex-start;
     gap: 30px;
 
+    @include max(tablet) {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    @include max(mobile) {
+        padding: 16px;
+    }
+
+
     &__img {
         height: 193px;
         max-width: 100%;
+
+        @include max(mobile) {
+            height: 100px;
+        }
 
         img {
             width: 100%;

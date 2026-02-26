@@ -1,0 +1,35 @@
+.contacts-intro {
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    &__param {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: $c-text-grey;
+    }
+
+    &__value {
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 110%;
+        margin-top: 10px;
+
+        a {
+            transition: color $tr;
+
+            &:hover {
+                color: $c-accent;
+            }
+        }
+    }
+
+    &__map {
+        min-height: 600px;
+    }
+}

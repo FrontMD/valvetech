@@ -1,0 +1,31 @@
+-
+    const defaultHowDeliveryProps = {
+        classes: ''
+    }
+
+mixin how-delivery(props = defaultHowDeliveryProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHowDeliveryProps.classes,
+        }
+
+    section.section.section--inner.how-delivery(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            .how-delivery__content
+                .how-delivery__desc
+                    +title({
+                        text: 'Как осуществляется доставка?',
+                        tag: 'h2',
+                        size: '48'
+                    })(data-aos="fade-right")
+                    .how-delivery__text.text-editor(data-aos="fade-right" data-aos-delay="200") 
+                        p За более чем 14-летний период работы, мы осуществили более 30000 поставок инженерного оборудования по России и странам ближнего зарубежья. Этот опыт позволяет нам осуществлять доставку вашего оборудования на самых выгодных условиях.
+                        p Мы работаем со следующими транспортными компаниями:
+                        ul
+                            li DPD (АО «Армадилло Бизнес Посылка»)
+                            li ООО «Деловые линии»
+                            li ООО «ПЭК»
+                        p Оборудование будет бесплатно доставлено до терминала транспортной компании в Вашем городе. Весь процесс поставки ежедневно мониторится нашими логистами.
+
+                .how-delivery__decor(data-aos="fade-in" data-aos-delay="400")
+                    img(src="img/payment/payment_map.svg" alt="")

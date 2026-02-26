@@ -1,0 +1,61 @@
+-
+    const defaultCompanyDetailsProps = {
+        classes: ''
+    }
+
+mixin company-details(props = defaultCompanyDetailsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCompanyDetailsProps.classes,
+        }
+
+    section.section.section--inner.company-details(class= checkProps.classes)&attributes(attributes)
+        .vt-container
+            +title({
+                text: 'Реквизиты',
+                tag: 'h2',
+                size: '48',
+            })(data-aos="fade-right")
+            .company-details__content(data-anim-list)
+
+                .company-details__block(data-anim-item)
+                    .company-details__item(data-anim-item)
+                        .company-details__param Полное наименование:
+                        .company-details__value Общество с ограниченной ответственностью «ВАЛЬВ ТЕК ГРУП»
+                    .company-details__item(data-anim-item)
+                        .company-details__param Юридический адрес:
+                        .company-details__value 614002, Пермский край, г. Пермь., ул. Чернышевского, д.28 оф.100
+                    .company-details__item(data-anim-item)
+                        .company-details__param Почтовый адрес:
+                        .company-details__value 614089, Пермский край, г. Пермь, ул. Лихвинская, д.16
+
+                .company-details__block(data-anim-item)
+                    .company-details__grid(data-anim-item)
+                        .company-details__item
+                            .company-details__param ИНН
+                            .company-details__value 5904211004
+                        .company-details__item
+                            .company-details__param КПП
+                            .company-details__value 590401001
+                        .company-details__item
+                            .company-details__param ОГРН
+                            .company-details__value 1095904009629
+                        .company-details__item
+                            .company-details__param ОКПО
+                            .company-details__value 60723609
+                        .company-details__item
+                            .company-details__param ОКАТО
+                            .company-details__value 57401380000
+                        .company-details__item
+                            .company-details__param ОКТМО
+                            .company-details__value 57701000001
+
+                    .company-details__item(data-anim-item)
+                        .company-details__param Расчетный счет
+                        .company-details__value 40702810049090017207 Волго-Вятский Банк ПАО Сбербанк г. Нижний Новгород
+                    .company-details__item(data-anim-item)
+                        .company-details__param Корреспондентский счет
+                        .company-details__value 30101810900000000603
+                    .company-details__item(data-anim-item)
+                        .company-details__param БИК
+                        .company-details__value 042202603

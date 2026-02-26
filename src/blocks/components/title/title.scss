@@ -11,13 +11,23 @@
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    a,
+    p {
         color: inherit;
         line-height: inherit;
         font-size: inherit;
         letter-spacing: inherit;
         font-weight: inherit;
         text-wrap: inherit;
+    }
+
+    a {
+        transition: color $tr;
+
+        &:hover {
+            color: $c-accent;
+        }
     }
 
     &--upper {

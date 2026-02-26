@@ -33,7 +33,7 @@ mixin breadcrumbs(props = defaultBreadCrumbsProps)
         }
 
     section.section.section--bc.breadcrumbs(class=checkProps.classes)&attributes(attributes)
-        .d-container
+        .vt-container
             .breadcrumbs__scroll.custom-scrollbar(data-js="customScrollbar")
                 ul.breadcrumbs__list(data-aos="fade-right")
                     each val, index in checkProps.items

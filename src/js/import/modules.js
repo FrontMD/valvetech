@@ -8,6 +8,7 @@
 @@include("../../blocks/modules/gallery-slider/gallery-slider.js")
 @@include("../../blocks/modules/accordion/accordion.js")
 @@include("../../blocks/modules/s-review/s-review.js")
+@@include("../../blocks/modules/contacts-intro/contacts-intro.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     header();
@@ -20,4 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
     gallerySlider();
     accordion();
     sReviewSlider();
+    contactsMap();
 })

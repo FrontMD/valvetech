@@ -1,1 +1,5 @@
-<svg width="29" height="23" viewBox="0 0 29 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M29 .215v3H0v-3zm0 9.57v3H0v-3zm0 10v3H0v-3z"/></svg>
+<svg width="29" height="23" viewBox="0 0 29 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="29" y="0.214844" width="3" height="29" transform="rotate(90 29 0.214844)" fill="currentColor"/>
+<rect x="29" y="9.785156" width="3" height="29" transform="rotate(90 29 9.785156)" fill="currentColor"/>
+<rect x="29" y="19.785156" width="3" height="29" transform="rotate(90 29 19.785156)" fill="currentColor"/>
+</svg>

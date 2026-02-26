@@ -1,0 +1,42 @@
+-
+    const defaultContactsIntroProps = {
+        classes: ''
+    }
+
+mixin contacts-intro(props = defaultContactsIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultContactsIntroProps.classes,
+        }
+
+    section.section.section--inner.contacts-intro(class= checkProps.classes data-anim-list="fade-right")&attributes(attributes)
+        .vt-container
+            .sidebar-layout
+                .sidebar-layout__sidebar
+                    +title({
+                        text: 'Контакты',
+                        tag: 'h1',
+                        size: '70',
+                        upper: true
+                    })(data-anim-item)
+
+                    .contacts-intro__bottom
+                        +title({
+                            text: '<a href="tel:+73422482063">+7 (342) 248-20-63</a>',
+                            tag: 'p',
+                            size: '48',
+                            upper: true
+                        })(data-anim-item)
+
+                        .contacts-intro__item(data-anim-item)
+                            .contacts-intro__param Адрес:
+                            .contacts-intro__value Пермь, Чернышевского 28, оф.100
+                        .contacts-intro__item(data-anim-item)
+                            .contacts-intro__param Email:
+                            .contacts-intro__value <a href="mailto:info6@valvetechgroup.com">info6@valvetechgroup.com</a>
+                        .contacts-intro__item(data-anim-item)
+                            .contacts-intro__param Режим работы:
+                            .contacts-intro__value 09 — 18 по Перми (07 — 16 по Мск)
+
+                .sidebar-layout__main
+                    .contacts-intro__map(data-aos='fade-in' data-aos-delay="400" data-js="contactsMap" data-coords="57.998042,56.266634")
