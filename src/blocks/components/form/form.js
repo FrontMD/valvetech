@@ -167,8 +167,6 @@ function validation() {
                 if (errors === 0) {
 
                     toggleLoading(form, true)
-                    
-                    
                     defaultAfterSubmit(form, true)
                     //window.ajaxForm(form, form.getAttribute('action'))
                 }

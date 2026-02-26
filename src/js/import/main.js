@@ -41,21 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fancyboxInit()
 })
 
-// Фоновый слайдер
-/*function sectionBgSlider() {
-    const sectionBgSliders = document.querySelectorAll('[data-js="sectionBgSlider"]')
-
-    if(sectionBgSliders.length < 1) return
-
-    sectionBgSliders.forEach(slider => {
-        const sliderEx = new Swiper(slider, {
-            slidesPerView: 1
-        })
-    })
-}*/
-
-
-
 // Инициализация фансибокса
 function fancyboxInit() {
     Fancybox.bind("[data-fancybox]", {
