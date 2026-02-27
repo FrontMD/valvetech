@@ -6,6 +6,7 @@
     z-index: 80;
     padding-top: 20px;
     padding-bottom: 20px;
+    transition: background-color 0.3s linear;
 
     @include max(large) {
         padding-top: 15px;
@@ -15,7 +16,15 @@
     @include max(mobile) {
         padding-top: 10px;
         padding-bottom: 10px;
-        background-color: $c-white;
+        background-color: transparent;
+        transition: background-color 0.3s linear 0.2s;
+    }
+
+    &:has(.site-header__container.aos-animate) {
+        @include max(mobile) {
+
+            background-color: $c-white;
+        }
     }
 
     &__container {

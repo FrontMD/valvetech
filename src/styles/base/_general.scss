@@ -306,7 +306,9 @@ body.no-scroll {
 	&__main {
 		flex: 0 0 66.2%;
 		padding-left: 30px;
-		border-left: 1px solid $c-border;
+		border-left: 1px solid transparent;
+		border-color: transparent;
+		transition: border-color 0.3s linear 0.4s;
 
 		@include max(tablet) {
 			padding-left: 0;
@@ -314,6 +316,10 @@ body.no-scroll {
 			border-left: none;
 			border-top: 1px solid $c-border;
 		}
+	}
+
+	&:has(.contacts-intro__map.aos-animate) &__main {
+		border-color: $c-border;
 	}
 }
 

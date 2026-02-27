@@ -16,10 +16,12 @@
 
     &__sidebar {
         padding-right: 24px;
-        border-right: 1px solid $c-border;
         flex: 0 0 437px;
         overflow: hidden;
         max-width: calc(100% - (100% - 437px));
+        border-right: 1px solid transparent;
+        border-color: transparent;
+        transition: border-color 0.3s linear 0.4s;
 
         @include max(large) {
             flex: 0 0 390px;
@@ -31,6 +33,10 @@
             flex: 0 0 auto;
             max-width: none;
         }
+    }
+
+    &:has(.catalog-filter.aos-animate) &__sidebar {
+        border-color: $c-border;
     }
 
     &__filter {
