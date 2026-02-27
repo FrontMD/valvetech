@@ -1,0 +1,26 @@
+-
+    const defaultNotFoundProps = {
+        classes: ''
+    }
+
+mixin not-found(props = defaultNotFoundProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNotFoundProps.classes,
+        }
+
+    section.section.section--inner.not-found(class= checkProps.classes)&attributes(attributes)
+        .vt-container.not-found__content(data-anim-list)
+            +title({
+                classes: 'not-found__title',
+                text: '404',
+                size: '85'
+            })(data-anim-item)
+            +title({
+                classes: 'not-found__subtitle',
+                text: 'Страница не найдена!',
+                size: '48'
+            })(data-anim-item)
+            +btn({
+                name: 'На главную'
+            })(data-anim-item)
