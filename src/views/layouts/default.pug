@@ -44,7 +44,8 @@ html(lang="ru")
 			block content
 
 		block footer
-			+footer
+
+			+footer(footerFormTitle ? footerFormTitle : false)
 
 		+preloader
 		include ../../blocks/modules/main-burger/main-burger

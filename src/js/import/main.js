@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         new SimpleBar(el, { autoHide: false });
     })
     fancyboxInit()
+    anchorsInit()
 })
 
 // Инициализация фансибокса
@@ -94,4 +95,29 @@ function getGridColumnCount(gridElement) {
     const columns = templateColumns.split(' ').filter(width => width !== '0px').length;
     
     return columns || 1;
+}
+
+// якорные ссылки
+function anchorsInit() {
+
+    const anchors = document.querySelectorAll('a[href^="#"]');
+
+    if(anchors.length < 1) return
+
+    anchors.forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const anchorName = this.getAttribute('href').replace('#', '');
+            const targetEl = document.getElementById(anchorName);
+            let scrollTopOffset = document.querySelector('[data-js="siteHeader"]') ? document.querySelector('[data-js="siteHeader"]').offsetHeight : '0'
+            const targetElPos = Math.ceil($(targetEl).offset().top - scrollTopOffset)
+
+            window.scrollTo({
+                top: targetElPos,
+                behavior: 'smooth'
+            })
+    
+        });
+    });
 }

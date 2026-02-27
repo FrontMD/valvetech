@@ -1,4 +1,4 @@
-mixin footer
+mixin footer(formTitle)
 
     footer.site-footer.section(id="footer")
         .section__bg
@@ -10,7 +10,7 @@ mixin footer
                         classes: 'site-footer__form form--light',
                         btnText: 'Отправить заявку',
                         btnCMode: 'white',
-                        title: 'Подобрать оборудование'
+                        title: formTitle ? formTitle : "Подобрать оборудование"
                     })
                         +field({
                             placeholder: 'Ваше имя',
