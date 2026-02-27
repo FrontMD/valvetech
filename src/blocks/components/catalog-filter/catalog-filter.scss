@@ -22,9 +22,11 @@
         max-width: 390px;
         padding-top: 60px;
         transition: right $tr-long;
+        opacity: 0 !important;
 
         &.opened {
             right: 0;
+            opacity: 1 !important;
         }
     }
 
