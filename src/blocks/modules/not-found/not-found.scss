@@ -23,6 +23,7 @@
     &__title {
         text-align: center;
         font-size: 170px;
+        font-family: $ff-numbers;
 
         @include max(large) {
             font-size: 150px;
