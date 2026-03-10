@@ -35,6 +35,39 @@ noindex
                         hasError: true
                     })
 
+        //- заказать товар
+        +modal({modalId:"productModal"})(data-js="productModal")
+            +form({
+                classes: 'form--modal',
+                title: 'Наш инженер с вами свяжется!',
+                text: '',
+                btnText: 'Жду звонка',
+                privacyText: 'Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a>',
+                })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: '',
+                        placeholder: 'Телефон',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                        hasError: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'email',
+                        title: '',
+                        placeholder: 'Электронная почта',
+                        inputAttr: {
+                            'required': '',
+                            'data-v-name': 'email'
+                        },
+                        hasError: true
+                    })
+
         //- заявка на подбор
         +modal({modalId:"selectionModal"})(data-js="selectionModal")
             +form({

@@ -34,9 +34,9 @@ mixin product-card(props = defaultProductCardProps)
         }
 
     .product-card(class= checkProps.classes)&attributes(attributes)
-        .product-card__img
+        a(href="javascript:void(0);").product-card__img
             img(src=checkProps.img, alt="")
-        .product-card__title!= checkProps.title
+        a(href="javascript:void(0);").product-card__title!= checkProps.title
         - if(checkProps.chars.length > 0)
             .product-card__chars
                 - let charsCount = 0
@@ -59,7 +59,7 @@ mixin product-card(props = defaultProductCardProps)
                     .card-price__old
                         != checkProps.price[1]
                         span!= ' ₽'
-            a.product-card__btn(href="javascript:void(0);")
+            a.product-card__btn(href="javascript:void(0);" data-modal="#productModal")
                 span Заказать
                 svg
                     use(xlink:href=`img/sprites/sprite.svg#card_chevron`)

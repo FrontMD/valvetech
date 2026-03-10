@@ -75,6 +75,51 @@
                     </div>
                   </div>
                 </div>
+                <div class="modal hystmodal" id="productModal" aria-hidden="true" data-js="productModal">
+                  <div class="hystmodal__wrap">
+                    <div class="hystmodal__window" role="dialog" aria-modal="true">
+                      <div class="modal__content">
+                        <div class="modal__close" data-hystclose>
+                          <svg> 
+                            <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                        <div class="modal__inner" data-js="modalInner">
+                              <form class="form form--modal" action="#" data-validate novalidate>
+                                <div class="form__content" data-js="formContent">
+                                  <div class="form__title">Наш инженер с вами свяжется!</div>
+                                  <div class="form__fields" data-js="formFields">
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="tel" placeholder="Телефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                        <label class="field     " data-js="formField">
+                                          <input class="field__input" type="email" placeholder="Электронная почта" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                  </div>
+                                  <div class="form__privacy form-privacy" data-js="formField">
+                                    <div class="form-privacy__flex">
+                                      <label>
+                                        <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                      </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
+                                    </div><span class="field__error" data-js="fieldError"></span>
+                                  </div>
+                                      <button class="vt-btn form__submit  vt-btn--accent vt-btn--i13" type="submit"><span class="vt-btn__text">Жду звонка</span><span class="vt-btn__separator"></span>
+                                        <svg> 
+                                          <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                        </svg>
+                                      </button>
+                                </div>
+                                <div class="form__thanks" data-js="form-thanks">
+                                  <div class="form__title">Ваша заявка отправлена!</div>
+                                  <div class="form__image-success"><img src="img/success.png"></div>
+                                  <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                                </div>
+                              </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="modal hystmodal" id="selectionModal" aria-hidden="true" data-js="selectionModal">
                   <div class="hystmodal__wrap">
                     <div class="hystmodal__window" role="dialog" aria-modal="true">
@@ -607,9 +652,7 @@
                     </div>
                     <div class="p-catalog__main">
                       <div class="p-catalog__list" data-js="pCatalogList" data-anim-list>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_1.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №07</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_1.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник пластинчатый разборный Ридан НН №07</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -630,15 +673,13 @@
                                   </div>
                                   <div class="card-price__old">88 900<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_2.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №09</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_2.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник пластинчатый разборный Ридан НН №09</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -659,15 +700,13 @@
                                   </div>
                                   <div class="card-price__old">168 800<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_3.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №14</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_3.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник пластинчатый разборный Ридан НН №14</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -688,15 +727,13 @@
                                   </div>
                                   <div class="card-price__old">123 300<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_4.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №19</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_4.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник пластинчатый разборный Ридан НН №19</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -717,15 +754,13 @@
                                   </div>
                                   <div class="card-price__old">189 800<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_5.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №21</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_5.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник пластинчатый разборный Ридан НН №21</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -746,15 +781,13 @@
                                   </div>
                                   <div class="card-price__old">296 300<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_6.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №41</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_6.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник пластинчатый разборный Ридан НН №41</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -775,15 +808,13 @@
                                   </div>
                                   <div class="card-price__old">567 100<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_7.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан HH №43</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_7.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник пластинчатый разборный Ридан HH №43</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -804,15 +835,13 @@
                                   </div>
                                   <div class="card-price__old">567 100<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_8.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник пластинчатый разборный Ридан НН №47</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_8.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник пластинчатый разборный Ридан НН №47</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -833,15 +862,13 @@
                                   </div>
                                   <div class="card-price__old">567 100<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_9.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник пластинчатый паяный Kaori K030</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_9.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник пластинчатый паяный Kaori K030</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -862,15 +889,13 @@
                                   </div>
                                   <div class="card-price__old">567 100<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_10.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник пластинчатый паяный Kaori K040</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_10.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник пластинчатый паяный Kaori K040</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -891,15 +916,13 @@
                                   </div>
                                   <div class="card-price__old">567 100<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_11.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник пластинчатый паяный Kaori K050</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_11.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник пластинчатый паяный Kaori K050</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -920,15 +943,13 @@
                                   </div>
                                   <div class="card-price__old">567 100<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
                               </div>
                             </div>
-                            <div class="product-card" data-anim-item>
-                              <div class="product-card__img"><img src="img/catalog/product_12.webp" alt=""></div>
-                              <div class="product-card__title">Теплообменник Феникс APR-4</div>
+                            <div class="product-card" data-anim-item><a class="product-card__img" href="javascript:void(0);"><img src="img/catalog/product_12.webp" alt=""></a><a class="product-card__title" href="javascript:void(0);">Теплообменник Феникс APR-4</a>
                               <div class="product-card__chars">
                                 <div class="product-card__char">
                                   <div class="product-card__param">Производитель:</div>
@@ -949,7 +970,7 @@
                                   </div>
                                   <div class="card-price__old">567 100<span> ₽</span>
                                   </div>
-                                </div><a class="product-card__btn" href="javascript:void(0);"><span>Заказать</span>
+                                </div><a class="product-card__btn" href="javascript:void(0);" data-modal="#productModal"><span>Заказать</span>
                                   <svg>
                                     <use xlink:href="img/sprites/sprite.svg#card_chevron"></use>
                                   </svg></a>
@@ -1181,6 +1202,51 @@
                                 </div><span class="field__error" data-js="fieldError"></span>
                               </div>
                                   <button class="vt-btn form__submit  vt-btn--accent vt-btn--i13" type="submit"><span class="vt-btn__text">Отправить заявку</span><span class="vt-btn__separator"></span>
+                                    <svg> 
+                                      <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
+                                    </svg>
+                                  </button>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="form__title">Ваша заявка отправлена!</div>
+                              <div class="form__image-success"><img src="img/success.png"></div>
+                              <div class="form__text">Менеджер свяжется с вами в ближайшее время</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal hystmodal" id="productModal" aria-hidden="true" data-js="productModal">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                    <div class="modal__close" data-hystclose>
+                      <svg> 
+                        <use xlink:href="./img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                    <div class="modal__inner" data-js="modalInner">
+                          <form class="form form--modal" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="formContent">
+                              <div class="form__title">Наш инженер с вами свяжется!</div>
+                              <div class="form__fields" data-js="formFields">
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="tel" placeholder="Телефон" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                    <label class="field     " data-js="formField">
+                                      <input class="field__input" type="email" placeholder="Электронная почта" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                              </div>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <div class="form-privacy__flex">
+                                  <label>
+                                    <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake"></span>
+                                  </label><span class="form-privacy__text">Нажимая кнопку “Отправить” вы соглашаетесь с <a href="javascript:void(0);" target="_blank">политикой конфиденциальности</a></span>
+                                </div><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                                  <button class="vt-btn form__submit  vt-btn--accent vt-btn--i13" type="submit"><span class="vt-btn__text">Жду звонка</span><span class="vt-btn__separator"></span>
                                     <svg> 
                                       <use xlink:href="img/sprites/sprite.svg#btn_chevron"></use>
                                     </svg>

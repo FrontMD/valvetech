@@ -24,9 +24,14 @@
         font-weight: 600;
         font-size: 22px;
         line-height: 120%;
+        transition: color $tr;
 
         @include max(mobile) {
             font-size: 18px;
+        }
+
+        &:hover {
+            color: $c-accent;
         }
     }
 
