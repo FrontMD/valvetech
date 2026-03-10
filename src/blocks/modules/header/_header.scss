@@ -106,7 +106,7 @@
     &__contacts {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 30px;
 
         @include max(large) {
             flex-direction: column;
@@ -125,10 +125,15 @@
         font-size: 16px;
         line-height: 100%;
         color: $c-title;
+        font-weight: 500;
 
         @include max(large) {
             font-size: 14px;
         }
+    }
+
+    &__contact--phone {
+        font-weight: 600;
     }
 
     a.site-header__contact {
