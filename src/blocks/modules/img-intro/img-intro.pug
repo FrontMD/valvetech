@@ -16,7 +16,7 @@ mixin img-intro(props = defaultImgIntroProps)
         }
 
     section.section.section--intro.img-intro(class= checkProps.classes data-anim-id="homeIntro")&attributes(attributes)
-        .section__bg(data-aos="fade-in" data-aos-duration="1000" data-aos-anchor="[data-anim-id='homeIntro']")
+        .section__bg.section__bg--overlay(data-aos="fade-in" data-aos-duration="1000" data-aos-anchor="[data-anim-id='homeIntro']")
             img(src=checkProps.img)
         .vt-container.img-intro__content
             +title({
