@@ -1,4 +1,8 @@
 .gallery-slider {
+    .swiper-wrapper {
+        height: auto;
+    }
+
     .slider-controls {
         @include max(laptop) {
             align-self: flex-end;

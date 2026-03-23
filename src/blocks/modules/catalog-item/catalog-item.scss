@@ -39,6 +39,10 @@
     gap: 24px;
     padding-left: 21%;
 
+    .swiper-wrapper {
+        height: auto;
+    }
+
     @include max(large) {
         padding-left: 18%;
     }
